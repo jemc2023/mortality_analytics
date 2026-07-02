@@ -1,0 +1,15 @@
+pandas
+numpy
+boto3
+sqlalchemy
+psycopg2-binary
+msal
+python-dotenv
+google-api-python-client
+google-auth-oauthlib
+Office365-REST-Python-Client
+openpyxl
+xlrd
+requests
+jupyter
+notebook

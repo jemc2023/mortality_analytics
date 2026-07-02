@@ -1,0 +1,55 @@
+site_name: Plataforma Analítica de Mortalidad
+site_description: Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica
+site_author: Seminario de Sistemas 2 — USAC 2026
+repo_url: https://github.com/jemc2023/mortality_analytics
+repo_name: mortality-analytics
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: es
+
+nav:
+  - Inicio: index.md
+  - Arquitectura: arquitectura.md
+  - Datos:
+    - Fuentes de Datos: fuentes.md
+    - Pipeline de Datos: pipelines.md
+    - Source-To-Target Mapping: source-to-target-mapping.md
+    - Gobernanza de Datos: gobernanza.md
+  - Administración: administración.md
+  - Propuesta Financiera: propuesta_financiera.md
+  - Insights: Insights.md
+  
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list

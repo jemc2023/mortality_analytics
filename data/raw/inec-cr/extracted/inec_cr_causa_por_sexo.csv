@@ -1,0 +1,100 @@
+year,cause_group,total,hombres,mujeres,source
+2022,Costa Rica,28931,16252,12679,INEC_CR_2022_C5
+2022,1- Enfermedades infecciosas intestinales,73,37,36,INEC_CR_2022_C5
+2022,2- Tuberculosis,34,28,6,INEC_CR_2022_C5
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,122,70,52,INEC_CR_2022_C5
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",2145,1228,917,INEC_CR_2022_C5
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",16,7,9,INEC_CR_2022_C5
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",108,80,28,INEC_CR_2022_C5
+2022,10- Tumor maligno de otros órganos digestivos,2148,1205,943,INEC_CR_2022_C5
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,383,248,135,INEC_CR_2022_C5
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",662,159,503,INEC_CR_2022_C5
+2022,13- Tumor maligno de los órganos genitourinarios,1052,629,423,INEC_CR_2022_C5
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",213,117,96,INEC_CR_2022_C5
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",249,124,125,INEC_CR_2022_C5
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",532,300,232,INEC_CR_2022_C5
+2022,18- Tumores benignos,41,20,21,INEC_CR_2022_C5
+2022,19- Tumores de comportamiento incierto o desconocidos,322,184,138,INEC_CR_2022_C5
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,2294,1136,1158,INEC_CR_2022_C5
+2022,21- Deficiencia de la nutrición,164,81,83,INEC_CR_2022_C5
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",144,73,71,INEC_CR_2022_C5
+2022,23- Trastornos mentales y del comportamiento,855,400,455,INEC_CR_2022_C5
+2022,24- Enfermedades e infecciones virales del sistema nervioso,1003,519,484,INEC_CR_2022_C5
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,22,11,11,INEC_CR_2022_C5
+2022,28- Enfermedad hipertensiva,1801,854,947,INEC_CR_2022_C5
+2022,29- Enfermedad isquémica del corazón,3101,1811,1290,INEC_CR_2022_C5
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,1008,516,492,INEC_CR_2022_C5
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",1781,898,883,INEC_CR_2022_C5
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",1751,939,812,INEC_CR_2022_C5
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,111,62,49,INEC_CR_2022_C5
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",3,2,1,INEC_CR_2022_C5
+2022,"36- Enfermedades del esófago, apéndice y hernias",185,97,88,INEC_CR_2022_C5
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",1428,811,617,INEC_CR_2022_C5
+2022,38- Otras enfermedades del sistema digestivo,76,37,39,INEC_CR_2022_C5
+2022,39- Enfermedades del aparato urinario y de  la mama,926,547,379,INEC_CR_2022_C5
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,124,67,57,INEC_CR_2022_C5
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,193,62,131,INEC_CR_2022_C5
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",251,128,123,INEC_CR_2022_C5
+2022,49- Ciertas afecciones originadas en el período perinatal,267,163,104,INEC_CR_2022_C5
+2022,"50- Signos, síntomas y estados morbosos mal definidos",426,304,122,INEC_CR_2022_C5
+2022,51-  Accidentes de transporte,847,717,130,INEC_CR_2022_C5
+2022,52- Envenenamiento accidental,106,86,20,INEC_CR_2022_C5
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,31,15,16,INEC_CR_2022_C5
+2022,54- Caídas accidentales,118,95,23,INEC_CR_2022_C5
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",177,161,16,INEC_CR_2022_C5
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",455,197,258,INEC_CR_2022_C5
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",31,30,1,INEC_CR_2022_C5
+2022,60- Suicidios y lesiones autoinflingidas,436,354,82,INEC_CR_2022_C5
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,611,560,51,INEC_CR_2022_C5
+2022,62- Eventos de intensión no determinada,20,14,6,INEC_CR_2022_C5
+2023,Costa Rica,29189,16446,12743,INEC_CR_2023_C5
+2023,1- Enfermedades infecciosas intestinales,79,36,43,INEC_CR_2023_C5
+2023,2- Tuberculosis,30,22,8,INEC_CR_2023_C5
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,107,55,52,INEC_CR_2023_C5
+2023,4- Enfermedades de transmisión predominantemente sexual,7,6,1,INEC_CR_2023_C5
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",612,396,216,INEC_CR_2023_C5
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",13,8,5,INEC_CR_2023_C5
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,9,4,5,INEC_CR_2023_C5
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",137,95,42,INEC_CR_2023_C5
+2023,10- Tumor maligno de otros órganos digestivos,2243,1252,991,INEC_CR_2023_C5
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,452,300,152,INEC_CR_2023_C5
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",683,158,525,INEC_CR_2023_C5
+2023,13- Tumor maligno de los órganos genitourinarios,1188,681,507,INEC_CR_2023_C5
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",258,125,133,INEC_CR_2023_C5
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",248,120,128,INEC_CR_2023_C5
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",620,352,268,INEC_CR_2023_C5
+2023,18- Tumores benignos,46,17,29,INEC_CR_2023_C5
+2023,19- Tumores de comportamiento incierto o desconocidos,362,185,177,INEC_CR_2023_C5
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,2415,1163,1252,INEC_CR_2023_C5
+2023,21- Deficiencia de la nutrición,203,115,88,INEC_CR_2023_C5
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",140,76,64,INEC_CR_2023_C5
+2023,23- Trastornos mentales y del comportamiento,1106,527,579,INEC_CR_2023_C5
+2023,24- Enfermedades e infecciones virales del sistema nervioso,1148,590,558,INEC_CR_2023_C5
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,25,10,15,INEC_CR_2023_C5
+2023,28- Enfermedad hipertensiva,1883,896,987,INEC_CR_2023_C5
+2023,29- Enfermedad isquémica del corazón,3050,1838,1212,INEC_CR_2023_C5
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,990,500,490,INEC_CR_2023_C5
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",1842,958,884,INEC_CR_2023_C5
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",1901,1043,858,INEC_CR_2023_C5
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,118,64,54,INEC_CR_2023_C5
+2023,"36- Enfermedades del esófago, apéndice y hernias",167,96,71,INEC_CR_2023_C5
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",1467,827,640,INEC_CR_2023_C5
+2023,38- Otras enfermedades del sistema digestivo,68,31,37,INEC_CR_2023_C5
+2023,39- Enfermedades del aparato urinario y de  la mama,946,513,433,INEC_CR_2023_C5
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,124,54,70,INEC_CR_2023_C5
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,249,64,185,INEC_CR_2023_C5
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",260,136,124,INEC_CR_2023_C5
+2023,49- Ciertas afecciones originadas en el período perinatal,215,129,86,INEC_CR_2023_C5
+2023,"50- Signos, síntomas y estados morbosos mal definidos",501,390,111,INEC_CR_2023_C5
+2023,51-  Accidentes de transporte,931,795,136,INEC_CR_2023_C5
+2023,52- Envenenamiento accidental,89,76,13,INEC_CR_2023_C5
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,41,13,28,INEC_CR_2023_C5
+2023,54- Caídas accidentales,152,126,26,INEC_CR_2023_C5
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",164,143,21,INEC_CR_2023_C5
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",528,250,278,INEC_CR_2023_C5
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",37,34,3,INEC_CR_2023_C5
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,11,10,1,INEC_CR_2023_C5
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,3,2,1,INEC_CR_2023_C5
+2023,60- Suicidios y lesiones autoinflingidas,398,330,68,INEC_CR_2023_C5
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,849,780,69,INEC_CR_2023_C5
+2023,62- Eventos de intensión no determinada,10,8,2,INEC_CR_2023_C5

@@ -1,0 +1,28 @@
+{
+  "source": "databricks",
+  "target": "greenplum",
+  "mode": "full_refresh",
+  "tables": [
+    { "source_table": "workspace.dm_mortality.dim_genero", "target_table": "dm_mortality.dim_genero", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_geografia", "target_table": "dm_mortality.dim_geografia", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_causa", "target_table": "dm_mortality.dim_causa", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_etario", "target_table": "dm_mortality.dim_etario", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_source", "target_table": "dm_mortality.dim_source", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_tiempo", "target_table": "dm_mortality.dim_tiempo", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_ine_perfil", "target_table": "dm_mortality.dim_ine_perfil", "group": "dimensions" },
+    { "source_table": "workspace.dm_mortality.dim_ihme_perfil", "target_table": "dm_mortality.dim_ihme_perfil", "group": "dimensions" },
+    {
+      "source_table": "workspace.dm_mortality.fact_ine",
+      "target_table": "dm_mortality.fact_ine",
+      "group": "facts",
+      "partition_column": "id_tiempo",
+      "partition_strategy": "range",
+      "partition_range_size": 20
+    },
+    { "source_table": "workspace.dm_mortality.fact_mspas", "target_table": "dm_mortality.fact_mspas", "group": "facts" },
+    { "source_table": "workspace.dm_mortality.fact_who_deaths", "target_table": "dm_mortality.fact_who_deaths", "group": "facts" },
+    { "source_table": "workspace.dm_mortality.fact_who_population", "target_table": "dm_mortality.fact_who_population", "group": "facts" },
+    { "source_table": "workspace.dm_mortality.fact_panama", "target_table": "dm_mortality.fact_panama", "group": "facts" },
+    { "source_table": "workspace.dm_mortality.fact_ihme", "target_table": "dm_mortality.fact_ihme", "group": "facts" }
+  ]
+}

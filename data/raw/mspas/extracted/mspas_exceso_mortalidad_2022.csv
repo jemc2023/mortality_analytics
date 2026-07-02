@@ -1,0 +1,6 @@
+group,observed_deaths,expected_deaths,excess_deaths,excess_pct,year,source
+Total,95116,82086,13030,16,2022,MSPAS_exceso_mortalidad
+<65 años,49331,45840,3491,8,2022,MSPAS_exceso_mortalidad
+>65 años,45801,35973,9828,27,2022,MSPAS_exceso_mortalidad
+Hombres,52165,45581,6584,14,2022,MSPAS_exceso_mortalidad
+Mujeres,42967,36092,6875,19,2022,MSPAS_exceso_mortalidad

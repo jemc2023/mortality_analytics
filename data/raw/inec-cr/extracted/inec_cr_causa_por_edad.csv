@@ -1,0 +1,1288 @@
+year,cause_group,age_group,deaths,source
+2022,Costa Rica,col_1,28931,INEC_CR_2022_C4
+2022,Costa Rica,Menos de,512,INEC_CR_2022_C4
+2022,Costa Rica,1 - 14,188,INEC_CR_2022_C4
+2022,Costa Rica,15 - 64,8811,INEC_CR_2022_C4
+2022,Costa Rica,65 años,19382,INEC_CR_2022_C4
+2022,Costa Rica,Ignorada,38,INEC_CR_2022_C4
+2022,Costa Rica,col_7,0,INEC_CR_2022_C4
+2022,Costa Rica,col_8,0,INEC_CR_2022_C4
+2022,Costa Rica,col_9,0,INEC_CR_2022_C4
+2022,Costa Rica,col_10,0,INEC_CR_2022_C4
+2022,Costa Rica,col_11,0,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,col_1,73,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,Menos de,6,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,1 - 14,2,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,15 - 64,14,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,65 años,51,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,Ignorada,0,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,col_7,0,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,col_8,0,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,col_9,0,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,col_10,0,INEC_CR_2022_C4
+2022,1- Enfermedades infecciosas intestinales,col_11,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,col_1,34,INEC_CR_2022_C4
+2022,2- Tuberculosis,Menos de,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,1 - 14,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,15 - 64,25,INEC_CR_2022_C4
+2022,2- Tuberculosis,65 años,9,INEC_CR_2022_C4
+2022,2- Tuberculosis,Ignorada,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,col_7,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,col_8,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,col_9,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,col_10,0,INEC_CR_2022_C4
+2022,2- Tuberculosis,col_11,0,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_1,122,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,Menos de,2,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,1 - 14,2,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,15 - 64,46,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,65 años,70,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,Ignorada,2,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_7,0,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_8,0,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_9,0,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_10,0,INEC_CR_2022_C4
+2022,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_11,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,col_1,8,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,Menos de,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,1 - 14,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,15 - 64,2,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,65 años,6,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,Ignorada,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,col_7,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,col_8,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,col_9,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,col_10,0,INEC_CR_2022_C4
+2022,4- Enfermedades de transmisión predominantemente sexual,col_11,0,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_1,2145,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",Menos de,5,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",1 - 14,14,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",15 - 64,588,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",65 años,1536,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",Ignorada,2,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_7,0,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_8,0,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_9,0,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_10,0,INEC_CR_2022_C4
+2022,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_11,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_1,16,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",Menos de,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",1 - 14,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",15 - 64,9,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",65 años,7,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",Ignorada,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_7,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_8,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_9,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_10,0,INEC_CR_2022_C4
+2022,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_11,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_1,1,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,Menos de,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,1 - 14,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,15 - 64,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,65 años,1,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,Ignorada,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_7,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_8,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_9,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_10,0,INEC_CR_2022_C4
+2022,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_11,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_1,108,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",Menos de,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",1 - 14,1,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",15 - 64,49,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",65 años,58,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",Ignorada,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_7,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_8,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_9,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_10,0,INEC_CR_2022_C4
+2022,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_11,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,col_1,2148,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,Menos de,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,1 - 14,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,15 - 64,757,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,65 años,1391,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,Ignorada,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,col_7,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,col_8,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,col_9,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,col_10,0,INEC_CR_2022_C4
+2022,10- Tumor maligno de otros órganos digestivos,col_11,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_1,383,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,Menos de,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,1 - 14,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,15 - 64,104,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,65 años,279,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,Ignorada,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_7,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_8,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_9,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_10,0,INEC_CR_2022_C4
+2022,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_11,0,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_1,662,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",Menos de,0,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",1 - 14,1,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",15 - 64,293,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",65 años,366,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",Ignorada,2,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_7,0,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_8,0,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_9,0,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_10,0,INEC_CR_2022_C4
+2022,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_11,0,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,col_1,1502,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,Menos de,0,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,1 - 14,1,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,15 - 64,347,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,65 años,702,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,Ignorada,2,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,col_7,0,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,col_8,0,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,col_9,0,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,col_10,0,INEC_CR_2022_C4
+2022,13- Tumor maligno de los órganos genitourinarios,col_11,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_1,213,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",Menos de,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",1 - 14,6,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",15 - 64,104,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",65 años,103,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",Ignorada,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_7,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_8,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_9,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_10,0,INEC_CR_2022_C4
+2022,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_11,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_1,249,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",Menos de,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",1 - 14,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",15 - 64,77,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",65 años,172,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",Ignorada,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_7,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_8,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_9,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_10,0,INEC_CR_2022_C4
+2022,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_11,0,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_1,532,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",Menos de,0,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",1 - 14,9,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",15 - 64,202,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",65 años,317,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",Ignorada,4,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_7,0,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_8,0,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_9,0,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_10,0,INEC_CR_2022_C4
+2022,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_11,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,col_1,41,INEC_CR_2022_C4
+2022,18- Tumores benignos,Menos de,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,1 - 14,1,INEC_CR_2022_C4
+2022,18- Tumores benignos,15 - 64,11,INEC_CR_2022_C4
+2022,18- Tumores benignos,65 años,29,INEC_CR_2022_C4
+2022,18- Tumores benignos,Ignorada,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,col_7,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,col_8,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,col_9,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,col_10,0,INEC_CR_2022_C4
+2022,18- Tumores benignos,col_11,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,col_1,322,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,Menos de,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,1 - 14,3,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,15 - 64,83,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,65 años,236,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,Ignorada,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,col_7,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,col_8,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,col_9,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,col_10,0,INEC_CR_2022_C4
+2022,19- Tumores de comportamiento incierto o desconocidos,col_11,0,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,col_1,2294,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,Menos de,1,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,1 - 14,9,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,15 - 64,509,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,65 años,1773,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,Ignorada,2,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,col_7,0,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,col_8,0,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,col_9,0,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,col_10,0,INEC_CR_2022_C4
+2022,20- Enfermedades de las glándulas endocrinas y metabólicas,col_11,0,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,col_1,164,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,Menos de,0,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,1 - 14,1,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,15 - 64,73,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,65 años,89,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,Ignorada,1,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,col_7,0,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,col_8,0,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,col_9,0,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,col_10,0,INEC_CR_2022_C4
+2022,21- Deficiencia de la nutrición,col_11,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_1,144,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",Menos de,1,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",1 - 14,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",15 - 64,42,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",65 años,101,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",Ignorada,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_7,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_8,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_9,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_10,0,INEC_CR_2022_C4
+2022,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_11,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,col_1,855,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,Menos de,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,1 - 14,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,15 - 64,81,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,65 años,774,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,Ignorada,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,col_7,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,col_8,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,col_9,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,col_10,0,INEC_CR_2022_C4
+2022,23- Trastornos mentales y del comportamiento,col_11,0,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,col_1,1003,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,Menos de,6,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,1 - 14,33,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,15 - 64,305,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,65 años,657,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,Ignorada,2,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,col_7,0,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,col_8,0,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,col_9,0,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,col_10,0,INEC_CR_2022_C4
+2022,24- Enfermedades e infecciones virales del sistema nervioso,col_11,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,col_1,2,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,Menos de,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,1 - 14,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,15 - 64,1,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,65 años,1,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,Ignorada,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,col_7,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,col_8,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,col_9,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,col_10,0,INEC_CR_2022_C4
+2022,26- Enfermedades del oído y de la apófisis mastoides,col_11,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_1,22,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,Menos de,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,1 - 14,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,15 - 64,5,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,65 años,17,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,Ignorada,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_7,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_8,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_9,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_10,0,INEC_CR_2022_C4
+2022,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_11,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,col_1,1801,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,Menos de,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,1 - 14,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,15 - 64,239,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,65 años,1560,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,Ignorada,2,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,col_7,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,col_8,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,col_9,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,col_10,0,INEC_CR_2022_C4
+2022,28- Enfermedad hipertensiva,col_11,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,col_1,3101,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,Menos de,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,1 - 14,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,15 - 64,670,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,65 años,2429,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,Ignorada,2,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,col_7,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,col_8,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,col_9,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,col_10,0,INEC_CR_2022_C4
+2022,29- Enfermedad isquémica del corazón,col_11,0,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_1,1008,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,Menos de,3,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,1 - 14,4,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,15 - 64,197,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,65 años,803,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,Ignorada,1,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_7,0,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_8,0,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_9,0,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_10,0,INEC_CR_2022_C4
+2022,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_11,0,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_1,1781,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",Menos de,0,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",1 - 14,2,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",15 - 64,324,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",65 años,1451,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",Ignorada,4,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_7,0,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_8,0,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_9,0,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_10,0,INEC_CR_2022_C4
+2022,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_11,0,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_1,1751,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",Menos de,24,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",1 - 14,13,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",15 - 64,231,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",65 años,1483,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",Ignorada,0,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_7,0,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_8,0,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_9,0,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_10,0,INEC_CR_2022_C4
+2022,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_11,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,col_1,111,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,Menos de,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,1 - 14,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,15 - 64,16,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,65 años,95,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,Ignorada,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,col_7,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,col_8,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,col_9,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,col_10,0,INEC_CR_2022_C4
+2022,34- Otras enfermedades del aparato respiratorio y de la pleura,col_11,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_1,3,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",Menos de,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",1 - 14,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",15 - 64,1,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",65 años,2,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",Ignorada,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_7,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_8,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_9,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_10,0,INEC_CR_2022_C4
+2022,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_11,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",col_1,185,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",Menos de,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",1 - 14,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",15 - 64,49,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",65 años,135,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",Ignorada,1,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",col_7,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",col_8,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",col_9,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",col_10,0,INEC_CR_2022_C4
+2022,"36- Enfermedades del esófago, apéndice y hernias",col_11,0,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_1,1428,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",Menos de,4,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",1 - 14,5,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",15 - 64,611,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",65 años,806,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",Ignorada,2,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_7,0,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_8,0,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_9,0,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_10,0,INEC_CR_2022_C4
+2022,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_11,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,col_1,76,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,Menos de,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,1 - 14,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,15 - 64,8,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,65 años,68,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,Ignorada,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,col_7,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,col_8,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,col_9,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,col_10,0,INEC_CR_2022_C4
+2022,38- Otras enfermedades del sistema digestivo,col_11,0,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,col_1,926,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,Menos de,0,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,1 - 14,3,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,15 - 64,234,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,65 años,686,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,Ignorada,3,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,col_7,0,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,col_8,0,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,col_9,0,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,col_10,0,INEC_CR_2022_C4
+2022,39- Enfermedades del aparato urinario y de  la mama,col_11,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,col_1,46,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,Menos de,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,1 - 14,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,15 - 64,8,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,65 años,38,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,Ignorada,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,col_7,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,col_8,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,col_9,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,col_10,0,INEC_CR_2022_C4
+2022,40- Enfermedades de los órganos genitales masculinos,col_11,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,col_1,8,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,Menos de,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,1 - 14,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,15 - 64,4,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,65 años,4,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,Ignorada,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,col_7,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,col_8,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,col_9,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,col_10,0,INEC_CR_2022_C4
+2022,41- Enfermedades de los órganos genitales femeninos,col_11,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,col_1,7,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,Menos de,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,1 - 14,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,15 - 64,7,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,65 años,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,Ignorada,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,col_7,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,col_8,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,col_9,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,col_10,0,INEC_CR_2022_C4
+2022,43- Causas obstétricas directas,col_11,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,col_1,1,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,Menos de,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,1 - 14,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,15 - 64,1,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,65 años,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,Ignorada,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,col_7,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,col_8,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,col_9,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,col_10,0,INEC_CR_2022_C4
+2022,44- Causas obstétricas indirectas,col_11,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,col_1,124,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,Menos de,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,1 - 14,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,15 - 64,19,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,65 años,105,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,Ignorada,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,col_7,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,col_8,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,col_9,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,col_10,0,INEC_CR_2022_C4
+2022,46- Enfermedades de la piel  y del tejido celular cutáneo,col_11,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_1,193,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,Menos de,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,1 - 14,1,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,15 - 64,77,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,65 años,115,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,Ignorada,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_7,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_8,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_9,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_10,0,INEC_CR_2022_C4
+2022,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_11,0,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_1,251,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",Menos de,185,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",1 - 14,21,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",15 - 64,35,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",65 años,10,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",Ignorada,0,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_7,0,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_8,0,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_9,0,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_10,0,INEC_CR_2022_C4
+2022,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_11,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,col_1,267,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,Menos de,266,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,1 - 14,1,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,15 - 64,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,65 años,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,Ignorada,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,col_7,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,col_8,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,col_9,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,col_10,0,INEC_CR_2022_C4
+2022,49- Ciertas afecciones originadas en el período perinatal,col_11,0,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",col_1,426,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",Menos de,6,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",1 - 14,8,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",15 - 64,234,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",65 años,176,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",Ignorada,2,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",col_7,0,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",col_8,0,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",col_9,0,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",col_10,0,INEC_CR_2022_C4
+2022,"50- Signos, síntomas y estados morbosos mal definidos",col_11,0,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,col_1,847,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,Menos de,0,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,1 - 14,14,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,15 - 64,751,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,65 años,81,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,Ignorada,1,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,col_7,0,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,col_8,0,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,col_9,0,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,col_10,0,INEC_CR_2022_C4
+2022,51-  Accidentes de transporte,col_11,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,col_1,106,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,Menos de,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,1 - 14,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,15 - 64,92,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,65 años,13,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,Ignorada,1,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,col_7,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,col_8,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,col_9,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,col_10,0,INEC_CR_2022_C4
+2022,52- Envenenamiento accidental,col_11,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_1,31,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,Menos de,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,1 - 14,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,15 - 64,7,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,65 años,24,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,Ignorada,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_7,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_8,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_9,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_10,0,INEC_CR_2022_C4
+2022,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_11,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,col_1,118,INEC_CR_2022_C4
+2022,54- Caídas accidentales,Menos de,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,1 - 14,2,INEC_CR_2022_C4
+2022,54- Caídas accidentales,15 - 64,55,INEC_CR_2022_C4
+2022,54- Caídas accidentales,65 años,61,INEC_CR_2022_C4
+2022,54- Caídas accidentales,Ignorada,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,col_7,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,col_8,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,col_9,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,col_10,0,INEC_CR_2022_C4
+2022,54- Caídas accidentales,col_11,0,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_1,177,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",Menos de,1,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",1 - 14,14,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",15 - 64,140,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",65 años,21,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",Ignorada,1,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_7,0,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_8,0,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_9,0,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_10,0,INEC_CR_2022_C4
+2022,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_11,0,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_1,455,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",Menos de,0,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",1 - 14,2,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",15 - 64,51,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",65 años,401,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",Ignorada,1,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_7,0,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_8,0,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_9,0,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_10,0,INEC_CR_2022_C4
+2022,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_11,0,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_1,31,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",Menos de,1,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",1 - 14,1,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",15 - 64,24,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",65 años,5,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",Ignorada,0,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_7,0,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_8,0,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_9,0,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_10,0,INEC_CR_2022_C4
+2022,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_11,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,col_1,12,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,Menos de,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,1 - 14,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,15 - 64,5,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,65 años,7,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,Ignorada,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,col_7,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,col_8,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,col_9,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,col_10,0,INEC_CR_2022_C4
+2022,58- Secuelas de causas externas de morbilidad y de mortalidad,col_11,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,col_1,436,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,Menos de,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,1 - 14,8,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,15 - 64,388,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,65 años,40,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,Ignorada,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,col_7,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,col_8,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,col_9,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,col_10,0,INEC_CR_2022_C4
+2022,60- Suicidios y lesiones autoinflingidas,col_11,0,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_1,611,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,Menos de,1,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,1 - 14,5,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,15 - 64,588,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,65 años,17,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,Ignorada,0,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_7,0,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_8,0,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_9,0,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_10,0,INEC_CR_2022_C4
+2022,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_11,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,col_1,20,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,Menos de,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,1 - 14,1,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,15 - 64,18,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,65 años,1,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,Ignorada,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,col_7,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,col_8,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,col_9,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,col_10,0,INEC_CR_2022_C4
+2022,62- Eventos de intensión no determinada,col_11,0,INEC_CR_2022_C4
+2023,Costa Rica,col_1,29189,INEC_CR_2023_C4
+2023,Costa Rica,Menos de,459,INEC_CR_2023_C4
+2023,Costa Rica,1 - 14,262,INEC_CR_2023_C4
+2023,Costa Rica,15 - 64,8981,INEC_CR_2023_C4
+2023,Costa Rica,65 años,19410,INEC_CR_2023_C4
+2023,Costa Rica,Ignorada,77,INEC_CR_2023_C4
+2023,Costa Rica,col_7,0,INEC_CR_2023_C4
+2023,Costa Rica,col_8,0,INEC_CR_2023_C4
+2023,Costa Rica,col_9,0,INEC_CR_2023_C4
+2023,Costa Rica,col_10,0,INEC_CR_2023_C4
+2023,Costa Rica,col_11,0,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,col_1,79,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,Menos de,2,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,1 - 14,7,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,15 - 64,19,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,65 años,51,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,Ignorada,0,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,col_7,0,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,col_8,0,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,col_9,0,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,col_10,0,INEC_CR_2023_C4
+2023,1- Enfermedades infecciosas intestinales,col_11,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,col_1,30,INEC_CR_2023_C4
+2023,2- Tuberculosis,Menos de,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,1 - 14,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,15 - 64,18,INEC_CR_2023_C4
+2023,2- Tuberculosis,65 años,12,INEC_CR_2023_C4
+2023,2- Tuberculosis,Ignorada,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,col_7,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,col_8,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,col_9,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,col_10,0,INEC_CR_2023_C4
+2023,2- Tuberculosis,col_11,0,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_1,107,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,Menos de,3,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,1 - 14,5,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,15 - 64,30,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,65 años,68,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,Ignorada,1,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_7,0,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_8,0,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_9,0,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_10,0,INEC_CR_2023_C4
+2023,3- Ciertas zoonosis bacterianas y otras enfermedades bacterianas,col_11,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,col_1,7,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,Menos de,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,1 - 14,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,15 - 64,1,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,65 años,6,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,Ignorada,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,col_7,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,col_8,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,col_9,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,col_10,0,INEC_CR_2023_C4
+2023,4- Enfermedades de transmisión predominantemente sexual,col_11,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",col_1,4,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",Menos de,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",1 - 14,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",15 - 64,1,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",65 años,3,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",Ignorada,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",col_7,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",col_8,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",col_9,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",col_10,0,INEC_CR_2023_C4
+2023,"5 - Rickettsiosis y otras enfermedades transmitidas por artrópodos, espiroquetas y clamidias",col_11,0,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_1,612,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",Menos de,6,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",1 - 14,3,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",15 - 64,217,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",65 años,382,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",Ignorada,4,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_7,0,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_8,0,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_9,0,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_10,0,INEC_CR_2023_C4
+2023,"6- Ciertas enfermedades víricas e infecciones virales, hepatitis viral, VIH por virus",col_11,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_1,13,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",Menos de,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",1 - 14,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",15 - 64,7,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",65 años,6,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",Ignorada,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_7,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_8,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_9,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_10,0,INEC_CR_2023_C4
+2023,"7- Micosis, enfermedades debido a protozoarios, helmintasis, pediculosis, acariosis y otras infestaciones",col_11,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_1,9,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,Menos de,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,1 - 14,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,15 - 64,3,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,65 años,6,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,Ignorada,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_7,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_8,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_9,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_10,0,INEC_CR_2023_C4
+2023,8- Otras enfermedades  y efectos tardíos de las enfermedades infecciosas y parasitarias,col_11,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_1,137,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",Menos de,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",1 - 14,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",15 - 64,57,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",65 años,80,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",Ignorada,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_7,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_8,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_9,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_10,0,INEC_CR_2023_C4
+2023,"9- Tumor maligno del labio, de la cavidad bucal y de la faringe",col_11,0,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,col_1,2243,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,Menos de,0,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,1 - 14,4,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,15 - 64,737,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,65 años,1498,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,Ignorada,4,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,col_7,0,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,col_8,0,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,col_9,0,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,col_10,0,INEC_CR_2023_C4
+2023,10- Tumor maligno de otros órganos digestivos,col_11,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_1,452,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,Menos de,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,1 - 14,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,15 - 64,99,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,65 años,352,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,Ignorada,1,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_7,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_8,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_9,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_10,0,INEC_CR_2023_C4
+2023,11- Tumor maligno de órganos respiratorios e intratoráxicos,col_11,0,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_1,683,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",Menos de,1,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",1 - 14,6,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",15 - 64,270,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",65 años,404,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",Ignorada,2,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_7,0,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_8,0,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_9,0,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_10,0,INEC_CR_2023_C4
+2023,"12- Tumor maligno de los huesos, del tejido conjuntivo, de los tejidos blandos, de piel y de la mama",col_11,0,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,col_1,1188,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,Menos de,0,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,1 - 14,3,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,15 - 64,366,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,65 años,817,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,Ignorada,2,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,col_7,0,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,col_8,0,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,col_9,0,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,col_10,0,INEC_CR_2023_C4
+2023,13- Tumor maligno de los órganos genitourinarios,col_11,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_1,258,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",Menos de,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",1 - 14,13,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",15 - 64,131,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",65 años,114,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",Ignorada,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_7,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_8,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_9,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_10,0,INEC_CR_2023_C4
+2023,"14- Tumor maligno del ojo, encéfalo, partes del sistema nervioso y glándulas endocrinas",col_11,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_1,248,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",Menos de,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",1 - 14,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",15 - 64,80,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",65 años,168,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",Ignorada,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_7,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_8,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_9,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_10,0,INEC_CR_2023_C4
+2023,"15- Tumor maligno de otros sitios, secundarios y de los no especificado",col_11,0,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_1,620,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",Menos de,1,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",1 - 14,15,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",15 - 64,250,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",65 años,353,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",Ignorada,1,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_7,0,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_8,0,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_9,0,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_10,0,INEC_CR_2023_C4
+2023,"16- Tumor maligno del tejido linfático, de los órganos hematopoyéticos y de sitios múltiples independientes",col_11,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,col_1,1,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,Menos de,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,1 - 14,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,15 - 64,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,65 años,1,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,Ignorada,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,col_7,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,col_8,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,col_9,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,col_10,0,INEC_CR_2023_C4
+2023,17 - Carcinoma in situ,col_11,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,col_1,46,INEC_CR_2023_C4
+2023,18- Tumores benignos,Menos de,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,1 - 14,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,15 - 64,21,INEC_CR_2023_C4
+2023,18- Tumores benignos,65 años,25,INEC_CR_2023_C4
+2023,18- Tumores benignos,Ignorada,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,col_7,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,col_8,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,col_9,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,col_10,0,INEC_CR_2023_C4
+2023,18- Tumores benignos,col_11,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,col_1,362,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,Menos de,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,1 - 14,1,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,15 - 64,97,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,65 años,264,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,Ignorada,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,col_7,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,col_8,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,col_9,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,col_10,0,INEC_CR_2023_C4
+2023,19- Tumores de comportamiento incierto o desconocidos,col_11,0,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,col_1,2415,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,Menos de,7,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,1 - 14,6,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,15 - 64,590,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,65 años,1809,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,Ignorada,3,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,col_7,0,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,col_8,0,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,col_9,0,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,col_10,0,INEC_CR_2023_C4
+2023,20- Enfermedades de las glándulas endocrinas y metabólicas,col_11,0,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,col_1,203,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,Menos de,2,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,1 - 14,0,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,15 - 64,93,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,65 años,107,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,Ignorada,1,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,col_7,0,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,col_8,0,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,col_9,0,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,col_10,0,INEC_CR_2023_C4
+2023,21- Deficiencia de la nutrición,col_11,0,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_1,140,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",Menos de,1,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",1 - 14,2,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",15 - 64,61,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",65 años,74,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",Ignorada,2,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_7,0,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_8,0,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_9,0,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_10,0,INEC_CR_2023_C4
+2023,"22- Enfermedades de la sangre, de los órganos hematopoyéticos y ciertos trastornos que afectan el mecanismo de la inmunidad",col_11,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,col_1,1106,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,Menos de,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,1 - 14,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,15 - 64,95,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,65 años,1010,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,Ignorada,1,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,col_7,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,col_8,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,col_9,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,col_10,0,INEC_CR_2023_C4
+2023,23- Trastornos mentales y del comportamiento,col_11,0,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,col_1,1148,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,Menos de,5,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,1 - 14,53,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,15 - 64,330,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,65 años,759,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,Ignorada,1,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,col_7,0,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,col_8,0,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,col_9,0,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,col_10,0,INEC_CR_2023_C4
+2023,24- Enfermedades e infecciones virales del sistema nervioso,col_11,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,col_1,1,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,Menos de,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,1 - 14,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,15 - 64,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,65 años,1,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,Ignorada,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,col_7,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,col_8,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,col_9,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,col_10,0,INEC_CR_2023_C4
+2023,25 - Enfermedades del ojo y sus anexos,col_11,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,col_1,2,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,Menos de,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,1 - 14,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,15 - 64,1,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,65 años,1,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,Ignorada,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,col_7,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,col_8,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,col_9,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,col_10,0,INEC_CR_2023_C4
+2023,26- Enfermedades del oído y de la apófisis mastoides,col_11,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_1,25,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,Menos de,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,1 - 14,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,15 - 64,4,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,65 años,21,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,Ignorada,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_7,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_8,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_9,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_10,0,INEC_CR_2023_C4
+2023,27- Fiebre reumática y otras enfermedades reumáticas del corazón,col_11,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,col_1,1883,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,Menos de,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,1 - 14,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,15 - 64,240,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,65 años,1638,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,Ignorada,5,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,col_7,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,col_8,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,col_9,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,col_10,0,INEC_CR_2023_C4
+2023,28- Enfermedad hipertensiva,col_11,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,col_1,3050,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,Menos de,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,1 - 14,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,15 - 64,621,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,65 años,2424,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,Ignorada,5,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,col_7,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,col_8,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,col_9,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,col_10,0,INEC_CR_2023_C4
+2023,29- Enfermedad isquémica del corazón,col_11,0,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_1,990,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,Menos de,2,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,1 - 14,7,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,15 - 64,205,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,65 años,775,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,Ignorada,1,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_7,0,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_8,0,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_9,0,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_10,0,INEC_CR_2023_C4
+2023,30- Enfermedades de la circulación pulmonar y otras formas de enfermedades del corazón,col_11,0,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_1,1842,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",Menos de,1,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",1 - 14,2,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",15 - 64,325,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",65 años,1513,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",Ignorada,1,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_7,0,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_8,0,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_9,0,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_10,0,INEC_CR_2023_C4
+2023,"31- Enfermedades cerebrovasculares, de las venas y las arterias",col_11,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,col_1,1,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,Menos de,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,1 - 14,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,15 - 64,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,65 años,1,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,Ignorada,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,col_7,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,col_8,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,col_9,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,col_10,0,INEC_CR_2023_C4
+2023,32 - Otras enfermedades del aparato circulatorio,col_11,0,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_1,1901,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",Menos de,25,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",1 - 14,26,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",15 - 64,262,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",65 años,1583,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",Ignorada,5,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_7,0,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_8,0,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_9,0,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_10,0,INEC_CR_2023_C4
+2023,"33- Enfermedades de las vías respiratorias- superiores e inferiores-, del pulmón, influenza y neumonía",col_11,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,col_1,118,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,Menos de,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,1 - 14,1,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,15 - 64,20,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,65 años,97,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,Ignorada,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,col_7,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,col_8,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,col_9,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,col_10,0,INEC_CR_2023_C4
+2023,34- Otras enfermedades del aparato respiratorio y de la pleura,col_11,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_1,1,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",Menos de,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",1 - 14,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",15 - 64,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",65 años,1,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",Ignorada,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_7,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_8,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_9,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_10,0,INEC_CR_2023_C4
+2023,"35- Enfermedades de la cavidad bucal, glándulas salivales y maxilares",col_11,0,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",col_1,167,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",Menos de,1,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",1 - 14,1,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",15 - 64,46,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",65 años,119,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",Ignorada,0,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",col_7,0,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",col_8,0,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",col_9,0,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",col_10,0,INEC_CR_2023_C4
+2023,"36- Enfermedades del esófago, apéndice y hernias",col_11,0,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_1,1467,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",Menos de,1,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",1 - 14,2,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",15 - 64,588,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",65 años,869,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",Ignorada,7,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_7,0,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_8,0,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_9,0,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_10,0,INEC_CR_2023_C4
+2023,"37- Enteritis y colitis no infecciosas, enfermedades del peritoneo, del hígado, de la vesícula e intestinos",col_11,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,col_1,68,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,Menos de,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,1 - 14,1,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,15 - 64,19,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,65 años,48,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,Ignorada,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,col_7,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,col_8,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,col_9,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,col_10,0,INEC_CR_2023_C4
+2023,38- Otras enfermedades del sistema digestivo,col_11,0,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,col_1,946,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,Menos de,0,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,1 - 14,2,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,15 - 64,240,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,65 años,701,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,Ignorada,3,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,col_7,0,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,col_8,0,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,col_9,0,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,col_10,0,INEC_CR_2023_C4
+2023,39- Enfermedades del aparato urinario y de  la mama,col_11,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,col_1,40,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,Menos de,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,1 - 14,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,15 - 64,4,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,65 años,36,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,Ignorada,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,col_7,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,col_8,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,col_9,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,col_10,0,INEC_CR_2023_C4
+2023,40- Enfermedades de los órganos genitales masculinos,col_11,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,col_1,9,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,Menos de,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,1 - 14,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,15 - 64,3,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,65 años,6,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,Ignorada,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,col_7,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,col_8,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,col_9,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,col_10,0,INEC_CR_2023_C4
+2023,41- Enfermedades de los órganos genitales femeninos,col_11,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,col_1,3,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,Menos de,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,1 - 14,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,15 - 64,3,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,65 años,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,Ignorada,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,col_7,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,col_8,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,col_9,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,col_10,0,INEC_CR_2023_C4
+2023,43- Causas obstétricas directas,col_11,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,col_1,2,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,Menos de,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,1 - 14,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,15 - 64,2,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,65 años,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,Ignorada,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,col_7,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,col_8,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,col_9,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,col_10,0,INEC_CR_2023_C4
+2023,44- Causas obstétricas indirectas,col_11,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,col_1,124,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,Menos de,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,1 - 14,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,15 - 64,24,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,65 años,100,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,Ignorada,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,col_7,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,col_8,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,col_9,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,col_10,0,INEC_CR_2023_C4
+2023,46- Enfermedades de la piel  y del tejido celular cutáneo,col_11,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_1,249,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,Menos de,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,1 - 14,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,15 - 64,92,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,65 años,157,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,Ignorada,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_7,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_8,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_9,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_10,0,INEC_CR_2023_C4
+2023,47- Enfermedades del sistema osteomuscular y del tejido conjuntivo,col_11,0,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_1,260,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",Menos de,166,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",1 - 14,29,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",15 - 64,54,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",65 años,11,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",Ignorada,0,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_7,0,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_8,0,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_9,0,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_10,0,INEC_CR_2023_C4
+2023,"48- Malformaciones congénitas, deformidades y anomalías cromosómicas",col_11,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,col_1,215,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,Menos de,215,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,1 - 14,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,15 - 64,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,65 años,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,Ignorada,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,col_7,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,col_8,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,col_9,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,col_10,0,INEC_CR_2023_C4
+2023,49- Ciertas afecciones originadas en el período perinatal,col_11,0,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",col_1,501,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",Menos de,14,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",1 - 14,17,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",15 - 64,308,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",65 años,148,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",Ignorada,14,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",col_7,0,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",col_8,0,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",col_9,0,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",col_10,0,INEC_CR_2023_C4
+2023,"50- Signos, síntomas y estados morbosos mal definidos",col_11,0,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,col_1,931,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,Menos de,1,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,1 - 14,19,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,15 - 64,793,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,65 años,118,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,Ignorada,0,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,col_7,0,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,col_8,0,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,col_9,0,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,col_10,0,INEC_CR_2023_C4
+2023,51-  Accidentes de transporte,col_11,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,col_1,89,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,Menos de,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,1 - 14,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,15 - 64,80,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,65 años,9,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,Ignorada,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,col_7,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,col_8,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,col_9,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,col_10,0,INEC_CR_2023_C4
+2023,52- Envenenamiento accidental,col_11,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_1,41,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,Menos de,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,1 - 14,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,15 - 64,9,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,65 años,32,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,Ignorada,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_7,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_8,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_9,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_10,0,INEC_CR_2023_C4
+2023,53- Contratiempos durante la atención médica reacciones anormales y complicaciones posteriores,col_11,0,INEC_CR_2023_C4
+2023,54- Caídas accidentales,col_1,152,INEC_CR_2023_C4
+2023,54- Caídas accidentales,Menos de,0,INEC_CR_2023_C4
+2023,54- Caídas accidentales,1 - 14,3,INEC_CR_2023_C4
+2023,54- Caídas accidentales,15 - 64,71,INEC_CR_2023_C4
+2023,54- Caídas accidentales,65 años,77,INEC_CR_2023_C4
+2023,54- Caídas accidentales,Ignorada,1,INEC_CR_2023_C4
+2023,54- Caídas accidentales,col_7,0,INEC_CR_2023_C4
+2023,54- Caídas accidentales,col_8,0,INEC_CR_2023_C4
+2023,54- Caídas accidentales,col_9,0,INEC_CR_2023_C4
+2023,54- Caídas accidentales,col_10,0,INEC_CR_2023_C4
+2023,54- Caídas accidentales,col_11,0,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_1,164,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",Menos de,3,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",1 - 14,18,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",15 - 64,129,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",65 años,14,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",Ignorada,0,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_7,0,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_8,0,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_9,0,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_10,0,INEC_CR_2023_C4
+2023,"55- Exposición a fuerzas mecánicas animadas e inanimadas, ahogamiento, sumersión accidental y otros",col_11,0,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_1,528,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",Menos de,0,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",1 - 14,1,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",15 - 64,58,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",65 años,467,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",Ignorada,2,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_7,0,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_8,0,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_9,0,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_10,0,INEC_CR_2023_C4
+2023,"56- Contacto traumáticos con animales, fuerzas de la naturaleza, exceso de esfuerzo, exposición a otros factores",col_11,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_1,37,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",Menos de,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",1 - 14,2,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",15 - 64,25,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",65 años,10,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",Ignorada,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_7,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_8,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_9,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_10,0,INEC_CR_2023_C4
+2023,"57- Accidentes causados por el fuego, corriente eléctrica, radiación, calor y sustancias calientes",col_11,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,col_1,11,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,Menos de,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,1 - 14,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,15 - 64,5,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,65 años,6,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,Ignorada,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,col_7,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,col_8,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,col_9,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,col_10,0,INEC_CR_2023_C4
+2023,58- Secuelas de causas externas de morbilidad y de mortalidad,col_11,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,col_1,3,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,Menos de,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,1 - 14,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,15 - 64,2,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,65 años,1,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,Ignorada,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,col_7,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,col_8,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,col_9,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,col_10,0,INEC_CR_2023_C4
+2023,59 - Drogas y medicamentos que causan efectos adversos en su uso terapéutico,col_11,0,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,col_1,398,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,Menos de,0,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,1 - 14,10,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,15 - 64,351,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,65 años,33,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,Ignorada,4,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,col_7,0,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,col_8,0,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,col_9,0,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,col_10,0,INEC_CR_2023_C4
+2023,60- Suicidios y lesiones autoinflingidas,col_11,0,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_1,849,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,Menos de,1,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,1 - 14,3,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,15 - 64,817,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,65 años,23,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,Ignorada,5,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_7,0,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_8,0,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_9,0,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_10,0,INEC_CR_2023_C4
+2023,61- Homicidios y lesiones infligidas intencionalmente por otra persona,col_11,0,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,col_1,10,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,Menos de,1,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,1 - 14,0,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,15 - 64,7,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,65 años,1,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,Ignorada,1,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,col_7,0,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,col_8,0,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,col_9,0,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,col_10,0,INEC_CR_2023_C4
+2023,62- Eventos de intensión no determinada,col_11,0,INEC_CR_2023_C4

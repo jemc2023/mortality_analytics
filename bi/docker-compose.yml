@@ -1,0 +1,31 @@
+services:
+  superset:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bi-superset
+    ports:
+      - "8088:8088"
+    environment:
+      - SUPERSET_SECRET_KEY=${SUPERSET_SECRET_KEY:-CHANGE_ME_TO_A_RANDOM_SECRET_KEY}
+      - SUPERSET_CONFIG_PATH=/app/superset_config.py
+      - SUPERSET_HOME=/app/superset_home
+    volumes:
+      - ./config/superset_config.py:/app/superset_config.py:ro
+      - superset_data:/app/superset_home
+    networks:
+      - mortality-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+networks:
+  mortality-net:
+    external: true
+
+volumes:
+  superset_data:

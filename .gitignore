@@ -1,0 +1,47 @@
+# Credenciales y secretos
+credentials.json
+token.json
+.env
+*.pem
+*.key
+scripts/ingesta/credentials.json
+scripts/ingesta/token.json
+
+scripts/connectors/.sp_token_cache.bin
+
+
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Datos de sandbox (ignorar contenido, conservar estructura)
+data/sandbox/*
+!data/sandbox/.gitkeep
+
+# Token cache SharePoint
+scripts/ingestion/.sp_token_cache.bin
+
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+site/
+.tmp/
+output/

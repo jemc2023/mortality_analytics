@@ -1,0 +1,337 @@
+year,province,sex,age_group,deaths,source
+2022,Costa Rica,total,Total,28931,INEC_CR_2022_C10
+2022,Costa Rica,total,Menos de 1 año,512,INEC_CR_2022_C10
+2022,Costa Rica,total,1 - 9,112,INEC_CR_2022_C10
+2022,Costa Rica,total,10 - 19,298,INEC_CR_2022_C10
+2022,Costa Rica,total,20 - 29,904,INEC_CR_2022_C10
+2022,Costa Rica,total,30 - 39,1238,INEC_CR_2022_C10
+2022,Costa Rica,total,40 - 49,1538,INEC_CR_2022_C10
+2022,Costa Rica,total,50 - 59,2746,INEC_CR_2022_C10
+2022,Costa Rica,total,60 - 69,4635,INEC_CR_2022_C10
+2022,Costa Rica,total,70 - 79,5983,INEC_CR_2022_C10
+2022,Costa Rica,total,80 años y más,10927,INEC_CR_2022_C10
+2022,Costa Rica,total,Ignorada,38,INEC_CR_2022_C10
+2022,Costa Rica,hombres,Total,16252,INEC_CR_2022_C10
+2022,Costa Rica,hombres,Menos de 1 año,281,INEC_CR_2022_C10
+2022,Costa Rica,hombres,1 - 9,64,INEC_CR_2022_C10
+2022,Costa Rica,hombres,10 - 19,186,INEC_CR_2022_C10
+2022,Costa Rica,hombres,20 - 29,733,INEC_CR_2022_C10
+2022,Costa Rica,hombres,30 - 39,920,INEC_CR_2022_C10
+2022,Costa Rica,hombres,40 - 49,975,INEC_CR_2022_C10
+2022,Costa Rica,hombres,50 - 59,1744,INEC_CR_2022_C10
+2022,Costa Rica,hombres,60 - 69,2827,INEC_CR_2022_C10
+2022,Costa Rica,hombres,70 - 79,3330,INEC_CR_2022_C10
+2022,Costa Rica,hombres,80 años y más,5169,INEC_CR_2022_C10
+2022,Costa Rica,hombres,Ignorada,23,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,Total,12679,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,Menos de 1 año,231,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,1 - 9,48,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,10 - 19,112,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,20 - 29,171,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,30 - 39,318,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,40 - 49,563,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,50 - 59,1002,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,60 - 69,1808,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,70 - 79,2653,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,80 años y más,5758,INEC_CR_2022_C10
+2022,Costa Rica,mujeres,Ignorada,15,INEC_CR_2022_C10
+2022,San José,total,Total,9918,INEC_CR_2022_C10
+2022,San José,total,Menos de 1 año,148,INEC_CR_2022_C10
+2022,San José,total,1 - 9,27,INEC_CR_2022_C10
+2022,San José,total,10 - 19,75,INEC_CR_2022_C10
+2022,San José,total,20 - 29,229,INEC_CR_2022_C10
+2022,San José,total,30 - 39,340,INEC_CR_2022_C10
+2022,San José,total,40 - 49,463,INEC_CR_2022_C10
+2022,San José,total,50 - 59,928,INEC_CR_2022_C10
+2022,San José,total,60 - 69,1587,INEC_CR_2022_C10
+2022,San José,total,70 - 79,2108,INEC_CR_2022_C10
+2022,San José,total,80 años y más,4001,INEC_CR_2022_C10
+2022,San José,total,Ignorada,12,INEC_CR_2022_C10
+2022,San José,hombres,Total,5272,INEC_CR_2022_C10
+2022,San José,hombres,Menos de 1 año,80,INEC_CR_2022_C10
+2022,San José,hombres,1 - 9,14,INEC_CR_2022_C10
+2022,San José,hombres,10 - 19,47,INEC_CR_2022_C10
+2022,San José,hombres,20 - 29,172,INEC_CR_2022_C10
+2022,San José,hombres,30 - 39,249,INEC_CR_2022_C10
+2022,San José,hombres,40 - 49,302,INEC_CR_2022_C10
+2022,San José,hombres,50 - 59,585,INEC_CR_2022_C10
+2022,San José,hombres,60 - 69,960,INEC_CR_2022_C10
+2022,San José,hombres,70 - 79,1115,INEC_CR_2022_C10
+2022,San José,hombres,80 años y más,1739,INEC_CR_2022_C10
+2022,San José,hombres,Ignorada,9,INEC_CR_2022_C10
+2022,San José,mujeres,Total,4646,INEC_CR_2022_C10
+2022,San José,mujeres,Menos de 1 año,68,INEC_CR_2022_C10
+2022,San José,mujeres,1 - 9,13,INEC_CR_2022_C10
+2022,San José,mujeres,10 - 19,28,INEC_CR_2022_C10
+2022,San José,mujeres,20 - 29,57,INEC_CR_2022_C10
+2022,San José,mujeres,30 - 39,91,INEC_CR_2022_C10
+2022,San José,mujeres,40 - 49,161,INEC_CR_2022_C10
+2022,San José,mujeres,50 - 59,343,INEC_CR_2022_C10
+2022,San José,mujeres,60 - 69,627,INEC_CR_2022_C10
+2022,San José,mujeres,70 - 79,993,INEC_CR_2022_C10
+2022,San José,mujeres,80 años y más,2262,INEC_CR_2022_C10
+2022,San José,mujeres,Ignorada,3,INEC_CR_2022_C10
+2022,Alajuela,total,Total,5565,INEC_CR_2022_C10
+2022,Alajuela,total,Menos de 1 año,114,INEC_CR_2022_C10
+2022,Alajuela,total,1 - 9,25,INEC_CR_2022_C10
+2022,Alajuela,total,10 - 19,66,INEC_CR_2022_C10
+2022,Alajuela,total,20 - 29,176,INEC_CR_2022_C10
+2022,Alajuela,total,30 - 39,259,INEC_CR_2022_C10
+2022,Alajuela,total,40 - 49,305,INEC_CR_2022_C10
+2022,Alajuela,total,50 - 59,495,INEC_CR_2022_C10
+2022,Alajuela,total,60 - 69,826,INEC_CR_2022_C10
+2022,Alajuela,total,70 - 79,1154,INEC_CR_2022_C10
+2022,Alajuela,total,80 años y más,2136,INEC_CR_2022_C10
+2022,Alajuela,total,Ignorada,9,INEC_CR_2022_C10
+2022,Alajuela,hombres,Total,3129,INEC_CR_2022_C10
+2022,Alajuela,hombres,Menos de 1 año,67,INEC_CR_2022_C10
+2022,Alajuela,hombres,1 - 9,15,INEC_CR_2022_C10
+2022,Alajuela,hombres,10 - 19,39,INEC_CR_2022_C10
+2022,Alajuela,hombres,20 - 29,147,INEC_CR_2022_C10
+2022,Alajuela,hombres,30 - 39,189,INEC_CR_2022_C10
+2022,Alajuela,hombres,40 - 49,207,INEC_CR_2022_C10
+2022,Alajuela,hombres,50 - 59,320,INEC_CR_2022_C10
+2022,Alajuela,hombres,60 - 69,498,INEC_CR_2022_C10
+2022,Alajuela,hombres,70 - 79,637,INEC_CR_2022_C10
+2022,Alajuela,hombres,80 años y más,1007,INEC_CR_2022_C10
+2022,Alajuela,hombres,Ignorada,3,INEC_CR_2022_C10
+2022,Alajuela,mujeres,Total,2436,INEC_CR_2022_C10
+2022,Alajuela,mujeres,Menos de 1 año,47,INEC_CR_2022_C10
+2022,Alajuela,mujeres,1 - 9,10,INEC_CR_2022_C10
+2022,Alajuela,mujeres,10 - 19,27,INEC_CR_2022_C10
+2022,Alajuela,mujeres,20 - 29,29,INEC_CR_2022_C10
+2022,Alajuela,mujeres,30 - 39,70,INEC_CR_2022_C10
+2022,Alajuela,mujeres,40 - 49,98,INEC_CR_2022_C10
+2022,Alajuela,mujeres,50 - 59,175,INEC_CR_2022_C10
+2022,Alajuela,mujeres,60 - 69,328,INEC_CR_2022_C10
+2022,Alajuela,mujeres,70 - 79,517,INEC_CR_2022_C10
+2022,Alajuela,mujeres,80 años y más,1129,INEC_CR_2022_C10
+2022,Alajuela,mujeres,Ignorada,6,INEC_CR_2022_C10
+2022,Cartago,total,Total,3107,INEC_CR_2022_C10
+2022,Cartago,total,Menos de 1 año,59,INEC_CR_2022_C10
+2022,Cartago,total,1 - 9,10,INEC_CR_2022_C10
+2022,Cartago,total,10 - 19,26,INEC_CR_2022_C10
+2022,Cartago,total,20 - 29,75,INEC_CR_2022_C10
+2022,Cartago,total,30 - 39,112,INEC_CR_2022_C10
+2022,Cartago,total,40 - 49,159,INEC_CR_2022_C10
+2022,Cartago,total,50 - 59,272,INEC_CR_2022_C10
+2022,Cartago,total,60 - 69,529,INEC_CR_2022_C10
+2022,Cartago,total,70 - 79,628,INEC_CR_2022_C10
+2022,Cartago,total,80 años y más,1235,INEC_CR_2022_C10
+2022,Cartago,total,Ignorada,2,INEC_CR_2022_C10
+2022,Cartago,hombres,Total,1715,INEC_CR_2022_C10
+2022,Cartago,hombres,Menos de 1 año,33,INEC_CR_2022_C10
+2022,Cartago,hombres,1 - 9,4,INEC_CR_2022_C10
+2022,Cartago,hombres,10 - 19,14,INEC_CR_2022_C10
+2022,Cartago,hombres,20 - 29,63,INEC_CR_2022_C10
+2022,Cartago,hombres,30 - 39,81,INEC_CR_2022_C10
+2022,Cartago,hombres,40 - 49,91,INEC_CR_2022_C10
+2022,Cartago,hombres,50 - 59,175,INEC_CR_2022_C10
+2022,Cartago,hombres,60 - 69,322,INEC_CR_2022_C10
+2022,Cartago,hombres,70 - 79,346,INEC_CR_2022_C10
+2022,Cartago,hombres,80 años y más,584,INEC_CR_2022_C10
+2022,Cartago,hombres,Ignorada,2,INEC_CR_2022_C10
+2022,Cartago,mujeres,Total,1392,INEC_CR_2022_C10
+2022,Cartago,mujeres,Menos de 1 año,26,INEC_CR_2022_C10
+2022,Cartago,mujeres,1 - 9,6,INEC_CR_2022_C10
+2022,Cartago,mujeres,10 - 19,12,INEC_CR_2022_C10
+2022,Cartago,mujeres,20 - 29,12,INEC_CR_2022_C10
+2022,Cartago,mujeres,30 - 39,31,INEC_CR_2022_C10
+2022,Cartago,mujeres,40 - 49,68,INEC_CR_2022_C10
+2022,Cartago,mujeres,50 - 59,97,INEC_CR_2022_C10
+2022,Cartago,mujeres,60 - 69,207,INEC_CR_2022_C10
+2022,Cartago,mujeres,70 - 79,282,INEC_CR_2022_C10
+2022,Cartago,mujeres,80 años y más,651,INEC_CR_2022_C10
+2022,Cartago,mujeres,Ignorada,0,INEC_CR_2022_C10
+2022,Heredia,total,Total,2794,INEC_CR_2022_C10
+2022,Heredia,total,Menos de 1 año,38,INEC_CR_2022_C10
+2022,Heredia,total,1 - 9,6,INEC_CR_2022_C10
+2022,Heredia,total,10 - 19,20,INEC_CR_2022_C10
+2022,Heredia,total,20 - 29,50,INEC_CR_2022_C10
+2022,Heredia,total,30 - 39,105,INEC_CR_2022_C10
+2022,Heredia,total,40 - 49,133,INEC_CR_2022_C10
+2022,Heredia,total,50 - 59,254,INEC_CR_2022_C10
+2022,Heredia,total,60 - 69,468,INEC_CR_2022_C10
+2022,Heredia,total,70 - 79,593,INEC_CR_2022_C10
+2022,Heredia,total,80 años y más,1123,INEC_CR_2022_C10
+2022,Heredia,total,Ignorada,4,INEC_CR_2022_C10
+2022,Heredia,hombres,Total,1516,INEC_CR_2022_C10
+2022,Heredia,hombres,Menos de 1 año,19,INEC_CR_2022_C10
+2022,Heredia,hombres,1 - 9,5,INEC_CR_2022_C10
+2022,Heredia,hombres,10 - 19,10,INEC_CR_2022_C10
+2022,Heredia,hombres,20 - 29,41,INEC_CR_2022_C10
+2022,Heredia,hombres,30 - 39,71,INEC_CR_2022_C10
+2022,Heredia,hombres,40 - 49,68,INEC_CR_2022_C10
+2022,Heredia,hombres,50 - 59,163,INEC_CR_2022_C10
+2022,Heredia,hombres,60 - 69,287,INEC_CR_2022_C10
+2022,Heredia,hombres,70 - 79,325,INEC_CR_2022_C10
+2022,Heredia,hombres,80 años y más,525,INEC_CR_2022_C10
+2022,Heredia,hombres,Ignorada,2,INEC_CR_2022_C10
+2022,Heredia,mujeres,Total,1278,INEC_CR_2022_C10
+2022,Heredia,mujeres,Menos de 1 año,19,INEC_CR_2022_C10
+2022,Heredia,mujeres,1 - 9,1,INEC_CR_2022_C10
+2022,Heredia,mujeres,10 - 19,10,INEC_CR_2022_C10
+2022,Heredia,mujeres,20 - 29,9,INEC_CR_2022_C10
+2022,Heredia,mujeres,30 - 39,34,INEC_CR_2022_C10
+2022,Heredia,mujeres,40 - 49,65,INEC_CR_2022_C10
+2022,Heredia,mujeres,50 - 59,91,INEC_CR_2022_C10
+2022,Heredia,mujeres,60 - 69,181,INEC_CR_2022_C10
+2022,Heredia,mujeres,70 - 79,268,INEC_CR_2022_C10
+2022,Heredia,mujeres,80 años y más,598,INEC_CR_2022_C10
+2022,Heredia,mujeres,Ignorada,2,INEC_CR_2022_C10
+2022,Guanacaste,total,Total,2428,INEC_CR_2022_C10
+2022,Guanacaste,total,Menos de 1 año,29,INEC_CR_2022_C10
+2022,Guanacaste,total,1 - 9,15,INEC_CR_2022_C10
+2022,Guanacaste,total,10 - 19,23,INEC_CR_2022_C10
+2022,Guanacaste,total,20 - 29,96,INEC_CR_2022_C10
+2022,Guanacaste,total,30 - 39,125,INEC_CR_2022_C10
+2022,Guanacaste,total,40 - 49,152,INEC_CR_2022_C10
+2022,Guanacaste,total,50 - 59,257,INEC_CR_2022_C10
+2022,Guanacaste,total,60 - 69,404,INEC_CR_2022_C10
+2022,Guanacaste,total,70 - 79,472,INEC_CR_2022_C10
+2022,Guanacaste,total,80 años y más,850,INEC_CR_2022_C10
+2022,Guanacaste,total,Ignorada,5,INEC_CR_2022_C10
+2022,Guanacaste,hombres,Total,1444,INEC_CR_2022_C10
+2022,Guanacaste,hombres,Menos de 1 año,15,INEC_CR_2022_C10
+2022,Guanacaste,hombres,1 - 9,7,INEC_CR_2022_C10
+2022,Guanacaste,hombres,10 - 19,14,INEC_CR_2022_C10
+2022,Guanacaste,hombres,20 - 29,82,INEC_CR_2022_C10
+2022,Guanacaste,hombres,30 - 39,95,INEC_CR_2022_C10
+2022,Guanacaste,hombres,40 - 49,100,INEC_CR_2022_C10
+2022,Guanacaste,hombres,50 - 59,159,INEC_CR_2022_C10
+2022,Guanacaste,hombres,60 - 69,265,INEC_CR_2022_C10
+2022,Guanacaste,hombres,70 - 79,271,INEC_CR_2022_C10
+2022,Guanacaste,hombres,80 años y más,432,INEC_CR_2022_C10
+2022,Guanacaste,hombres,Ignorada,4,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,Total,984,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,Menos de 1 año,14,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,1 - 9,8,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,10 - 19,9,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,20 - 29,14,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,30 - 39,30,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,40 - 49,52,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,50 - 59,98,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,60 - 69,139,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,70 - 79,201,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,80 años y más,418,INEC_CR_2022_C10
+2022,Guanacaste,mujeres,Ignorada,1,INEC_CR_2022_C10
+2022,Puntarenas,total,Total,2720,INEC_CR_2022_C10
+2022,Puntarenas,total,Menos de 1 año,62,INEC_CR_2022_C10
+2022,Puntarenas,total,1 - 9,10,INEC_CR_2022_C10
+2022,Puntarenas,total,10 - 19,48,INEC_CR_2022_C10
+2022,Puntarenas,total,20 - 29,125,INEC_CR_2022_C10
+2022,Puntarenas,total,30 - 39,143,INEC_CR_2022_C10
+2022,Puntarenas,total,40 - 49,173,INEC_CR_2022_C10
+2022,Puntarenas,total,50 - 59,275,INEC_CR_2022_C10
+2022,Puntarenas,total,60 - 69,435,INEC_CR_2022_C10
+2022,Puntarenas,total,70 - 79,564,INEC_CR_2022_C10
+2022,Puntarenas,total,80 años y más,884,INEC_CR_2022_C10
+2022,Puntarenas,total,Ignorada,1,INEC_CR_2022_C10
+2022,Puntarenas,hombres,Total,1698,INEC_CR_2022_C10
+2022,Puntarenas,hombres,Menos de 1 año,28,INEC_CR_2022_C10
+2022,Puntarenas,hombres,1 - 9,7,INEC_CR_2022_C10
+2022,Puntarenas,hombres,10 - 19,37,INEC_CR_2022_C10
+2022,Puntarenas,hombres,20 - 29,102,INEC_CR_2022_C10
+2022,Puntarenas,hombres,30 - 39,118,INEC_CR_2022_C10
+2022,Puntarenas,hombres,40 - 49,110,INEC_CR_2022_C10
+2022,Puntarenas,hombres,50 - 59,184,INEC_CR_2022_C10
+2022,Puntarenas,hombres,60 - 69,270,INEC_CR_2022_C10
+2022,Puntarenas,hombres,70 - 79,353,INEC_CR_2022_C10
+2022,Puntarenas,hombres,80 años y más,488,INEC_CR_2022_C10
+2022,Puntarenas,hombres,Ignorada,1,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,Total,1022,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,Menos de 1 año,34,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,1 - 9,3,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,10 - 19,11,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,20 - 29,23,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,30 - 39,25,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,40 - 49,63,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,50 - 59,91,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,60 - 69,165,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,70 - 79,211,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,80 años y más,396,INEC_CR_2022_C10
+2022,Puntarenas,mujeres,Ignorada,0,INEC_CR_2022_C10
+2022,Limón,total,Total,2399,INEC_CR_2022_C10
+2022,Limón,total,Menos de 1 año,62,INEC_CR_2022_C10
+2022,Limón,total,1 - 9,19,INEC_CR_2022_C10
+2022,Limón,total,10 - 19,40,INEC_CR_2022_C10
+2022,Limón,total,20 - 29,153,INEC_CR_2022_C10
+2022,Limón,total,30 - 39,154,INEC_CR_2022_C10
+2022,Limón,total,40 - 49,153,INEC_CR_2022_C10
+2022,Limón,total,50 - 59,265,INEC_CR_2022_C10
+2022,Limón,total,60 - 69,386,INEC_CR_2022_C10
+2022,Limón,total,70 - 79,464,INEC_CR_2022_C10
+2022,Limón,total,80 años y más,698,INEC_CR_2022_C10
+2022,Limón,total,Ignorada,5,INEC_CR_2022_C10
+2022,Limón,hombres,Total,1478,INEC_CR_2022_C10
+2022,Limón,hombres,Menos de 1 año,39,INEC_CR_2022_C10
+2022,Limón,hombres,1 - 9,12,INEC_CR_2022_C10
+2022,Limón,hombres,10 - 19,25,INEC_CR_2022_C10
+2022,Limón,hombres,20 - 29,126,INEC_CR_2022_C10
+2022,Limón,hombres,30 - 39,117,INEC_CR_2022_C10
+2022,Limón,hombres,40 - 49,97,INEC_CR_2022_C10
+2022,Limón,hombres,50 - 59,158,INEC_CR_2022_C10
+2022,Limón,hombres,60 - 69,225,INEC_CR_2022_C10
+2022,Limón,hombres,70 - 79,283,INEC_CR_2022_C10
+2022,Limón,hombres,80 años y más,394,INEC_CR_2022_C10
+2022,Limón,hombres,Ignorada,2,INEC_CR_2022_C10
+2022,Limón,mujeres,Total,921,INEC_CR_2022_C10
+2022,Limón,mujeres,Menos de 1 año,23,INEC_CR_2022_C10
+2022,Limón,mujeres,1 - 9,7,INEC_CR_2022_C10
+2022,Limón,mujeres,10 - 19,15,INEC_CR_2022_C10
+2022,Limón,mujeres,20 - 29,27,INEC_CR_2022_C10
+2022,Limón,mujeres,30 - 39,37,INEC_CR_2022_C10
+2022,Limón,mujeres,40 - 49,56,INEC_CR_2022_C10
+2022,Limón,mujeres,50 - 59,107,INEC_CR_2022_C10
+2022,Limón,mujeres,60 - 69,161,INEC_CR_2022_C10
+2022,Limón,mujeres,70 - 79,181,INEC_CR_2022_C10
+2022,Limón,mujeres,80 años y más,304,INEC_CR_2022_C10
+2022,Limón,mujeres,Ignorada,3,INEC_CR_2022_C10
+2023,Costa Rica,total,Total,29189,INEC_CR_2023_C10
+2023,Costa Rica,total,Grupos de edades,459,INEC_CR_2023_C10
+2023,Costa Rica,hombres,Total,16446,INEC_CR_2023_C10
+2023,Costa Rica,hombres,Grupos de edades,270,INEC_CR_2023_C10
+2023,Costa Rica,mujeres,Total,12743,INEC_CR_2023_C10
+2023,Costa Rica,mujeres,Grupos de edades,189,INEC_CR_2023_C10
+2023,San José,total,Total,9850,INEC_CR_2023_C10
+2023,San José,total,Grupos de edades,116,INEC_CR_2023_C10
+2023,San José,hombres,Total,5258,INEC_CR_2023_C10
+2023,San José,hombres,Grupos de edades,69,INEC_CR_2023_C10
+2023,San José,mujeres,Total,4592,INEC_CR_2023_C10
+2023,San José,mujeres,Grupos de edades,47,INEC_CR_2023_C10
+2023,Alajuela,total,Total,5668,INEC_CR_2023_C10
+2023,Alajuela,total,Grupos de edades,93,INEC_CR_2023_C10
+2023,Alajuela,hombres,Total,3174,INEC_CR_2023_C10
+2023,Alajuela,hombres,Grupos de edades,61,INEC_CR_2023_C10
+2023,Alajuela,mujeres,Total,2494,INEC_CR_2023_C10
+2023,Alajuela,mujeres,Grupos de edades,32,INEC_CR_2023_C10
+2023,Cartago,total,Total,3035,INEC_CR_2023_C10
+2023,Cartago,total,Grupos de edades,54,INEC_CR_2023_C10
+2023,Cartago,hombres,Total,1648,INEC_CR_2023_C10
+2023,Cartago,hombres,Grupos de edades,29,INEC_CR_2023_C10
+2023,Cartago,mujeres,Total,1387,INEC_CR_2023_C10
+2023,Cartago,mujeres,Grupos de edades,25,INEC_CR_2023_C10
+2023,Heredia,total,Total,2784,INEC_CR_2023_C10
+2023,Heredia,total,Grupos de edades,47,INEC_CR_2023_C10
+2023,Heredia,hombres,Total,1529,INEC_CR_2023_C10
+2023,Heredia,hombres,Grupos de edades,31,INEC_CR_2023_C10
+2023,Heredia,mujeres,Total,1255,INEC_CR_2023_C10
+2023,Heredia,mujeres,Grupos de edades,16,INEC_CR_2023_C10
+2023,Guanacaste,total,Total,2530,INEC_CR_2023_C10
+2023,Guanacaste,total,Grupos de edades,33,INEC_CR_2023_C10
+2023,Guanacaste,hombres,Total,1538,INEC_CR_2023_C10
+2023,Guanacaste,hombres,Grupos de edades,16,INEC_CR_2023_C10
+2023,Guanacaste,mujeres,Total,992,INEC_CR_2023_C10
+2023,Guanacaste,mujeres,Grupos de edades,17,INEC_CR_2023_C10
+2023,Puntarenas,total,Total,2846,INEC_CR_2023_C10
+2023,Puntarenas,total,Grupos de edades,64,INEC_CR_2023_C10
+2023,Puntarenas,hombres,Total,1723,INEC_CR_2023_C10
+2023,Puntarenas,hombres,Grupos de edades,36,INEC_CR_2023_C10
+2023,Puntarenas,mujeres,Total,1123,INEC_CR_2023_C10
+2023,Puntarenas,mujeres,Grupos de edades,28,INEC_CR_2023_C10
+2023,Limón,total,Total,2476,INEC_CR_2023_C10
+2023,Limón,total,Grupos de edades,52,INEC_CR_2023_C10
+2023,Limón,hombres,Total,1576,INEC_CR_2023_C10
+2023,Limón,hombres,Grupos de edades,28,INEC_CR_2023_C10
+2023,Limón,mujeres,Total,900,INEC_CR_2023_C10
+2023,Limón,mujeres,Grupos de edades,24,INEC_CR_2023_C10

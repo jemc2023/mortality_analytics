@@ -1,0 +1,6 @@
+FROM apache/superset:latest
+
+USER root
+RUN pip install psycopg2-binary && \
+    cp -r /usr/local/lib/python3.10/site-packages/psycopg2* /app/.venv/lib/python3.10/site-packages/
+USER superset
