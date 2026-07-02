@@ -1,0 +1,2216 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+        <link rel="prev" href="../source-to-target-mapping/">
+      
+      
+        <link rel="next" href="../administraci%C3%B3n/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Gobernanza de Datos - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gobernanza-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gobernanza de Datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../fuentes/" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../administraci%C3%B3n/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#catalogo-de-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catálogo de Metadatos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catálogo de Metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-por-capa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento por capa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-anonimizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan de Anonimización
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de Anonimización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marco-regulatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marco regulatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrategia aplicada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justificacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificación técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-sensibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de sensibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnicas-aplicadas-ine-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Técnicas aplicadas — INE Guatemala
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correspondencia-con-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correspondencia con notebooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-eu-data-act-aplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios EU Data Act aplicados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compromisos-por-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compromisos por fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones de Limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decisiones de Limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ine-guatemala-sandboxraw_ine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INE Guatemala — sandbox.raw_ine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ihme-gbd-2023-sandboxraw_ihme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IHME GBD 2023 — sandbox.raw_ihme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mspas-guatemala-sandboxraw_mspas_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSPAS Guatemala — sandbox.raw_mspas_*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panama-inec-sandboxraw_panama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panamá INEC — sandbox.raw_panama*
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionario-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diccionario de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diccionario de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_ine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_ine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_ihme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_ihme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_mspas_exceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_mspas_exceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_panama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_panama
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glosario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administraci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#catalogo-de-metadatos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catálogo de Metadatos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Catálogo de Metadatos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#almacenamiento-por-capa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Almacenamiento por capa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plan-de-anonimizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan de Anonimización
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plan de Anonimización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marco-regulatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marco regulatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estrategia aplicada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#justificacion-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificación técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-sensibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de sensibilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnicas-aplicadas-ine-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Técnicas aplicadas — INE Guatemala
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correspondencia-con-notebooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Correspondencia con notebooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-eu-data-act-aplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios EU Data Act aplicados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compromisos-por-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compromisos por fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones de Limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Decisiones de Limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ine-guatemala-sandboxraw_ine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INE Guatemala — sandbox.raw_ine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ihme-gbd-2023-sandboxraw_ihme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IHME GBD 2023 — sandbox.raw_ihme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mspas-guatemala-sandboxraw_mspas_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSPAS Guatemala — sandbox.raw_mspas_*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#panama-inec-sandboxraw_panama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panamá INEC — sandbox.raw_panama*
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diccionario-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diccionario de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diccionario de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_ine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_ine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_ihme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_ihme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_mspas_exceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_mspas_exceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sandboxraw_panama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sandbox.raw_panama
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#glosario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gobernanza-de-datos">Gobernanza de Datos</h1>
+<blockquote>
+<p>Fuente de verdad operacional: las fuentes, reglas de limpieza y niveles de agregación descritos aquí corresponden a los procesos implementados en <code>notebooks/</code>.</p>
+</blockquote>
+<hr />
+<h2 id="catalogo-de-metadatos">Catálogo de Metadatos</h2>
+<p>Inventario de todos los conjuntos de datos del proyecto con sus atributos de origen, cobertura y clasificación.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Fuente</th>
+<th>Publicador</th>
+<th>Licencia</th>
+<th>Tipo</th>
+<th>Sensibilidad</th>
+<th>Tabla Delta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DS-01</td>
+<td>INE Guatemala — defunciones</td>
+<td>INE GT</td>
+<td>Datos abiertos</td>
+<td>Microdato</td>
+<td>Alta</td>
+<td><code>sandbox.raw_ine</code></td>
+</tr>
+<tr>
+<td>DS-02</td>
+<td>MSPAS — estadísticas vitales</td>
+<td>MSPAS GT</td>
+<td>Datos abiertos</td>
+<td>Agregado</td>
+<td>Baja</td>
+<td><code>sandbox.raw_mspas_*</code></td>
+</tr>
+<tr>
+<td>DS-03</td>
+<td>IHME GBD 2023</td>
+<td>IHME / U. Washington</td>
+<td>No comercial</td>
+<td>Estimación</td>
+<td>Baja</td>
+<td><code>sandbox.raw_ihme</code></td>
+</tr>
+<tr>
+<td>DS-04</td>
+<td>Panamá INEC</td>
+<td>INEC Panamá</td>
+<td>Datos abiertos</td>
+<td>Agregado</td>
+<td>Baja</td>
+<td><code>sandbox.raw_panama*</code></td>
+</tr>
+<tr>
+<td>DS-05</td>
+<td>WHO Mortality DB</td>
+<td>OMS</td>
+<td>CC BY-NC-SA 3.0 IGO</td>
+<td>Agregado</td>
+<td>Baja</td>
+<td><code>sandbox.raw_who_mortality_*</code></td>
+</tr>
+<tr>
+<td>DS-06</td>
+<td>PAHO Core Indicators</td>
+<td>OPS</td>
+<td>CC BY</td>
+<td>Indicadores</td>
+<td>Baja</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>DS-07</td>
+<td>INEC Costa Rica</td>
+<td>INEC CR</td>
+<td>Uso público (PAD5)</td>
+<td>Microdato</td>
+<td>Media</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>DS-08</td>
+<td>RENAP Guatemala</td>
+<td>RENAP GT</td>
+<td>Solicitud formal</td>
+<td>Microdato</td>
+<td>Alta (potencial)</td>
+<td>Pendiente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="almacenamiento-por-capa">Almacenamiento por capa</h3>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Tecnología</th>
+<th>Ubicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Archivos GT/INE</td>
+<td>Google Drive</td>
+<td><code>semis2_raw_data/ine/</code></td>
+</tr>
+<tr>
+<td>Archivos Panamá</td>
+<td>OneDrive</td>
+<td><code>semi2-mortalidad/panama/</code></td>
+</tr>
+<tr>
+<td>Archivos WHO</td>
+<td>nginx (DevTunnel)</td>
+<td>Servidor local</td>
+</tr>
+<tr>
+<td>Objetos S3</td>
+<td>AWS S3</td>
+<td><code>s3://mortality-analytics-semi2/raw/</code></td>
+</tr>
+<tr>
+<td>Base relacional</td>
+<td>RDS PostgreSQL</td>
+<td>Schema <code>raw_data</code>, DB <code>mortality_dw</code></td>
+</tr>
+<tr>
+<td>Data Lake</td>
+<td>Databricks Delta Lake</td>
+<td>Schema <code>sandbox.*</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="plan-de-anonimizacion">Plan de Anonimización</h2>
+<h3 id="marco-regulatorio">Marco regulatorio</h3>
+<p>El proyecto opera en contexto académico con datos de salud pública. Para la fase de ingesta y publicación interna en Sandbox, la referencia principal es el <strong>EU Data Act (Reglamento UE 2023/2854)</strong> en cuanto a interoperabilidad, portabilidad y minimización del tratamiento, complementado por los principios generales de manejo ético de datos sensibles aplicables al proyecto.</p>
+<p>Las fuentes incorporadas en <code>notebooks/</code> no exponen identificadores directos de las personas fallecidas (nombre, documento, contacto o equivalentes). En consecuencia, no fue necesario diseñar un proceso de anonimización primaria complejo; sí fue necesario aplicar controles de minimización, validación y agregación según la granularidad de cada fuente.</p>
+<h3 id="estrategia-aplicada">Estrategia aplicada</h3>
+<p>La política documental del proyecto se resume en los siguientes principios:</p>
+<ol>
+<li><strong>Conservar únicamente variables necesarias</strong> para el análisis de mortalidad.</li>
+<li><strong>Validar y normalizar</strong> las variables sensibles o cuasi-identificadoras cuando la fuente fuese de mayor granularidad.</li>
+<li><strong>Mantener el nivel de agregación original</strong> cuando el proveedor ya publicara datos agregados.</li>
+<li><strong>Reducir el riesgo de reidentificación</strong> mediante supresión de columnas accesorias, generalización de edad y normalización de categorías atípicas.</li>
+</ol>
+<h3 id="justificacion-tecnica">Justificación técnica</h3>
+<p>No fue necesario aplicar anonimización adicional sobre el material cargado porque las fuentes consultadas ya venían publicadas en formato anonimizado o agregado:</p>
+<ul>
+<li><strong>INE Guatemala</strong>: microdatos sin identificadores directos; el notebook aplica supresión de columnas accesorias y generalización/validación de atributos sensibles.</li>
+<li><strong>MSPAS Guatemala</strong>: tablas agregadas desde origen, sin nivel individual de registro.</li>
+<li><strong>IHME GBD 2023</strong>: estimaciones agregadas por país, sexo, edad y causa.</li>
+<li><strong>Panamá INEC</strong>: estadísticas ya agregadas por causa, sexo, edad, provincia y otras dimensiones.</li>
+<li><strong>WHO Mortality Database</strong>: datos consolidados y agregados por país y causa.</li>
+</ul>
+<p>Por tanto, el tratamiento ejecutado por el proyecto se limitó a <strong>minimización de datos, normalización de esquemas, validación de dominios y control de calidad</strong>, sin incorporar datos nominales ni identificadores directos en ninguna fase de Sandbox.</p>
+<h3 id="clasificacion-de-sensibilidad">Clasificación de sensibilidad</h3>
+<p>La sensibilidad se evalúa por el riesgo de re-identificación, no por la presencia de PII directa.</p>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Sensibilidad</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INE Guatemala</td>
+<td>Media</td>
+<td>No contiene identificadores directos; el riesgo residual proviene de cuasi-identificadores y se mitiga con supresión y generalización</td>
+</tr>
+<tr>
+<td>MSPAS, IHME, Panamá INEC, WHO</td>
+<td>Baja</td>
+<td>Datos agregados en origen; no existe exposición individual</td>
+</tr>
+<tr>
+<td>INEC Costa Rica</td>
+<td>Media</td>
+<td>PAD5 ya aplica supresión; riesgo residual bajo</td>
+</tr>
+<tr>
+<td>RENAP</td>
+<td>Alta (potencial)</td>
+<td>Si se incorpora microdato, debe anonimizarse antes de ingesta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tecnicas-aplicadas-ine-guatemala">Técnicas aplicadas — INE Guatemala</h3>
+<p><strong>Supresión de columnas.</strong> Se eliminan en la ingesta:</p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Razón</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Puedif</code> (etnia)</td>
+<td>Quasi-identificador de alto riesgo combinado con municipio pequeño</td>
+</tr>
+<tr>
+<td><code>Pnadif</code>, <code>Dnadif</code>, <code>Mnadif</code> (lugar de nacimiento)</td>
+<td>Sin valor analítico para el proyecto</td>
+</tr>
+<tr>
+<td><code>Cerdef</code> (certificador)</td>
+<td>Sin valor analítico</td>
+</tr>
+<tr>
+<td><code>Mredof</code> (municipio residencia duplicado)</td>
+<td>Campo redundante</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Generalización de edad.</strong> Edades en meses → <code>0</code> años. Valores fuera de <code>[0, 120]</code> → <code>null</code>.</p>
+<p><strong>Validación de causa.</strong> Solo se conservan códigos CIE-10 con formato válido. Texto libre o códigos malformados → <code>null</code>, evitando que funcionen como identificador indirecto.</p>
+<p><strong>Generalización de desconocidos.</strong> <code>"Ignorado"</code> y vacíos → categorías genéricas (<code>"Desconocido"</code>, <code>"No Especificado"</code>), reduciendo la singularidad de registros.</p>
+<p><strong>Riesgo residual.</strong> El vector más probable es la combinación de municipio pequeño + causa rara + grupo etario + sexo. Para Fase 2 se aplicará supresión de celdas con menos de 5 registros en las tablas de análisis. Las visualizaciones BI mostrarán solo agregados por departamento, no por municipio.</p>
+<h3 id="correspondencia-con-notebooks">Correspondencia con notebooks</h3>
+<table>
+<thead>
+<tr>
+<th>Notebook</th>
+<th>Fuente</th>
+<th>Tratamiento relevante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>notebooks/gdrive_ine_guatemala_ingest.py</code></td>
+<td>INE Guatemala</td>
+<td>Renombrado de campos, validación de CIE-10, supresión de columnas accesorias, normalización de valores desconocidos y generalización de edad</td>
+</tr>
+<tr>
+<td><code>notebooks/rds_mspas_guatemala_ingest.py</code></td>
+<td>MSPAS Guatemala</td>
+<td>Lectura JDBC, normalización de nombres, estandarización de años y deduplicación</td>
+</tr>
+<tr>
+<td><code>notebooks/s3_ihme_gbd_ingest.py</code></td>
+<td>IHME GBD 2023</td>
+<td>Conversión de tipos, normalización semántica de categorías, exclusión de nulos y deduplicación</td>
+</tr>
+<tr>
+<td><code>notebooks/onedrive_panama_inec_ingest.py</code></td>
+<td>Panamá INEC</td>
+<td>Normalización de columnas, validación de códigos CIE-10, estandarización de sexo/año y deduplicación</td>
+</tr>
+<tr>
+<td><code>notebooks/gdrive_sandbox_ingest.py</code></td>
+<td>Consolidación Sandbox</td>
+<td>Reutilización de la misma política de normalización y control de calidad para aterrizaje en Sandbox</td>
+</tr>
+</tbody>
+</table>
+<h3 id="principios-eu-data-act-aplicados">Principios EU Data Act aplicados</h3>
+<table>
+<thead>
+<tr>
+<th>Principio</th>
+<th>Implementación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Portabilidad</td>
+<td>Delta Lake con esquemas versionados, exportable en Parquet/CSV</td>
+</tr>
+<tr>
+<td>Interoperabilidad</td>
+<td>CIE-10, ISO 3166, grupos etarios WHO</td>
+</tr>
+<tr>
+<td>Minimización de datos</td>
+<td>Solo se ingesan columnas necesarias para el análisis</td>
+</tr>
+<tr>
+<td>Transparencia</td>
+<td>Este documento y el diccionario de datos cubren el linaje completo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compromisos-por-fuente">Compromisos por fuente</h3>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Restricción</th>
+<th>Compromiso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IHME GBD 2023</td>
+<td>Licencia no comercial</td>
+<td>Uso exclusivamente académico</td>
+</tr>
+<tr>
+<td>WHO Mortality DB</td>
+<td>CC BY-NC-SA 3.0 IGO</td>
+<td>Atribución obligatoria en publicaciones</td>
+</tr>
+<tr>
+<td>RENAP</td>
+<td>Solicitud bajo Ley 57-2008</td>
+<td>Si se recibe microdato individual, anonimizar antes de ingesta</td>
+</tr>
+<tr>
+<td>INEC Costa Rica</td>
+<td>PAD5 uso público</td>
+<td>No redistribuir archivos brutos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="decisiones-de-limpieza">Decisiones de Limpieza</h2>
+<p>Registro de decisiones tomadas durante la ingesta (Raw → Sandbox).</p>
+<h3 id="ine-guatemala-sandboxraw_ine">INE Guatemala — <code>sandbox.raw_ine</code></h3>
+<p><strong>Valores nulos en columnas categóricas</strong></p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Valor de relleno</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>escolaridad</code></td>
+<td><code>"No Especificado"</code></td>
+<td>Coincide semánticamente con los valores existentes del campo</td>
+</tr>
+<tr>
+<td><code>sexo</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Campo no registrado en el acta</td>
+</tr>
+<tr>
+<td><code>estado_civil</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Campo no registrado</td>
+</tr>
+<tr>
+<td><code>nacionalidad</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Campo no registrado</td>
+</tr>
+<tr>
+<td><code>periodo_edad</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Rango etario no registrado</td>
+</tr>
+<tr>
+<td><code>dep_registro</code>, <code>mun_registro</code>, <code>mes_registro</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Lugar de registro no disponible</td>
+</tr>
+<tr>
+<td><code>dep_ocurrencia</code>, <code>mun_ocurrencia</code>, <code>area_geografica</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Lugar de ocurrencia no disponible</td>
+</tr>
+<tr>
+<td><code>lugar_defuncion</code>, <code>mes_ocurrencia</code></td>
+<td><code>"Desconocido"</code></td>
+<td>No registrado</td>
+</tr>
+<tr>
+<td><code>dep_residencia</code>, <code>mun_residencia</code>, <code>lugar_residencia</code></td>
+<td><code>"Desconocido"</code></td>
+<td>Frecuente en extranjeros o registros rurales incompletos</td>
+</tr>
+<tr>
+<td><code>asistencia_medica</code>, <code>tipo_ocurrencia</code></td>
+<td><code>"Desconocido"</code></td>
+<td>No registrado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Columnas que se mantienen en <code>null</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Razón</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>edad</code></td>
+<td>Numérico — <code>null</code> es la representación correcta de edad desconocida; imputar sesgaría distribuciones</td>
+</tr>
+<tr>
+<td><code>dia_ocurrencia</code></td>
+<td>Numérico — día no registrado</td>
+</tr>
+<tr>
+<td><code>anio_ocurrencia</code>, <code>anio_registro</code></td>
+<td>Numérico — año no registrado</td>
+</tr>
+<tr>
+<td><code>mes_ocurrencia_num</code></td>
+<td>Derivado de <code>mes_ocurrencia</code>; si el origen es nulo, el derivado también lo es</td>
+</tr>
+<tr>
+<td><code>causa_cie10</code></td>
+<td><code>null</code> significa código ausente o inválido — semántica propia para análisis de causas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Otras transformaciones</strong></p>
+<ul>
+<li><code>"Ignorado"</code> → <code>null</code> antes del relleno categórico.</li>
+<li>CIE-10: solo formato <code>^[A-Z][0-9]{2}[0-9A-Z]?$</code>; el resto → <code>null</code>.</li>
+<li>Edad en meses → <code>0</code>. Edades fuera de <code>[0, 120]</code> → <code>null</code>.</li>
+<li>Columnas eliminadas: <code>Puedif</code>, <code>Pnadif</code>, <code>Dnadif</code>, <code>Mnadif</code>, <code>Cerdef</code>, <code>Mredof</code>.</li>
+<li><code>dropDuplicates()</code> al final.</li>
+</ul>
+<h3 id="ihme-gbd-2023-sandboxraw_ihme">IHME GBD 2023 — <code>sandbox.raw_ihme</code></h3>
+<ul>
+<li>Columnas renombradas al español (ver <a href="../pipelines/">Pipelines</a>).</li>
+<li><code>Both/Male/Female → Ambos/Hombre/Mujer</code>; <code>Number/Rate/Percent → Número/Tasa/Porcentaje</code>.</li>
+<li><code>valor</code> negativo → <code>null</code> (fila se conserva).</li>
+<li><code>limite_superior</code>, <code>limite_inferior</code> pueden ser <code>null</code> si IHME no los reporta para cierta métrica.</li>
+<li><code>dropna</code> sobre <code>pais</code>, <code>causa</code>, <code>anio</code>, <code>valor</code>.</li>
+<li><code>dropDuplicates()</code>.</li>
+</ul>
+<h3 id="mspas-guatemala-sandboxraw_mspas_">MSPAS Guatemala — <code>sandbox.raw_mspas_*</code></h3>
+<p>Tres tablas separadas porque tienen esquemas distintos; unirlas generaría nulls estructurales que no representan datos faltantes.</p>
+<ul>
+<li>Nombres de columnas normalizados a snake_case.</li>
+<li><code>year → anio</code>.</li>
+<li><code>"Ignorado"</code> en todas sus variantes → <code>null</code>.</li>
+<li>Años fuera de 2000–2030 → <code>null</code>.</li>
+<li><code>dropDuplicates()</code>.</li>
+</ul>
+<h3 id="panama-inec-sandboxraw_panama">Panamá INEC — <code>sandbox.raw_panama*</code></h3>
+<ul>
+<li>Nombres de columnas normalizados con <code>_norm_col</code> (Unicode, snake_case, prefijo <code>edad_</code> si empieza con dígito).</li>
+<li><code>"-"</code>, <code>".."</code>, <code>"Ignorado"</code> → <code>null</code>.</li>
+<li><code>causa_codigo</code> validado contra <code>^\d{3}(-\d{3})?$</code>.</li>
+<li><code>sexo</code> solo acepta <code>"Total"</code>, <code>"Hombres"</code>, <code>"Mujeres"</code>.</li>
+<li>Años fuera de 2000–2030 → <code>null</code>.</li>
+<li>Columnas categóricas → <code>"Desconocido"</code>. Numéricas se mantienen en <code>null</code>.</li>
+<li><code>dropDuplicates()</code>.</li>
+</ul>
+<hr />
+<h2 id="diccionario-de-datos">Diccionario de Datos</h2>
+<h3 id="sandboxraw_ine"><code>sandbox.raw_ine</code></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dep_registro</code></td>
+<td>String</td>
+<td>Departamento de inscripción de la defunción</td>
+</tr>
+<tr>
+<td><code>mun_registro</code></td>
+<td>String</td>
+<td>Municipio de inscripción</td>
+</tr>
+<tr>
+<td><code>mes_registro</code></td>
+<td>String</td>
+<td>Mes de inscripción</td>
+</tr>
+<tr>
+<td><code>anio_registro</code></td>
+<td>String</td>
+<td>Año de inscripción</td>
+</tr>
+<tr>
+<td><code>dep_ocurrencia</code></td>
+<td>String</td>
+<td>Departamento donde ocurrió la muerte</td>
+</tr>
+<tr>
+<td><code>mun_ocurrencia</code></td>
+<td>String</td>
+<td>Municipio de ocurrencia</td>
+</tr>
+<tr>
+<td><code>area_geografica</code></td>
+<td>String</td>
+<td>Área urbana o rural</td>
+</tr>
+<tr>
+<td><code>sexo</code></td>
+<td>String</td>
+<td>Sexo del fallecido</td>
+</tr>
+<tr>
+<td><code>dia_ocurrencia</code></td>
+<td>Integer</td>
+<td>Día de ocurrencia (null si no registrado)</td>
+</tr>
+<tr>
+<td><code>mes_ocurrencia</code></td>
+<td>String</td>
+<td>Mes de ocurrencia (nombre)</td>
+</tr>
+<tr>
+<td><code>mes_ocurrencia_num</code></td>
+<td>Integer</td>
+<td>Mes de ocurrencia (1–12)</td>
+</tr>
+<tr>
+<td><code>anio_ocurrencia</code></td>
+<td>Integer</td>
+<td>Año de ocurrencia</td>
+</tr>
+<tr>
+<td><code>edad</code></td>
+<td>Integer</td>
+<td>Edad en años (0 si menor de un año; null si desconocida)</td>
+</tr>
+<tr>
+<td><code>periodo_edad</code></td>
+<td>String</td>
+<td>Unidad de la edad (años, meses, días)</td>
+</tr>
+<tr>
+<td><code>estado_civil</code></td>
+<td>String</td>
+<td>Estado civil</td>
+</tr>
+<tr>
+<td><code>escolaridad</code></td>
+<td>String</td>
+<td>Nivel de escolaridad</td>
+</tr>
+<tr>
+<td><code>lugar_defuncion</code></td>
+<td>String</td>
+<td>Tipo de lugar (hospital, domicilio, vía pública, etc.)</td>
+</tr>
+<tr>
+<td><code>nacionalidad</code></td>
+<td>String</td>
+<td>Nacionalidad</td>
+</tr>
+<tr>
+<td><code>dep_residencia</code></td>
+<td>String</td>
+<td>Departamento de residencia habitual</td>
+</tr>
+<tr>
+<td><code>mun_residencia</code></td>
+<td>String</td>
+<td>Municipio de residencia habitual</td>
+</tr>
+<tr>
+<td><code>lugar_residencia</code></td>
+<td>String</td>
+<td>Descripción del lugar de residencia</td>
+</tr>
+<tr>
+<td><code>causa_cie10</code></td>
+<td>String</td>
+<td>Código CIE-10 de la causa básica de muerte</td>
+</tr>
+<tr>
+<td><code>asistencia_medica</code></td>
+<td>String</td>
+<td>Tipo de asistencia recibida antes del fallecimiento</td>
+</tr>
+<tr>
+<td><code>tipo_ocurrencia</code></td>
+<td>String</td>
+<td>Tipo de ocurrencia (natural, accidental, etc.)</td>
+</tr>
+<tr>
+<td><code>anio</code></td>
+<td>Integer</td>
+<td>Año del archivo de origen (clave de partición)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sandboxraw_ihme"><code>sandbox.raw_ihme</code></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grupo_poblacion</code></td>
+<td>String</td>
+<td>Grupo de población analizado</td>
+</tr>
+<tr>
+<td><code>medida</code></td>
+<td>String</td>
+<td>Tipo de medida (Deaths, DALYs)</td>
+</tr>
+<tr>
+<td><code>pais</code></td>
+<td>String</td>
+<td>País</td>
+</tr>
+<tr>
+<td><code>sexo</code></td>
+<td>String</td>
+<td>Sexo (Hombre / Mujer / Ambos)</td>
+</tr>
+<tr>
+<td><code>grupo_edad</code></td>
+<td>String</td>
+<td>Grupo etario</td>
+</tr>
+<tr>
+<td><code>causa</code></td>
+<td>String</td>
+<td>Causa de muerte</td>
+</tr>
+<tr>
+<td><code>metrica</code></td>
+<td>String</td>
+<td>Métrica (Número / Tasa / Porcentaje)</td>
+</tr>
+<tr>
+<td><code>anio</code></td>
+<td>Integer</td>
+<td>Año</td>
+</tr>
+<tr>
+<td><code>valor</code></td>
+<td>Double</td>
+<td>Valor estimado</td>
+</tr>
+<tr>
+<td><code>limite_superior</code></td>
+<td>Double</td>
+<td>Intervalo de confianza superior</td>
+</tr>
+<tr>
+<td><code>limite_inferior</code></td>
+<td>Double</td>
+<td>Intervalo de confianza inferior</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sandboxraw_mspas_exceso"><code>sandbox.raw_mspas_exceso</code></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>group</code></td>
+<td>String</td>
+<td>Grupo de análisis</td>
+</tr>
+<tr>
+<td><code>observed_deaths</code></td>
+<td>Integer</td>
+<td>Defunciones observadas</td>
+</tr>
+<tr>
+<td><code>expected_deaths</code></td>
+<td>Double</td>
+<td>Defunciones esperadas según tendencia histórica</td>
+</tr>
+<tr>
+<td><code>excess_deaths</code></td>
+<td>Double</td>
+<td>Defunciones en exceso</td>
+</tr>
+<tr>
+<td><code>excess_pct</code></td>
+<td>Double</td>
+<td>Porcentaje de exceso</td>
+</tr>
+<tr>
+<td><code>anio</code></td>
+<td>Integer</td>
+<td>Año</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sandboxraw_panama"><code>sandbox.raw_panama</code></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>anio</code></td>
+<td>Integer</td>
+<td>Año</td>
+</tr>
+<tr>
+<td><code>tabla</code></td>
+<td>String</td>
+<td>Tipo de estadística de origen</td>
+</tr>
+<tr>
+<td><code>causa_codigo</code></td>
+<td>String</td>
+<td>Código INEC de la causa (formato <code>\d{3}(-\d{3})?</code>)</td>
+</tr>
+<tr>
+<td><code>causa</code></td>
+<td>String</td>
+<td>Descripción de la causa</td>
+</tr>
+<tr>
+<td><code>sexo</code></td>
+<td>String</td>
+<td>Total / Hombres / Mujeres</td>
+</tr>
+<tr>
+<td><code>grupo_edad</code></td>
+<td>String</td>
+<td>Grupo etario</td>
+</tr>
+<tr>
+<td><code>provincia</code></td>
+<td>String</td>
+<td>Provincia de Panamá</td>
+</tr>
+<tr>
+<td><code>estado_civil</code></td>
+<td>String</td>
+<td>Estado civil</td>
+</tr>
+<tr>
+<td><code>defunciones</code></td>
+<td>Integer</td>
+<td>Número de defunciones</td>
+</tr>
+<tr>
+<td><code>fuente</code></td>
+<td>String</td>
+<td>Nombre del archivo CSV de origen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="glosario">Glosario</h3>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CIE-10</td>
+<td>Clasificación Internacional de Enfermedades, décima revisión. Sistema estándar de codificación de causas de muerte.</td>
+</tr>
+<tr>
+<td>Microdato</td>
+<td>Registro a nivel individual: una fila = una defunción.</td>
+</tr>
+<tr>
+<td>Sandbox</td>
+<td>Capa de aterrizaje de datos crudos en Delta Lake. Preserva el dato sin transformaciones destructivas.</td>
+</tr>
+<tr>
+<td>Stage</td>
+<td>Capa de datos limpios y estandarizados (Fase 2).</td>
+</tr>
+<tr>
+<td>Exceso de mortalidad</td>
+<td>Diferencia entre defunciones observadas y las esperadas según tendencia histórica. Metodología para estimar el impacto real del COVID-19.</td>
+</tr>
+<tr>
+<td>Período pre-COVID</td>
+<td>2015–2019 (antes del primer caso en Guatemala, marzo 2020).</td>
+</tr>
+<tr>
+<td>Período post-COVID</td>
+<td>2020 en adelante.</td>
+</tr>
+<tr>
+<td>SIGSA</td>
+<td>Sistema de Información Gerencial de Salud (MSPAS).</td>
+</tr>
+<tr>
+<td>RENAP</td>
+<td>Registro Nacional de las Personas — fuente primaria de actas de defunción.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notas">Notas</h3>
+<p>Nota de cobertura: el período objetivo del proyecto es 2015–2024. Algunas fuentes externas no publican todo el período; en particular, WHO Mortality Database para Guatemala no tenía datos disponibles para 2023 ni 2024 en la página consultada, por lo que su cobertura queda limitada a 2015–2022.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

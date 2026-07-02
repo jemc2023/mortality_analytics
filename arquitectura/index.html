@@ -1,0 +1,1092 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../fuentes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Arquitectura - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arquitectura-del-sistema" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arquitectura
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fuentes/" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../administraci%C3%B3n/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de despliegue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelado-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelado de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelado de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fact-Dimensions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fact-Dimensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cubos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cubos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones de arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administraci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descripción General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagrama de despliegue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelado-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelado de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelado de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fact-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fact-Dimensions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fact-Dimensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cubos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cubos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisiones de arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="arquitectura-del-sistema">Arquitectura del Sistema</h1>
+<h2 id="descripcion-general">Descripción General</h2>
+<p>Para dar una solución a los requerimientos del proyecto, se ha optado por tomar una arquitectura híbrida, que pueda interoperar infraestructura on-premise y en la nube, utilizando tecnologías como databricks, Azure, Power BI, Greenplum, Apache Superset entre otras. Esta arquitectura permite aprovechar las ventajas de ambas infraestructuras, como la escalabilidad y flexibilidad de la nube, así como la seguridad y control que ofrece la infraestructura on-premise.</p>
+<p>De igual forma, esta arquitectura será iterativa, por lo que se irá ajustando y mejorando a medida que se avance en el desarrollo del proyecto, permitiendo así adaptarse a los cambios y nuevas necesidades que puedan surgir durante el proceso.</p>
+<p>En este momento, ya se ha consolidado toda la arquitectura como tal, y se ha definido un diagrama de arquitectura de solución que representa los diferentes componentes del sistema y su interacción entre ellos. Este diagrama es fundamental para entender cómo se integran las diferentes partes del sistema y cómo se gestionan los datos a lo largo de todo el proceso.</p>
+<p><img alt="Diagrama de Arquitectura de Solución" src="../img/SolutionArchitectureDiagram.jpeg" /></p>
+<p>Actualmente, se ha empezado el desarrollo de la parte de extracción y almacenamiento de datos, utilizando databricks como herramienta principal para llevar a cabo esta tarea. Como bien se sabe, databricks debe operarse sobre una infraestructura, y en este caso se ha optado por utilizar Azure como plataforma de nube para alojar databricks y aprovechar sus servicios asociados.</p>
+<p>Por otra parte, se ha optado por utilizar fuentes heterogéneas para la extracción de datos, como lo son SharePoint, Google Drive, AWS S3, AWS RDS y un web server en local con Nginx. Esto se debe a que se busca tener una solución flexible y adaptable a diferentes fuentes de datos, permitiendo así integrar información de diversas plataformas y sistemas.</p>
+<p>El Sandbox que servirá tanto para manipular data que se redirigirá al data warehouse tanto local como en la nube, estará gestionado por databricks, no se plantea replicarlo en local, ya que, se consideraría redundancia y almacenamiento innecesario. Por su parte, el stage será el lugar donde se procesarán y transformarán los datos para luego ser cargados al data warehouse, que como los requerimientos lo han planteado, tendría que gestionarse de manera inteoperable e híbrida un data warehouse en la nube y otro local, para así aprovechar las ventajas de ambas infraestructuras y garantizar la disponibilidad y accesibilidad de los datos para su análisis y consulta.</p>
+<p>Para suplir la necesidad del data warehouse local, se ha optado por utilizar Greenplum, el cual es un exelente sistema de gestión de bases de datos relacional orientado a la analítica y el procesamiento de grandes volúmenes de datos. Este mismo, se da a la tarea de ir a traer la data ya procesada y almacenada en la cpaa gold, para luego ser consultada y analizada de manera eficiente. Además, Greenplum es compatible con SQL, lo que facilita la consulta y análisis de los datos almacenados en el data warehouse local.</p>
+<p>Ahora bien , para la visualización de los datos, se ha optado por utilizar herramientas como Power BI y Apache Superset, las cuales permiten crear dashboards interactivos y visualizaciones de datos de manera sencilla y eficiente. Estas herramientas se integran con el data warehouse en la nube y el data warehouse local, permitiendo así acceder a los datos desde ambos entornos y generar informes y análisis de manera rápida y efectiva.</p>
+<p>Finalmente, para almacenar todos aquellos outputs y componentes necesarios para llevar a cabo la implementación de Machine Learning, se ha optado por utilizar en AWS un bucket de S3. Este bucket se utilizará para almacenar los modelos entrenados, los resultados de las predicciones y cualquier otro componente necesario para llevar a cabo la implementación de Machine Learning, permitiendo así tener un repositorio centralizado y accesible desde diferentes entornos y herramientas.</p>
+<h2 id="diagrama-de-despliegue">Diagrama de despliegue</h2>
+<p><img alt="Diagrama de Despliegue" src="../img/Deploymendiagram.jpeg" /></p>
+<p>Como se puede observar en el diagrama de despliegue, el sistema está compuesto por varios componentes que interactúan entre sí para cumplir con los requerimientos del proyecto. En primer lugar, se encuentran las fuentes de datos heterogéneas, cada uno representado por un nodo distinto, los cuales, se comunican con databricks a través de diferentes protocolos. Mientras tanto, databricks en sí, su arquitectura es una de tipo distribuida, la cual se divide en 2 principales componentes, el driver y los workers. El driver es el componente encargado de coordinar la ejecución de las tareas y gestionar la comunicación entre los workers, mientras que los workers son los encargados de ejecutar las tareas asignadas por el driver y procesar los datos. Además, databricks se encuentra alojado en Azure, lo que permite aprovechar los servicios de almacenamiento como Blob Storage para almacenar los datos procesados y transformados, así como también para facilitar la integración con otras herramientas y servicios en la nube.</p>
+<p>Asímismo, se puede observar que el cluster de datarbricks, aparte de trabajar conjunto a su storage en Azure, también utiliza secrets para gestionar de manera segura las credenciales y configuraciones necesarias para acceder a las diferentes fuentes de datos y servicios en la nube. Esto es fundamental para garantizar la seguridad y confidencialidad de la información, evitando así posibles vulnerabilidades y riesgos asociados con el manejo de datos sensibles.</p>
+<p>Por otro lado, en la esquina inferior derecha del diagrama, se puede observar un nodo que representa el data warehouse local, el cual se encuentra gestionado por Greenplum. Este componente es fundamental para almacenar y gestionar los datos procesados y transformados, permitiendo así su consulta y análisis de manera eficiente. La comunicación entre databricks y el data warehouse local se realiza a través de una conexión segura, lo que garantiza la integridad y confidencialidad de los datos durante su transferencia, por medio de consultas a la API que databricks ofrece para este tipo de casos.</p>
+<p>De igual forma, se puede resaltar el hecho que el diagrama también logra evidenciar la presencia de las herramientas de visualización de datos, como Power BI y Apache Superset. Por su parte, Power BI se estaría ejecutando en su versión web, es por ello, que se puede observar que está conectado a databricks. Mientras tanto, Apache Superset se decidió que se montaría de manera local y trabajaría conuntamente de manera on-premise con el data warehouse local. Finalmente, se puede añadir el hecho que para almacenar todos aquellos artefactos producidos en consecuencia de la implementación de Machine Learning, se ha optado por utilizar un bucket de S3 en AWS, el cual se encuentra representado en la parte superior del diagrama, que en sí, solo interactúa con el cluster de databricks.</p>
+<h2 id="modelado-de-datos">Modelado de datos</h2>
+<p>Actulamente, el modelado de datos se encuentra en proceso iterativo. A medida que se avanza en el desarrollo del proyecto, se van identificando nuevas entidades y relaciones que deben ser incorporadas al modelo de datos. Este proceso es fundamental para asegurar que el sistema pueda manejar eficientemente la información y cumplir con los requisitos funcionales establecidos.</p>
+<h3 id="sandbox">Sandbox</h3>
+<p>Se ha modealdo el Sandbox, el cual es un esquema de base de datos que contiene un conjunto de tablas las cuales se utilizan para almacenar la información en crudo y sin ser procesada aún. El Sandbox es una parte fundamental del sistema, ya que permite almacenar los datos de manera temporal antes de ser procesados y transformados para su uso en otras partes del sistema. En sí, el Sandbox estaría representando la capa bronce de la arquitectura.</p>
+<p><img alt="Diagrama de Sandbox" src="../img/Sandbox.png" /></p>
+<h3 id="stage">Stage</h3>
+<p>Se ha modealdo el Stage, el cual es un esquema de base de datos que contiene un conjunto de tablas las cuales se utilizan para almacenar la información procesada y transformada. El Stage es una parte fundamental del sistema, ya que permite almacenar los datos de manera temporal antes de ser cargados al data warehouse. En sí, el Stage estaría representando la capa plata de la arquitectura medallón que se está implementando en el proyecto en el caso de los datos.</p>
+<p><img alt="Diagrama de Stage" src="../img/Stage.png" /></p>
+<h3 id="fact-dimensions">Fact-Dimensions</h3>
+<p>En el caso de las tablas Fact-Dimensions, se ha modelado un conjunto de tablas que representan las dimensiones y hechos del modelo dimensional. Estas tablas son fundamentales para el análisis de datos, ya que permiten organizar la información de manera estructurada y facilitar la consulta y análisis de los datos. En sí, las tablas Fact-Dimensions estarían representando la capa oro de la arquitectura medallón que se está implementando en el proyecto.</p>
+<p><img alt="Diagrama de Fact-Dimensions" src="../img/phase2/DM_Mortality.png" /></p>
+<h4 id="cubos">Cubos</h4>
+<p>De igual forma, para que sea visualmente más interpretable, se ha modelado de manera individual cada cubo con sus respectivas dimensiones y hechos, para así facilitar la comprensión de la estructura de cada uno de los cubos y su relación con las demás tablas del modelo dimensional.</p>
+<p><img alt="Cubo INE" src="../img/phase2/INE.png" />
+<img alt="Cubo INE" src="../img/phase2/IHME.png" />
+<img alt="Cubo INE" src="../img/phase2/panama.png" />
+<img alt="Cubo INE" src="../img/phase2/MSPAS.png" />
+<img alt="Cubo INE" src="../img/phase2/who_deaths.png" />
+<img alt="Cubo INE" src="../img/phase2/who_population.png" /></p>
+<p>Cabe señalar que en este caso, todo este tipo de modelado se ha enfocado más en la realización del modelo estrella, el cual es un tipo de modelo dimensional que se caracteriza por tener una tabla central de hechos que se conecta a varias tablas de dimensiones. Este tipo de modelo es comúnmente utilizado en sistemas de inteligencia empresarial y análisis de datos, ya que permite organizar la información de manera eficiente y facilitar la consulta y análisis de los datos.</p>
+<h2 id="decisiones-de-arquitectura">Decisiones de arquitectura</h2>
+<p>Se ha optado por la utilización de databricks como la herramientra principal para la extracción y almacenamiento de datos, debido a su capacidad para manejar grandes volúmenes de datos y su integración con diversas fuentes de datos.
+Apesar que databricks no sea una herramienta únicamente para la gestión de un data warehouse, sino que para un lakehouse, se decidió utilizarlo porque como se conoce en la teoría, un lakehouse es una arquitectura que combina las ventajas de un data warehouse y un data lake, permitiendo almacenar datos estructurados y no estructurados en un mismo lugar. Además, databricks ofrece funcionalidades esenciales para la gestión de datos, como operaciones ACID y procesamiento de datos distribuidos, lo que lo convierte en una opción adecuada para el proyecto.</p>
+<p>Asímismo, se puede comentar que para darle una solución al poder compartir datos desde local, se optó por utilizar un web server que corre con Nginx. Recordemos que Nginx es un servidor web de código abierto que se utiliza para servir contenido web y manejar solicitudes HTTP. En este caso, se ha configurado Nginx para servir los archivos de datos desde el entorno local, permitiendo así que databricks pueda acceder a ellos a través de una URL. Esta solución es eficiente y sencilla de implementar, ya que no requiere la configuración de un servidor FTP o la utilización de servicios en la nube para almacenar los datos. Dicho sea de paso, los demás orígenes de fuentes heterogéneas se han utilizado dado que entre los requerimientos del proyecto se hacía solicitud de estos.</p>
+<p>Ante la sitaución que se está implementando un data warehouse que en su principio está siendo en la nube, el proceso de consolidación del mismo, sería un ELT y no un ETL, ya que, se está utilizando databricks para extraer los datos y almacenarlos en su forma cruda en el Sandbox, para luego ser procesados y transformados dentro de databricks antes de ser cargados al data warehouse. Este enfoque permite aprovechar las capacidades de procesamiento de databricks y optimizar el rendimiento del sistema, ya que se evita la necesidad de transferir grandes volúmenes de datos entre diferentes sistemas durante el proceso de transformación.</p>
+<p>Para resnponder la necesidad de tener un data warehouse local, se ha optado por utilizar Greenplum, el cual es un sistema de gestión de bases de datos relacional orientado a la analítica y el procesamiento de grandes volúmenes de datos. Greenplum ofrece funcionalidades avanzadas para el manejo de datos, como particionamiento, paralelismo y optimización de consultas, lo que lo convierte en una opción adecuada para el proyecto. Además, Greenplum es compatible con SQL, lo que facilita la consulta y análisis de los datos almacenados en el data warehouse local. Su sistema es de tipo MPP (Massively Parallel Processing), lo que significa que puede distribuir la carga de trabajo entre múltiples nodos, lo que mejora el rendimiento y la escalabilidad del sistema.</p>
+<p>Ahora bien, la interoperabilidad entre el data warehouse en la nube y el data warehouse local se logra a través de la conexión segura que se establece entre databricks y Greenplum. Esta conexión realizada mediante la API de datarbicks nos permite obtener los datos procesados y transformados en databricks y cargarlos al data warehouse local, lo que garantiza la disponibilidad y accesibilidad de los datos para su análisis y consulta desde ambos entornos. Esta solución permite aprovechar las ventajas de ambas infraestructuras, como la escalabilidad y flexibilidad de la nube, así como la seguridad y control que ofrece la infraestructura on-premise.</p>
+<p>Hablando un poco sobre las herramientas de visualización de datos, se ha optado por utilizar Power BI, ya que, esta plataforma desarrollada por Microsoft, es uno de los productos líderes de la actualidad para esta tarea en especial. Lo que trae de grandioso Power BI, es que, además de su facilidad en la creación e interacción con dashboards, este posee 2 herramientras esenciales y poderosas en estos entornos, los cuales serian Power Query y Dax. Además de ello, Power BI ofrece una amplia gama de conectores y opciones de integración con diferentes fuentes de datos, lo que facilita la conexión con cualquier de los dos data warehouse. Adicionalmente, Power BI permite cargar la data en memoria primaria, lo que mejora el rendimiento y la velocidad de las consultas y análisis de datos. Asimismo, esta plataforma ofrece la posibilidad de cargar modeloados de datos como el de estrella o copo de nieve, de manera nativa, facilitando así la interacción con los datos.</p>
+<p>Por otra parte, Apache Superset, es otra herramienta de visualización de datos que se ha optado por utilizar en el proyecto. Superset es una plataforma de código abierto que permite también la creación de dashboards efectivos. Este, a diferencia de Power BI, no almacena o carga la data en memoria, sino que, se conecta directamente a la fuente de datos para realizar las consultas y generar las visualizaciones, es por ello que se le llama SQL Native. Esta herramiente, puede correr tanto Web como en local, y es compatible con una amplia gama de bases de datos y sistemas de almacenamiento de datos, lo que facilita la integración con los data warehouse.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

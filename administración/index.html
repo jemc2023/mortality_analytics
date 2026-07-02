@@ -1,0 +1,2428 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+        <link rel="prev" href="../gobernanza/">
+      
+      
+        <link rel="next" href="../propuesta_financiera/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Administración - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestion-y-administracion-del-proyecto" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administración
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fuentes/" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Project Charter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Project Charter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumen-ejecutivo-del-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo del Project Charter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-diagrama-de-gantt-4-meses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Diagrama de Gantt (4 Meses)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-de-desglose-de-trabajo-edt-wbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura de Desglose de Trabajo (EDT / WBS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Estructura de Desglose de Trabajo (EDT / WBS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-fase-1-ingesta-y-fundamentos-de-datos-sprint-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Fase 1 — Ingesta y Fundamentos de Datos (Sprint 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-fase-2-transformacion-y-data-warehouse-sprint-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Fase 2 — Transformación y Data Warehouse (Sprint 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-fase-3-machine-learning-bi-y-cierre-sprint-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Fase 3 — Machine Learning, BI y Cierre (Sprint 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-matriz-raci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Matriz RACI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gestion-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gestión de Riesgos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gestión de Riesgos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-resumen-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Resumen de Riesgos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-riesgos-criticos-severidad-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Riesgos Críticos (Severidad ≥ 12)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-plan-de-aseguramiento-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Plan de Aseguramiento de Calidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Plan de Aseguramiento de Calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-objetivos-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Objetivos de Calidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-roles-y-responsabilidades-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Roles y Responsabilidades de Calidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-procesos-de-control-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Procesos de Control de Calidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Procesos de Control de Calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-calidad-de-datos-fases-1-y-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 Calidad de Datos (Fases 1 y 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-calidad-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 Calidad de Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-calidad-de-modelos-ml-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 Calidad de Modelos ML (Fase 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-calidad-de-dashboards-bi-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4 Calidad de Dashboards BI (Fase 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#635-calidad-de-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.5 Calidad de Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-auditorias-y-revisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Auditorías y Revisiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-herramientas-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Herramientas de Calidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-metricas-de-calidad-dashboard-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Métricas de Calidad (Dashboard de Control)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Project Charter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Project Charter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resumen-ejecutivo-del-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo del Project Charter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-diagrama-de-gantt-4-meses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Diagrama de Gantt (4 Meses)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-de-desglose-de-trabajo-edt-wbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura de Desglose de Trabajo (EDT / WBS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Estructura de Desglose de Trabajo (EDT / WBS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-fase-1-ingesta-y-fundamentos-de-datos-sprint-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Fase 1 — Ingesta y Fundamentos de Datos (Sprint 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-fase-2-transformacion-y-data-warehouse-sprint-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Fase 2 — Transformación y Data Warehouse (Sprint 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-fase-3-machine-learning-bi-y-cierre-sprint-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Fase 3 — Machine Learning, BI y Cierre (Sprint 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-matriz-raci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Matriz RACI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gestion-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gestión de Riesgos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gestión de Riesgos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-resumen-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Resumen de Riesgos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-riesgos-criticos-severidad-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Riesgos Críticos (Severidad ≥ 12)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-plan-de-aseguramiento-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Plan de Aseguramiento de Calidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Plan de Aseguramiento de Calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-objetivos-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Objetivos de Calidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-roles-y-responsabilidades-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Roles y Responsabilidades de Calidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-procesos-de-control-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Procesos de Control de Calidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Procesos de Control de Calidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-calidad-de-datos-fases-1-y-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 Calidad de Datos (Fases 1 y 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-calidad-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 Calidad de Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-calidad-de-modelos-ml-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 Calidad de Modelos ML (Fase 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-calidad-de-dashboards-bi-fase-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4 Calidad de Dashboards BI (Fase 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#635-calidad-de-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.5 Calidad de Documentación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-auditorias-y-revisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Auditorías y Revisiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-herramientas-de-calidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Herramientas de Calidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-metricas-de-calidad-dashboard-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Métricas de Calidad (Dashboard de Control)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gestion-y-administracion-del-proyecto">Gestión y Administración del Proyecto</h1>
+<blockquote>
+<p><strong>Cliente:</strong> PNUD · Ministerio de Salud Pública y Asistencia Social (MSPAS)<br />
+<strong>Firma Consultora:</strong> DataMortality Analytics Group<br />
+<strong>Duración:</strong> 4 meses (marzo — junio 2026)<br />
+<strong>Metodología:</strong> Ágil Scrum — 3 Sprints + Cierre</p>
+</blockquote>
+<hr />
+<h2 id="1-project-charter">1. Project Charter</h2>
+<p>El <strong>Project Charter</strong> formaliza el inicio del proyecto, estableciendo el alcance, objetivos, stakeholders, hitos, presupuesto, supuestos, restricciones y criterios de éxito. Este documento fue elaborado siguiendo el estándar PMI y constituye el acta de constitución oficial de la consultoría ante el PNUD y el MSPAS.</p>
+<p>El documento completo incluye 24 campos distribuidos en tres partes:</p>
+<ul>
+<li><strong>Parte I — Información General:</strong> Título, alcance, PM, sponsors, entregables, objetivos, recursos, stakeholders, hitos, presupuesto, supuestos, restricciones y riesgos de alto nivel.</li>
+<li><strong>Parte II — Información del Negocio:</strong> Términos contractuales, caso de negocio, expectativas y requisitos de stakeholders, criterios de éxito.</li>
+<li><strong>Parte III — Información Organizacional:</strong> Plan de mejora de procesos, definición de procesos, lecciones aprendidas, herramientas y plantillas.</li>
+</ul>
+<blockquote>
+<p><strong>Ver archivo completo:</strong> <a href="https://docs.google.com/document/d/1ec7Ev_cSdQ4dw1ul6KRx7rWRXFlhNiLtspwN4ja8y6g/edit?usp=sharing">Project_Charter.docx</a></p>
+</blockquote>
+<h3 id="resumen-ejecutivo-del-project-charter">Resumen Ejecutivo del Project Charter</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Project Title</strong></td>
+<td>Plataforma Analítica de Mortalidad End-to-End: Análisis Pre-COVID y Post-COVID en Guatemala y Centroamérica</td>
+</tr>
+<tr>
+<td><strong>Project Manager</strong></td>
+<td>Sebastián Valle — Tutor Académico / PM</td>
+</tr>
+<tr>
+<td><strong>Sponsors</strong></td>
+<td>PNUD / MSPAS de Guatemala</td>
+</tr>
+<tr>
+<td><strong>Presupuesto</strong></td>
+<td>USD $187,400 (suma alzada, todo incluido)</td>
+</tr>
+<tr>
+<td><strong>Duración</strong></td>
+<td>4 meses (marzo — junio 2026)</td>
+</tr>
+<tr>
+<td><strong>Hitos principales</strong></td>
+<td>Hito 0 (anticipo) → Hito 1 (Sandbox) → Hito 2 (DW) → Hito 3 (ML+BI) → Hito 4 (Cierre)</td>
+</tr>
+<tr>
+<td><strong>Metodología</strong></td>
+<td>Ágil Scrum — 3 Sprints + Cierre</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-diagrama-de-gantt-4-meses">2. Diagrama de Gantt (4 Meses)</h2>
+<p>El cronograma del proyecto abarca <strong>17 semanas</strong> distribuidas en 4 meses calendario (marzo — junio 2026). Se organiza en tres Sprints correspondientes a las fases del proyecto, más un período de cierre:</p>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Período</th>
+<th>Semanas</th>
+<th>Fase</th>
+<th>Entregable Principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sprint 1</strong></td>
+<td>Marzo 2026</td>
+<td>1 – 4</td>
+<td>Fase 1 — Ingesta y Sandbox</td>
+<td>Datos crudos consolidados en Sandbox, diccionario de datos, arquitectura de despliegue</td>
+</tr>
+<tr>
+<td><strong>Sprint 2</strong></td>
+<td>Abril 2026</td>
+<td>5 – 8</td>
+<td>Fase 2 — Transformación y DW</td>
+<td>Pipeline ELT completo, DW nube + DW local interoperables</td>
+</tr>
+<tr>
+<td><strong>Sprint 3</strong></td>
+<td>Mayo – Junio 2026</td>
+<td>9 – 16</td>
+<td>Fase 3 — ML, BI y Cierre</td>
+<td>4 modelos ML, 4 dashboards BI, informe final, gestión de proyecto</td>
+</tr>
+<tr>
+<td><strong>Cierre</strong></td>
+<td>Junio 2026</td>
+<td>17</td>
+<td>Cierre</td>
+<td>Documentación final, transferencia de conocimiento</td>
+</tr>
+</tbody>
+</table>
+<p>El diagrama de Gantt detalla 31 tareas organizadas jerárquicamente con su WBS, fechas de inicio y fin, duración en días, y barras visuales por semana. Incluye 4 hitos marcados con rombos rojos.</p>
+<blockquote>
+<p><strong>Ver archivo completo:</strong> <a href="https://docs.google.com/spreadsheets/d/1R6__zXzHIDvA_g1BOl6mSTuCtCHQ_Ma7/edit?usp=sharing&amp;ouid=100455211682358519319&amp;rtpof=true&amp;sd=true">Gantt_4Meses.xlsx</a></p>
+</blockquote>
+<hr />
+<h2 id="3-estructura-de-desglose-de-trabajo-edt-wbs">3. Estructura de Desglose de Trabajo (EDT / WBS)</h2>
+<p>La EDT descompone el alcance total del proyecto en paquetes de trabajo jerárquicos, identificados con códigos WBS. Cada paquete representa un entregable verificable.</p>
+<h3 id="31-fase-1-ingesta-y-fundamentos-de-datos-sprint-1">3.1 Fase 1 — Ingesta y Fundamentos de Datos (Sprint 1)</h3>
+<table>
+<thead>
+<tr>
+<th>WBS</th>
+<th>Entregable</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Repositorio de Datos de Mortalidad</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>Set de datos INE</td>
+<td>Obtención, validación y carga de microdatos de defunciones CIE-10</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Set de datos RENAP</td>
+<td>Solicitud formal (Ley 57-2008), seguimiento y documentación del oficio</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Set de datos OMS (WHO)</td>
+<td>Descarga de WHO Mortality Database y WHO Population</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Set de datos MSPAS</td>
+<td>Obtención de estadísticas vitales y exceso de mortalidad</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Set de datos Centroamérica</td>
+<td>Datos de IHME GBD 2023, Panamá INEC, Costa Rica INEC</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Infraestructura de Orígenes de Datos</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>Google Drive</td>
+<td>Configuración de API y service account para acceso a <code>semis2_raw_data/ine/</code></td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>SharePoint / OneDrive</td>
+<td>App registration Azure AD para acceso a datos de Panamá</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Base de datos AWS RDS</td>
+<td>Instancia PostgreSQL con esquema <code>raw_data</code> para fuente MSPAS</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Bucket AWS S3</td>
+<td>Configuración de bucket <code>mortality-analytics-semi2/raw/</code> para objetos</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>Servidor web local (Nginx)</td>
+<td>Configuración de Nginx + DevTunnel para exponer archivos WHO</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Pipeline de Datos (ETL)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>3.1</td>
+<td>Extracción de datos</td>
+<td>Conectores a 5+ fuentes (GDrive API, MS Graph, boto3/S3, JDBC/RDS, HTTP/Nginx)</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Transformación de datos</td>
+<td>Políticas de limpieza, normalización CIE-10, validación, deduplicación</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Carga de datos</td>
+<td>Creación de esquema y tablas Sandbox en Databricks Delta Lake</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>Documentación</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>4.1</td>
+<td>Decisiones arquitectónicas</td>
+<td>Documentación de selección de herramientas, arquitectura y justificaciones</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Diagramas de arquitectura</td>
+<td>Draw.io: 4 vistas (Solución, Despliegue, Sandbox, Stage)</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Políticas de transformación</td>
+<td>Registro de reglas de limpieza, normalización y control de calidad</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Diccionario y linaje de datos</td>
+<td>Catálogo de metadatos, data lineage fuente → Sandbox</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-fase-2-transformacion-y-data-warehouse-sprint-2">3.2 Fase 2 — Transformación y Data Warehouse (Sprint 2)</h3>
+<table>
+<thead>
+<tr>
+<th>WBS</th>
+<th>Entregable</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>Arquitectura por Capas</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>5.1</td>
+<td>Revisión capa Sandbox</td>
+<td>Auditoría de datos crudos provenientes de Fase 1</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Definición capa Stage</td>
+<td>Esquema de tablas limpias, tipadas y estandarizadas</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>Definición capa Fact-Dimensions</td>
+<td>Modelo dimensional estrella (5 hechos + 5 dimensiones)</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>Diseño del flujo</td>
+<td>Sandbox → Stage → Fact-Dimensions</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>Transformación de Datos</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>6.1</td>
+<td>Reglas de transformación</td>
+<td>Definición de reglas de negocio y calidad</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Limpieza y estandarización</td>
+<td>Normalización de catálogos, CIE-10 → GBD crosswalk</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>Tipado y conformación</td>
+<td>Casting de tipos, estandarización de formatos</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Validación de calidad</td>
+<td>Checks de integridad referencial, cardinalidad, duplicados</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>Pipeline ELT con Databricks</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>7.1</td>
+<td>Consolidación del flujo</td>
+<td>Databricks como fuente de verdad del DW cloud</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>Carga Sandbox → Stage</td>
+<td>Transformación y carga dentro de Databricks</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>Carga Stage → Fact-Dim</td>
+<td>Poblamiento del modelo dimensional</td>
+</tr>
+<tr>
+<td>7.4</td>
+<td>Registro de logs</td>
+<td>Evidencias de ejecución y auditoría</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>Modelo Dimensional</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>8.1</td>
+<td>Diseño esquema estrella</td>
+<td>Modelo con tabla de hechos central + dimensiones</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>Dimensiones (8)</td>
+<td>Tiempo, Geografía, Causa CIE-10, Sexo, Grupo Etario, Fuente, Perfil INE, Perfil IHME</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>Tablas de hechos (6)</td>
+<td>fact_ine, fact_mspas, fact_who_deaths, fact_who_population, fact_panama, fact_ihme</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>Data Warehouse en la Nube</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>9.1</td>
+<td>Creación de esquemas</td>
+<td>Unity Catalog <code>dm_mortality</code></td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>Carga del modelo dimensional</td>
+<td>Poblamiento de tablas fact-dimension</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>Pruebas de consulta</td>
+<td>Validación de queries analíticas</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>Data Warehouse Local</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>10.1</td>
+<td>Selección del motor</td>
+<td>Greenplum (MPP, PostgreSQL-compatible)</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>Creación de esquemas</td>
+<td>DDL para tablas fact-dimension en Greenplum</td>
+</tr>
+<tr>
+<td>10.3</td>
+<td>Carga del modelo</td>
+<td>Replicación desde Databricks</td>
+</tr>
+<tr>
+<td>10.4</td>
+<td>Pruebas de consulta</td>
+<td>Validación de queries locales</td>
+</tr>
+<tr>
+<td>10.5</td>
+<td>Backup automático</td>
+<td>Script de respaldo del DW local</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>Interoperabilidad Nube-Local</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>11.1</td>
+<td>Mecanismo de intercambio</td>
+<td>API Databricks → JDBC Greenplum</td>
+</tr>
+<tr>
+<td>11.2</td>
+<td>Replicación</td>
+<td>Databricks → Greenplum para tablas Fact-Dim</td>
+</tr>
+<tr>
+<td>11.3</td>
+<td>Auditoría de replicación</td>
+<td>Logs y verificación de consistencia</td>
+</tr>
+<tr>
+<td>11.4</td>
+<td>Validación de consistencia</td>
+<td>Comparación de conteos y sumas entre repositorios</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-fase-3-machine-learning-bi-y-cierre-sprint-3">3.3 Fase 3 — Machine Learning, BI y Cierre (Sprint 3)</h3>
+<table>
+<thead>
+<tr>
+<th>WBS</th>
+<th>Entregable</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>12</strong></td>
+<td><strong>Documentación de la Solución</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>12.1</td>
+<td>Diagramas</td>
+<td>Draw.io: Despliegue, Workflow, Arquitectura de Solución</td>
+</tr>
+<tr>
+<td>12.2</td>
+<td>Explicaciones técnicas</td>
+<td>Documentación de decisiones de ingeniería</td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td><strong>Análisis de Datos e Insights</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>13.1</td>
+<td>Respuesta a preguntas de negocio</td>
+<td>3 preguntas estratégicas PNUD/MSPAS</td>
+</tr>
+<tr>
+<td>13.2</td>
+<td>Gráficas analíticas</td>
+<td>Visualizaciones en Power BI y Apache Superset</td>
+</tr>
+<tr>
+<td>13.3</td>
+<td>Interpretaciones de datos</td>
+<td>Hallazgos basados en evidencia</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td><strong>Informe Final de Consultoría</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>14.1</td>
+<td>Resumen ejecutivo</td>
+<td>Síntesis de hallazgos y recomendaciones</td>
+</tr>
+<tr>
+<td>14.2</td>
+<td>Metodología (Ágil Scrum)</td>
+<td>Descripción del marco de trabajo</td>
+</tr>
+<tr>
+<td>14.3</td>
+<td>Arquitectura y sustento</td>
+<td>Diseño y justificaciones arquitectónicas</td>
+</tr>
+<tr>
+<td>14.4</td>
+<td>Gobernanza y cumplimiento</td>
+<td>Ética de datos y EU Data Act</td>
+</tr>
+<tr>
+<td>14.5</td>
+<td>Resultados del análisis</td>
+<td>Insights, gráficas y explicación de hallazgos</td>
+</tr>
+<tr>
+<td>14.6</td>
+<td>Recomendaciones de política</td>
+<td>Propuestas accionables para MSPAS</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td><strong>Gestión de Proyecto</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>15.1</td>
+<td>Project Charter</td>
+<td>Acta de constitución (24 campos PMI)</td>
+</tr>
+<tr>
+<td>15.2</td>
+<td>Planificación y control</td>
+<td>Gantt (4 meses), EDT/WBS, Matriz RACI</td>
+</tr>
+<tr>
+<td>15.3</td>
+<td>Gestión de riesgos</td>
+<td>Registro de 10 riesgos con matriz P×I</td>
+</tr>
+<tr>
+<td>15.4</td>
+<td>Plan de aseguramiento de calidad</td>
+<td>Estándares, roles, revisiones, métricas</td>
+</tr>
+<tr>
+<td><strong>16</strong></td>
+<td><strong>Propuesta Financiera</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>16.1</td>
+<td>Estructura de costos</td>
+<td>Tarifas por rol, días, costos de personal</td>
+</tr>
+<tr>
+<td>16.2</td>
+<td>Costos operativos</td>
+<td>Infraestructura cloud, licencias, gastos administrativos</td>
+</tr>
+<tr>
+<td>16.3</td>
+<td>Modelo comercial</td>
+<td>Suma alzada, desglose por hitos de pago</td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td><strong>Entregables de Comunicación</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>17.1</td>
+<td>Presentación defensa oral</td>
+<td>Canva/PowerPoint con demostración end-to-end</td>
+</tr>
+<tr>
+<td><strong>18</strong></td>
+<td><strong>Business Intelligence</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>18.1</td>
+<td>Dashboards Power BI</td>
+<td>2 visualizaciones con Power Query + DAX</td>
+</tr>
+<tr>
+<td>18.2</td>
+<td>Dashboards Apache Superset</td>
+<td>2 visualizaciones SQL Native</td>
+</tr>
+<tr>
+<td><strong>19</strong></td>
+<td><strong>Machine Learning</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>19.1</td>
+<td>Construcción ABT</td>
+<td>Analytical Base Table desde el DW</td>
+</tr>
+<tr>
+<td>19.2</td>
+<td>Modelos entrenados</td>
+<td>Regresión, Random Forest, K-means, Forecast</td>
+</tr>
+<tr>
+<td>19.3</td>
+<td>Registro MLflow</td>
+<td>Modelos versionados en Unity Catalog</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-matriz-raci">4. Matriz RACI</h2>
+<p>La <strong>Matriz RACI</strong> asigna responsabilidades para cada actividad del proyecto, asegurando que no haya ambigüedad sobre quién ejecuta, aprueba, es consultado o informado. La matriz cubre <strong>32 actividades</strong> distribuidas en las 3 fases, cruzadas contra <strong>8 roles</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Sigla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerente de Proyecto (PM)</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>Arquitecto de Datos</td>
+<td>ARQ</td>
+</tr>
+<tr>
+<td>Ingeniero de Datos / ML</td>
+<td>ING</td>
+</tr>
+<tr>
+<td>Analista BI</td>
+<td>BI</td>
+</tr>
+<tr>
+<td>Consultor DBA</td>
+<td>DBA</td>
+</tr>
+<tr>
+<td>Product Owner (simulado)</td>
+<td>PO</td>
+</tr>
+<tr>
+<td>Stakeholders (PNUD/MSPAS)</td>
+<td>STK</td>
+</tr>
+<tr>
+<td>Tutor Académico (USAC)</td>
+<td>TUT</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Leyenda RACI:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Letra</th>
+<th>Significado</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>R</strong></td>
+<td>Responsible — Ejecuta la tarea</td>
+<td>Verde</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>Accountable — Aprueba y rinde cuentas (único por actividad)</td>
+<td>Rojo</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Consulted — Consultado antes de ejecutar</td>
+<td>Amarillo</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Informed — Informado después de ejecutar</td>
+<td>Azul</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Ver archivo completo:</strong> <a href="https://docs.google.com/spreadsheets/d/1ItmX3Qk2d7-Bh0uWxXh8SeXAAe-1Ds1G/edit?usp=sharing&amp;ouid=100455211682358519319&amp;rtpof=true&amp;sd=true">Matriz_RACI.xlsx</a></p>
+</blockquote>
+<hr />
+<h2 id="5-gestion-de-riesgos">5. Gestión de Riesgos</h2>
+<p>Se identificaron <strong>10 riesgos</strong> principales clasificados por categoría, probabilidad, impacto y severidad. Cada riesgo incluye una estrategia de mitigación y un plan de contingencia con responsable asignado.</p>
+<h3 id="51-resumen-de-riesgos">5.1 Resumen de Riesgos</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Riesgo</th>
+<th>Cat.</th>
+<th style="text-align: center;">Prob.</th>
+<th style="text-align: center;">Imp.</th>
+<th style="text-align: center;">Sev.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>RENAP no responda a tiempo la solicitud formal</td>
+<td>Datos</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>16</strong></td>
+</tr>
+<tr>
+<td>R02</td>
+<td>Alto % de causas mal definidas (R99) en INE</td>
+<td>Calidad</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>12</strong></td>
+</tr>
+<tr>
+<td>R03</td>
+<td>Incompatibilidad de esquemas entre fuentes heterogéneas</td>
+<td>Técnico</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>Fallos en replicación Databricks → Greenplum</td>
+<td>Técnico</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>15</strong></td>
+</tr>
+<tr>
+<td>R05</td>
+<td>Costos DBU excedan el presupuesto</td>
+<td>Financiero</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Incumplimiento EU Data Act (cuasi-identificadores)</td>
+<td>Legal</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>10</strong></td>
+</tr>
+<tr>
+<td>R07</td>
+<td>Ausencia prolongada de miembro del equipo</td>
+<td>Recursos</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Cambios en APIs de fuentes externas (IHME, WHO)</td>
+<td>Técnico</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>Problemas conectividad BI ↔ Databricks SQL Warehouse</td>
+<td>Técnico</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>Modelos ML no alcancen métricas aceptables</td>
+<td>Técnico</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Severidad:</strong> Crítico (≥12) | Moderado (8-11) | Bajo (&lt;8)</p>
+<h3 id="52-riesgos-criticos-severidad-12">5.2 Riesgos Críticos (Severidad ≥ 12)</h3>
+<p><strong>R01 — RENAP no responda (16):</strong> Se mitiga enviando la solicitud en la Semana 1 con seguimiento quincenal. El plan de contingencia es utilizar INE como fuente primaria alternativa, ya que recibe los mismos registros del RENAP.</p>
+<p><strong>R04 — Fallos replicación Databricks → Greenplum (15):</strong> Se mitiga probando conectividad temprana (Semana 5) con reintentos y logs. Si falla, se generan archivos Parquet desde Databricks y se cargan manualmente en Greenplum vía COPY.</p>
+<p><strong>R02 — Causas mal definidas INE (12):</strong> Se mitiga con validación CIE-10 en ingesta y reporte de distribución. Si el porcentaje es alto, se excluyen del análisis causal principal y se documenta como limitación.</p>
+<blockquote>
+<p><strong>Ver archivo completo con matriz P×I, estrategias de mitigación y planes de contingencia:</strong> <a href="https://docs.google.com/spreadsheets/d/1anfpfXWvYOL2EQ5wnD5sD9YA8RBVX9Rf/edit?usp=sharing&amp;ouid=100455211682358519319&amp;rtpof=true&amp;sd=true">Gestion_Riesgos.xlsx</a></p>
+</blockquote>
+<hr />
+<h2 id="6-plan-de-aseguramiento-de-calidad">6. Plan de Aseguramiento de Calidad</h2>
+<p>El Plan de Aseguramiento de Calidad (Quality Assurance Plan) establece los estándares, procesos, roles y métricas que garantizan que todos los entregables del proyecto cumplan con los requisitos de calidad definidos en los Términos de Referencia y las expectativas del cliente.</p>
+<h3 id="61-objetivos-de-calidad">6.1 Objetivos de Calidad</h3>
+<table>
+<thead>
+<tr>
+<th>Objetivo</th>
+<th>Meta</th>
+<th>Medición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integridad de datos</td>
+<td>≥95% de registros fuente cargados en Sandbox</td>
+<td>Conteo de filas fuente vs Sandbox</td>
+</tr>
+<tr>
+<td>Calidad de codificación CIE-10</td>
+<td>≥90% de códigos con formato válido</td>
+<td>Validación regex en ingesta</td>
+</tr>
+<tr>
+<td>Cobertura de fuentes</td>
+<td>5+ fuentes heterogéneas integradas</td>
+<td>Catálogo de fuentes operativas</td>
+</tr>
+<tr>
+<td>Interoperabilidad DW</td>
+<td>Consistencia ≥99% entre DW nube y local</td>
+<td>Comparación de sumas y conteos</td>
+</tr>
+<tr>
+<td>Desempeño de modelos ML</td>
+<td>R² ≥ 0.5 para regresión; Silueta ≥ 0.3 para clustering</td>
+<td>Métricas en MLflow</td>
+</tr>
+<tr>
+<td>Cobertura de dashboards</td>
+<td>2 Power BI + 2 Superset respondiendo preguntas de negocio</td>
+<td>Checklist de requerimientos</td>
+</tr>
+<tr>
+<td>Documentación</td>
+<td>MkDocs desplegado con todas las secciones requeridas</td>
+<td>Revisión de completitud</td>
+</tr>
+<tr>
+<td>Cumplimiento ético</td>
+<td>0 exposiciones de datos individuales en visualizaciones</td>
+<td>Auditoría de dashboards</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-roles-y-responsabilidades-de-calidad">6.2 Roles y Responsabilidades de Calidad</h3>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Responsabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gerente de Proyecto</strong></td>
+<td>Dueño del plan de calidad. Aprueba entregables. Coordina revisiones y auditorías.</td>
+</tr>
+<tr>
+<td><strong>Arquitecto de Datos</strong></td>
+<td>Revisa diseño de arquitectura, modelo dimensional, DDL. Responsable de la calidad técnica del DW.</td>
+</tr>
+<tr>
+<td><strong>Ingeniero de Datos / ML</strong></td>
+<td>Ejecuta pruebas de calidad de datos (validación CIE-10, nulos, duplicados). Responsable de métricas de modelos ML.</td>
+</tr>
+<tr>
+<td><strong>Analista BI</strong></td>
+<td>Valida que los dashboards respondan las preguntas de negocio. Revisa que no se expongan datos individuales.</td>
+</tr>
+<tr>
+<td><strong>Consultor DBA</strong></td>
+<td>Responsable de la consistencia en la replicación Databricks → Greenplum. Ejecuta auditorías de interoperabilidad.</td>
+</tr>
+<tr>
+<td><strong>Tutor USAC</strong></td>
+<td>Revisor externo. Proporciona retroalimentación en cada Sprint Review.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-procesos-de-control-de-calidad">6.3 Procesos de Control de Calidad</h3>
+<h4 id="631-calidad-de-datos-fases-1-y-2">6.3.1 Calidad de Datos (Fases 1 y 2)</h4>
+<ul>
+<li><strong>Validación de formato CIE-10:</strong> Todo código de causa debe cumplir el patrón <code>^[A-Z][0-9]{2}[0-9A-Z]?$</code>. Códigos inválidos se marcan como <code>null</code> y se reportan.</li>
+<li><strong>Deduplicación:</strong> Se aplica <code>dropDuplicates()</code> sobre llave natural compuesta al final de cada ingesta.</li>
+<li><strong>Validación de dominios:</strong> Años en rango 2000–2030. Edad en rango [0, 120]. Sexo en valores esperados. Valores fuera de dominio se marcan como <code>null</code>.</li>
+<li><strong>Reporte de calidad:</strong> Cada notebook genera un resumen de filas ingresadas, rechazadas, nulos por columna y causas inválidas.</li>
+</ul>
+<h4 id="632-calidad-de-codigo">6.3.2 Calidad de Código</h4>
+<ul>
+<li><strong>Control de versiones:</strong> Todo el código se versiona en GitHub. Commits atómicos con mensajes descriptivos. Se utiliza <code>git blame</code> para trazabilidad de contribuciones.</li>
+<li><strong>Code Review:</strong> Revisión entre pares antes de merge a <code>main</code>. El revisor verifica legibilidad, cumplimiento de estándares y ausencia de secrets hardcodeados.</li>
+<li><strong>Secrets Management:</strong> Todas las credenciales se gestionan mediante Databricks Secret Scopes. No se permite hardcodear tokens, claves o contraseñas en notebooks.</li>
+</ul>
+<h4 id="633-calidad-de-modelos-ml-fase-3">6.3.3 Calidad de Modelos ML (Fase 3)</h4>
+<ul>
+<li><strong>Train/Test Split:</strong> 80/20 para todos los modelos. Validación cruzada k-fold (k=5) para Random Forest.</li>
+<li><strong>Baseline:</strong> Se establece un modelo naïve (promedio histórico) como línea base de comparación.</li>
+<li><strong>Registro MLflow:</strong> Cada experimento se registra con parámetros, métricas y artefactos. Solo los modelos que superan el baseline se registran en Model Registry.</li>
+<li><strong>Métricas mínimas:</strong> Regresión R² ≥ 0.5. Clustering Silhouette Score ≥ 0.3. Clasificación F1 ≥ 0.7.</li>
+</ul>
+<h4 id="634-calidad-de-dashboards-bi-fase-3">6.3.4 Calidad de Dashboards BI (Fase 3)</h4>
+<ul>
+<li><strong>Validación de datos:</strong> Cada gráfica se compara contra una consulta SQL directa al DW para verificar que los valores mostrados sean correctos.</li>
+<li><strong>Revisión de privacidad:</strong> Se audita que ningún dashboard muestre datos a nivel municipal o individual. Solo agregados departamentales, por grupo etario y causa.</li>
+<li><strong>Checklist de preguntas de negocio:</strong> Cada dashboard debe responder al menos una de las preguntas estratégicas definidas en los Términos de Referencia.</li>
+</ul>
+<h4 id="635-calidad-de-documentacion">6.3.5 Calidad de Documentación</h4>
+<ul>
+<li><strong>MkDocs:</strong> La documentación se despliega automáticamente con GitHub Actions en cada push a <code>main</code>.</li>
+<li><strong>Estructura:</strong> Debe incluir todas las secciones requeridas: arquitectura, fuentes, pipeline, gobernanza, modelo dimensional, source-to-target mapping, insights, administración y propuesta financiera.</li>
+<li><strong>Diagramas:</strong> Formato Draw.io exclusivamente. 4 vistas requeridas: Solución, Despliegue, Sandbox, Stage, Fact-Dimensions.</li>
+</ul>
+<h3 id="64-auditorias-y-revisiones">6.4 Auditorías y Revisiones</h3>
+<table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Tipo</th>
+<th>Responsable</th>
+<th>Criterio de Aceptación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fin de cada notebook</td>
+<td>Autoverificación</td>
+<td>Ingeniero de Datos</td>
+<td>Resumen de calidad sin errores críticos</td>
+</tr>
+<tr>
+<td>Antes de merge a main</td>
+<td>Code Review</td>
+<td>Par del equipo</td>
+<td>Aprobación de al menos 1 revisor</td>
+</tr>
+<tr>
+<td>Fin de Sprint (Sprint Review)</td>
+<td>Demostración end-to-end</td>
+<td>Todo el equipo</td>
+<td>Flujo completo funcional desde fuente hasta entregable</td>
+</tr>
+<tr>
+<td>Pre-entrega de fase</td>
+<td>Revisión de cumplimiento</td>
+<td>PM + Tutor</td>
+<td>Checklist de entregables completo</td>
+</tr>
+<tr>
+<td>Cierre del proyecto</td>
+<td>Auditoría final</td>
+<td>PM</td>
+<td>Todos los entregables aprobados, documentación desplegada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="65-herramientas-de-calidad">6.5 Herramientas de Calidad</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Control de versiones, code review, trazabilidad (<code>git blame</code>)</td>
+</tr>
+<tr>
+<td><strong>Databricks Notebooks</strong></td>
+<td>Ejecución y documentación de pipelines con celdas de validación</td>
+</tr>
+<tr>
+<td><strong>MLflow</strong></td>
+<td>Tracking de experimentos ML, registro de métricas y artefactos</td>
+</tr>
+<tr>
+<td><strong>Power BI / Superset</strong></td>
+<td>Validación visual de datos agregados</td>
+</tr>
+<tr>
+<td><strong>MkDocs + GitHub Actions</strong></td>
+<td>Despliegue automatizado de documentación</td>
+</tr>
+<tr>
+<td><strong>Draw.io</strong></td>
+<td>Diagramas de arquitectura y modelo de datos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="66-metricas-de-calidad-dashboard-de-control">6.6 Métricas de Calidad (Dashboard de Control)</h3>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Frecuencia</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>% de registros fuente cargados en Sandbox</td>
+<td>Por ingesta</td>
+<td>Ing. Datos</td>
+</tr>
+<tr>
+<td>% de códigos CIE-10 válidos</td>
+<td>Por ingesta</td>
+<td>Ing. Datos</td>
+</tr>
+<tr>
+<td>% de valores nulos por columna crítica</td>
+<td>Por ingesta</td>
+<td>Ing. Datos</td>
+</tr>
+<tr>
+<td>Consistencia DW nube vs local (diferencia %)</td>
+<td>Por replicación</td>
+<td>DBA</td>
+</tr>
+<tr>
+<td>Métricas de modelos ML (R², Silueta, F1)</td>
+<td>Por experimento</td>
+<td>Ing. Datos</td>
+</tr>
+<tr>
+<td>Cobertura de documentación (% secciones completas)</td>
+<td>Semanal</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>Cumplimiento de cronograma (% avance vs plan)</td>
+<td>Semanal</td>
+<td>PM</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Documento elaborado como parte de los entregables de la Fase 3 del proyecto.</em><br />
+<em>Seminario de Sistemas 2 — USAC, Escuela de Vacaciones 2026.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1277 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+        <link rel="prev" href="../arquitectura/">
+      
+      
+        <link rel="next" href="../pipelines/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Fuentes de Datos - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fuentes-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fuentes de Datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../administraci%C3%B3n/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ds-01-ine-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-01 · INE Guatemala
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-02-mspas-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-02 · MSPAS Guatemala
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-03-ihme-gbd-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-03 · IHME GBD 2023
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-04-panama-inec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-04 · Panamá INEC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-05-who-mortality-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-05 · WHO Mortality Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-08-renap-guatemala-solicitud-enviada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-08 · RENAP Guatemala (solicitud enviada)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-de-calidad-conocidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas de calidad conocidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administraci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ds-01-ine-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-01 · INE Guatemala
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-02-mspas-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-02 · MSPAS Guatemala
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-03-ihme-gbd-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-03 · IHME GBD 2023
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-04-panama-inec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-04 · Panamá INEC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-05-who-mortality-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-05 · WHO Mortality Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ds-08-renap-guatemala-solicitud-enviada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DS-08 · RENAP Guatemala (solicitud enviada)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-de-calidad-conocidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas de calidad conocidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fuentes-de-datos">Fuentes de Datos</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Fuente</th>
+<th>Granularidad</th>
+<th>Período</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DS-01</td>
+<td>INE Guatemala — microdatos defunciones</td>
+<td>Municipio + CIE-10</td>
+<td>2015–2024</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>DS-02</td>
+<td>MSPAS — estadísticas vitales</td>
+<td>Nacional</td>
+<td>2001–2024</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>DS-03</td>
+<td>IHME GBD 2023 — Centroamérica</td>
+<td>País + causa</td>
+<td>1990–2023</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>DS-04</td>
+<td>Panamá INEC — defunciones</td>
+<td>Provincial</td>
+<td>2015–2024</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>DS-05</td>
+<td>WHO Mortality Database</td>
+<td>País + CIE-10</td>
+<td>2015–2022</td>
+<td>Disponible con limitación</td>
+</tr>
+<tr>
+<td>DS-06</td>
+<td>PAHO Core Indicators</td>
+<td>País/región</td>
+<td>1995–2026</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>DS-07</td>
+<td>INEC Costa Rica</td>
+<td>Provincia + CIE-10</td>
+<td>2002–2024</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>DS-08</td>
+<td>RENAP Guatemala</td>
+<td>Municipio</td>
+<td>2015–2024</td>
+<td>Solicitud enviada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ds-01-ine-guatemala">DS-01 · INE Guatemala</h2>
+<p>El INE publica anualmente microdatos de defunciones no fetales en <code>datos.ine.gob.gt</code>. Cada fila corresponde a una defunción individual codificada bajo CIE-10. Los datos provienen de los libros de inscripción del RENAP.</p>
+<p>Los archivos 2018–2024 están disponibles públicamente sin registro. Se descargaron con <code>curl</code> y se subieron a Google Drive (<code>semis2_raw_data/ine/</code>) como fuente centralizada.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Año</th>
+<th>Tamaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>defunciones_2018.xlsx</code></td>
+<td>2015</td>
+<td>9.5 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2018.xlsx</code></td>
+<td>2016</td>
+<td>9.0 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2018.xlsx</code></td>
+<td>2017</td>
+<td>9.7 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2018.xlsx</code></td>
+<td>2018</td>
+<td>9.3 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2019.xlsx</code></td>
+<td>2019</td>
+<td>9.4 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2020.xlsx</code></td>
+<td>2020</td>
+<td>10 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2021.xlsx</code></td>
+<td>2021</td>
+<td>13 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2022.xlsx</code></td>
+<td>2022</td>
+<td>10 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2023.xlsx</code></td>
+<td>2023</td>
+<td>10 MB</td>
+</tr>
+<tr>
+<td><code>defunciones_2024.xlsx</code></td>
+<td>2024</td>
+<td>9.7 MB</td>
+</tr>
+<tr>
+<td><code>diccionario_2018_2022.xlsx</code></td>
+<td>Referencia</td>
+<td>430 KB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas de calidad:</strong> los datos de 2024 pueden ser preliminares. Usar <code>Añoocu</code> (año de ocurrencia) para análisis temporal, no <code>Añoreg</code>, ya que pueden diferir cuando hay rezago en la inscripción. Registros sin municipio se tratan como <code>"Desconocido"</code>.</p>
+<p>La data obtenida fue recolectada a través de los siguientes enlaces:</p>
+<p><a href="https://www.ine.gob.gt/vitales/">Mortaldiad INE 2015-2017</a></p>
+<p><a href="https://datos.ine.gob.gt/dataset/estadisticas-vitales-defunciones">Mortaldiad INE2018-2024</a></p>
+<hr />
+<h2 id="ds-02-mspas-guatemala">DS-02 · MSPAS Guatemala</h2>
+<p>La Dirección de Epidemiología del MSPAS publica estadísticas de mortalidad basadas en SIGSA. Aunque comparte la misma fuente primaria que el INE, presenta los datos con su propia metodología de agregación, lo que lo hace útil para validación cruzada y para cubrir el período 2015–2017 a nivel nacional.</p>
+<p>Los archivos se descargaron de <code>epidemiologia.mspas.gob.gt</code> y se cargaron a RDS PostgreSQL (<code>raw_data.*</code>) para ingesta vía JDBC desde Databricks.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Contenido</th>
+<th>Años</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>indicadores_mortalidad_2010_2024.xlsx</code></td>
+<td>Tasas e indicadores por causa</td>
+<td>2010–2024</td>
+</tr>
+<tr>
+<td><code>mortalidad_2001_2019.xlsx</code></td>
+<td>Defunciones históricas por causa</td>
+<td>2001–2019</td>
+</tr>
+<tr>
+<td><code>top15_causas_mortalidad_ine.xlsx</code></td>
+<td>Top 15 causas por año</td>
+<td>Multi-año</td>
+</tr>
+<tr>
+<td><code>exceso_mortalidad_2022.xlsx</code></td>
+<td>Exceso de mortalidad COVID-19</td>
+<td>2020–2022</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas de calidad:</strong> datos agregados a nivel nacional únicamente. La codificación de causas puede diferir levemente de la del INE antes de 2018.</p>
+<p>La data obtenida fue recolectada a través del siguiente enlace:</p>
+<p><a href="https://datosabiertos.mspas.gob.gt/">Mortalidad MSPAS</a></p>
+<hr />
+<h2 id="ds-03-ihme-gbd-2023">DS-03 · IHME GBD 2023</h2>
+<p>El Global Burden of Disease 2023 del IHME cubre Guatemala, Honduras, El Salvador, Costa Rica, Nicaragua y Panamá entre 1990 y 2023 con 16 causas principales. Los valores son estimaciones estadísticas con corrección por subregistro, no conteos directos de actas de defunción.</p>
+<p>El CSV se descargó de <code>healthdata.org</code> y se subió a S3 (<code>s3://mortality-analytics-semi2/raw/ihme/</code>). El notebook lo descarga desde ahí en cada ejecución.</p>
+<p><strong>Notas de calidad:</strong> los totales para Guatemala pueden diferir de los del INE porque el IHME aplica correcciones por subregistro. Licencia no comercial — uso exclusivamente académico.</p>
+<p>La data obtenida fue recolectada a través del siguiente enlace:</p>
+<p><a href="https://vizhub.healthdata.org/gbd-results/?params=gbd-api-2023-permalink/2922b6b201ff4bd8b37341900b2514b0">IHME GBD 2023</a></p>
+<hr />
+<h2 id="ds-04-panama-inec">DS-04 · Panamá INEC</h2>
+<p>El INEC de Panamá publica estadísticas de defunciones en formato XLS con múltiples dimensiones: causa × edad/sexo, causa × provincia/sexo, actividad económica, tasas de mortalidad y certificación médica. Los datos son ya agregados en origen.</p>
+<p><strong>Fuente original:</strong> https://www.inec.gob.pa/buscador/Default.aspx?BUSCAR=defuciones</p>
+<p>Los XLS se convirtieron a CSV con <code>scripts/transformation/panama_excel_to_csv.py</code> y se subieron a OneDrive (<code>semi2-mortalidad/panama/</code>). El notebook los descarga desde ahí vía Microsoft Graph API. Hay 10 archivos en total: <code>panama_YYYY_csv.csv</code> para cada año entre 2015 y 2024.</p>
+<p>La data obtenida fue recolectada a través del siguiente enlace:</p>
+<p><a href="https://www.inec.gob.pa/publicaciones/Default2.aspx?ID_CATEGORIA=3&amp;ID_SUBCATEGORIA=7">Mortalidad Panamá INEC</a></p>
+<hr />
+<h2 id="ds-05-who-mortality-database">DS-05 · WHO Mortality Database</h2>
+<p>La OMS recopila registros de causas de muerte de los sistemas de registro civil de los países miembros. Para Guatemala se descargaron los archivos disponibles en la página de WHO Mortality Database y se almacenaron en <code>data/raw/who_mortality/</code>. Para la ingesta en Databricks, los archivos se sirven desde un servidor nginx local expuesto como DevTunnel.</p>
+<p>El período de análisis del proyecto es 2015–2024; sin embargo, la fuente de WHO para Guatemala solo publicó datos hasta 2022 al momento de la extracción. No se pudieron extraer datos de 2023 ni 2024 porque la página de origen no tenía registros disponibles para esos años. Por esta razón, WHO se utiliza como fuente de referencia para 2015–2022 y no como cobertura completa del período 2015–2024.</p>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deaths_by_age_group_gtm.csv</code></td>
+<td>Muertes por grupo etario e indicador</td>
+</tr>
+<tr>
+<td><code>population_distribution_gtm.csv</code></td>
+<td>Distribución poblacional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notas de calidad:</strong> la OMS documenta problemas de completitud en los registros de Guatemala anteriores a 2018. Datos solo a nivel país. La cobertura disponible para Guatemala llega hasta 2022; 2023–2024 no están publicados en la fuente consultada. Licencia CC BY-NC-SA 3.0 IGO.</p>
+<p>La data obtenida fue recolectada a través del siguiente enlace:</p>
+<p><a href="https://platform.who.int/mortality/countries/country-details/MDB/guatemala">WHO Mortality Database</a></p>
+<h2 id="ds-08-renap-guatemala-solicitud-enviada">DS-08 · RENAP Guatemala <em>(solicitud enviada)</em></h2>
+<p>El RENAP inscribe las defunciones antes de que el INE las procese estadísticamente. Se envió solicitud formal el 2026-06-03 bajo la Ley de Acceso a la Información Pública (Decreto 57-2008), solicitando datos agregados de defunciones 2015–2024. Respuesta esperada el 2026-06-18, prorrogable hasta 2026-07-02.</p>
+<p><strong>Evidencia de solicitud:</strong></p>
+<p><img alt="Evidencia de solicitud RENAP" src="../img/renap_solicitud_evidencia.png" /></p>
+<hr />
+<h2 id="problemas-de-calidad-conocidos">Problemas de calidad conocidos</h2>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Problema</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INE 2015–2017</td>
+<td>No publicados en portal abierto</td>
+<td>Solicitud formal enviada; provisional con MSPAS</td>
+</tr>
+<tr>
+<td>INE todos los años</td>
+<td><code>Añoreg</code> puede diferir de <code>Añoocu</code></td>
+<td>Usar siempre <code>Añoocu</code> para análisis temporal</td>
+</tr>
+<tr>
+<td>INE todos los años</td>
+<td>Registros sin municipio</td>
+<td>→ <code>"Desconocido"</code> en la ingesta</td>
+</tr>
+<tr>
+<td>INE 2024</td>
+<td>Datos posiblemente preliminares</td>
+<td>Marcar como provisional; re-ingestar al publicarse la versión definitiva</td>
+</tr>
+<tr>
+<td>MSPAS</td>
+<td>Solo nivel nacional</td>
+<td>Usar INE para análisis geográfico</td>
+</tr>
+<tr>
+<td>WHO Guatemala pre-2018</td>
+<td>Baja completitud CIE-10</td>
+<td>Solo como referencia; no fuente primaria para Guatemala</td>
+</tr>
+<tr>
+<td>WHO Guatemala 2023–2024</td>
+<td>Sin registros publicados en la página de origen</td>
+<td>No imputar; documentar ausencia y usar otras fuentes para esos años</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2112 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Hallazgos y correcciones — Capa de Staging - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hallazgos-y-correcciones-capa-de-staging" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hallazgos y correcciones — Capa de Staging
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fuentes/" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../administraci%C3%B3n/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administraci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-decisiones-de-alcance-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Decisiones de alcance (stage)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Decisiones de alcance (stage)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mspas-exceso-eliminado-definitivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSPAS exceso — ELIMINADO (definitivo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ihme-columnas-cie-10-eliminadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IHME — columnas CIE-10 eliminadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#area_geografica-ine-descartada-no-validada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        area_geografica (INE) — descartada, no validada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-bugs-de-infraestructura-databricks-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Bugs de infraestructura — Databricks Connect
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Bugs de infraestructura — Databricks Connect">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-split-brain-file-scheme-no-resuelve-en-el-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Split-brain: file: scheme no resuelve en el cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-naming-de-columnas-_c0-vs-0-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Naming de columnas: _c0 vs 0, 1, 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-truncado-de-display-confunde-el-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Truncado de display() confunde el análisis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hallazgos-por-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hallazgos por fuente
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Hallazgos por fuente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-ine-notebooksstaginginepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 INE (notebooks/staging/ine.py)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 INE (notebooks/staging/ine.py)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asistencia_medica-corregido-100-null-poblado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        asistencia_medica — corregido (100% null → poblado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cie10_nombre-poblado-desde-diccionario-cie-10-del-ine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        cie10_nombre — poblado desde diccionario CIE-10 del INE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crosswalk-etario-implementado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crosswalk etario — implementado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ihme-notebooksstagingihmepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 IHME (notebooks/staging/ihme.py)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 IHME (notebooks/staging/ihme.py)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#medida-corregido-50-null-0-null" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        medida — corregido (50% null → 0% null)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-gbd-y-etario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cobertura GBD y etario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-temporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cobertura temporal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mspas-notebooksstagingmspaspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 MSPAS (notebooks/staging/mspas.py)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 MSPAS (notebooks/staging/mspas.py)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexto-los-excel-de-mspas-son-pdfs-con-graficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexto: los "Excel" de MSPAS son PDFs con gráficas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-final-tras-eliminar-exceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado final (tras eliminar exceso)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-panama-notebooksstagingpanamapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Panamá (notebooks/staging/panama.py)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Panamá (notebooks/staging/panama.py)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-gbd-y-etario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cobertura GBD y etario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-who-notebooksstagingwho_mortalitypy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 WHO (notebooks/staging/who_mortality.py)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 WHO (notebooks/staging/who_mortality.py)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cobertura-temporal-correccion-del-doc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cobertura temporal (corrección del doc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pendiente-normalizacion-gbd-etario-descarte-de-bandas-solapadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pendiente: normalización GBD + etario + descarte de bandas solapadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cobertura-de-normalizacion-gbd-ine-detalle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cobertura de normalización GBD — INE (detalle)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cobertura de normalización GBD — INE (detalle)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-el-problema-gaps-del-master-gbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 El problema: gaps del master GBD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-cobertura-antes-y-despues-de-los-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Cobertura antes y después de los overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-overrides-aplicados-22-codigos-16-causas-gbd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Overrides aplicados (22 códigos → 16 causas GBD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-causas-fuera-de-las-16-12-codigos-solo-gbd_nombre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Causas fuera de las 16 (12 códigos → solo gbd_nombre)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-cobertura-gbd-por-ano-tabla-real-stageine-918687-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Cobertura GBD por año (tabla real stage.ine, 918,687 filas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-crosswalk-etario-implementacion-por-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Crosswalk etario — implementación por fuente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estado-final-de-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estado final de schemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estado final de schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stageine-41-columnas-918687-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stage.ine — 41 columnas, 918,687 filas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stageihme-23-columnas-5184-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stage.ihme — 23 columnas, 5,184 filas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stagepanama-23-columnas-5592-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stage.panama — 23 columnas, 5,592 filas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stagemspas_mortalidad_general-6-columnas-15-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stage.mspas_mortalidad_general — 6 columnas, 15 filas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stagemspas_tasa-6-columnas-19-filas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stage.mspas_tasa — 6 columnas, 19 filas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stagemspas_exceso-eliminado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stage.mspas_exceso — ELIMINADO
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-patrones-reutilizables-identificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Patrones reutilizables identificados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Patrones reutilizables identificados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pandas-sparkcreatedataframe-databricks-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        pandas + spark.createDataFrame (Databricks Connect)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_normalize_cols-renombrar-completar-con-nulls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        _normalize_cols — renombrar + completar con nulls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backtick-escaping-para-palabras-reservadas-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backtick escaping para palabras reservadas SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentinels-blancos-del-raw-null-en-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sentinels: blancos del raw → null en staging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-pendientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Pendientes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="hallazgos-y-correcciones-capa-de-staging">Hallazgos y correcciones — Capa de Staging</h1>
+<p>Diagnóstico y resolución de problemas encontrados al ejecutar los notebooks de
+sandbox y staging en Databricks. Incluye bugs de infraestructura, decisiones de
+alcance, coberturas de normalización y estado final de cada tabla.</p>
+<blockquote>
+<p><strong>Fecha de última revisión:</strong> 2026-06-18. Las coberturas y conteos reflejan
+las tablas <code>stage.*</code> reales en Databricks (no exports CSV truncados).</p>
+</blockquote>
+<hr />
+<h2 id="1-decisiones-de-alcance-stage">1. Decisiones de alcance (stage)</h2>
+<h3 id="mspas-exceso-eliminado-definitivo">MSPAS exceso — ELIMINADO (definitivo)</h3>
+<p><code>stage.mspas_exceso</code> se retira del alcance. Motivos:
+- La fuente solo cubre <strong>2022</strong>, fuera del enfoque pre/post-COVID (2015–2022).
+- La columna <code>grupo</code> combinaba dos particiones independientes (edad <code>&lt;65</code>/<code>&gt;65</code>
+  y sexo <code>Hombres</code>/<code>Mujeres</code>) más <code>Total</code> en una sola columna de texto. Eran
+  totales marginales solapados, no un cruce real → no modelables sin doble conteo.</p>
+<p><strong>Acción ejecutada:</strong>
+- <code>notebooks/staging/mspas.py</code>: eliminados <code>SCHEMA_EXCESO</code>, <code>_rename_exceso</code>,
+  <code>transform_exceso</code> y el bloque <code>try</code> que escribía <code>stage.mspas_exceso</code>.
+- <code>notebooks/sandbox/rds_mspas_guatemala_ingest.py</code>: removido el mapeo
+  <code>raw_data.mspas_exceso_mortalidad_2022 → sandbox.raw_mspas_exceso</code>.
+- El notebook ahora solo procesa <code>mspas_mortalidad_general</code> y <code>mspas_tasa</code>.</p>
+<h3 id="ihme-columnas-cie-10-eliminadas">IHME — columnas CIE-10 eliminadas</h3>
+<p>IHME viene con la causa ya agregada a <strong>GBD Nivel 2</strong> (ej. <code>Neoplasms</code>), que
+corresponde a un rango de ~100+ códigos CIE-10. El mapeo es muchos-a-uno y <strong>no
+reversible</strong>: dado "Neoplasms" no se sabe si fue C50 (mama) o C34 (pulmón). Por
+eso <code>cie10_code</code> y <code>cie10_nombre</code> no aplican y se eliminaron del schema, la
+función <code>_add_gbd_columns</code> y el <code>select</code> final de <code>staging/ihme.py</code>.</p>
+<h3 id="area_geografica-ine-descartada-no-validada"><code>area_geografica</code> (INE) — descartada, no validada</h3>
+<p>El esquema original del INE traía <code>Areag</code> (área geográfica). Se decidió
+<strong>dropearla</strong> (<code>_INE_DROP_COLS</code>), alineado con §3.1 del modelo dimensional
+(simplificación de geografía a solo ocurrencia: dep/mun). La sección anterior
+de este doc que describía <code>_validate_area_geografica</code> queda obsoleta.</p>
+<hr />
+<h2 id="2-bugs-de-infraestructura-databricks-connect">2. Bugs de infraestructura — Databricks Connect</h2>
+<h3 id="21-split-brain-file-scheme-no-resuelve-en-el-cluster">2.1 Split-brain: <code>file:</code> scheme no resuelve en el cluster</h3>
+<p><strong>Síntoma:</strong> los notebooks de ingesta (gDrive) descargan archivos CSV al
+filesystem del cliente, pero <code>spark.read.format("csv").load("file:/Workspace/...")</code>
+falla con <code>PATH_NOT_FOUND</code> o lee DataFrames vacíos.</p>
+<p><strong>Causa:</strong> el proyecto usa <strong>Databricks Connect</strong> (el cliente Python corre
+local; el cluster Spark corre remoto). <code>file:</code> scheme busca en el filesystem
+del <strong>cluster</strong>, donde los archivos descargados por Python nunca llegaron. Solo
+los archivos cacheados de corridas previas funcionaban (falsa apariencia de
+éxito).</p>
+<p><strong>Impacto medido en INE:</strong> <code>sandbox.raw_ine</code> quedó con solo 4,126 filas de 2
+archivos (2021, 2023 — cacheados) en lugar de los ~920k esperados de 10
+archivos (2015–2024). Esto a su vez hacía que la cobertura GBD se midiera sobre
+un sample no representativo.</p>
+<p><strong>Corrección:</strong> migrar todas las lecturas de CSV al patrón <strong>pandas en cliente
++ <code>spark.createDataFrame(pdf)</code></strong>. Los datos viajan por el protocolo de Connect,
+sin tocar el FS del cluster.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">pdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">final_path</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Archivos fixeados:</strong>
+- <code>gdrive_ine_guatemala_ingest.py</code>: bucle de 10 CSV de defunciones + diccionario
+  de defunciones + diccionario CIE-10.
+- <code>gdrive_sandbox_ingest.py</code> (duplicado idéntico): mismo fix.</p>
+<h3 id="22-naming-de-columnas-_c0-vs-0-1-2">2.2 Naming de columnas: <code>_c0</code> vs <code>0, 1, 2</code></h3>
+<p><strong>Síntoma:</strong> <code>staging/ine.py</code> lanza
+<code>[UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name '_c0' cannot be resolved. Did you mean one of the following? [0, 1, 2, ...]</code>.</p>
+<p><strong>Causa:</strong> <code>pd.read_csv(..., header=None)</code> nombra las columnas con enteros
+<code>0, 1, 2</code>, pero <code>_load_catalogs()</code> busca <code>_c0, _c1, _c2</code> (la convención que
+<code>spark.read.csv</code> sin header generaba). Al migrar a pandas se perdió el naming.</p>
+<p><strong>Corrección:</strong> renombrar las columnas del DataFrame de pandas antes de
+<code>spark.createDataFrame</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pdf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;_c</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pdf</span><span class="o">.</span><span class="n">columns</span><span class="p">))]</span>
+</code></pre></div>
+<h3 id="23-truncado-de-display-confunde-el-analisis">2.3 Truncado de <code>display()</code> confunde el análisis</h3>
+<p><strong>Síntoma:</strong> el CSV exportado <code>INE-5.csv</code> tenía 4,217 filas y solo 3 años
+(2017, 2019, 2023), sugiriendo que la ingesta falló.</p>
+<p><strong>Causa:</strong> <code>display(df)</code> en Databricks trunca la preview a ~4,000 filas. El CSV
+se exportó desde esa preview, no desde la tabla real. La tabla <code>stage.ine</code>
+sí tenía los 918,687 filas completas.</p>
+<p><strong>Lección:</strong> validar conteos siempre con <code>spark.read.table("stage.ine").count()</code>
+o agregaciones, nunca con el truncado de <code>display()</code>.</p>
+<hr />
+<h2 id="3-hallazgos-por-fuente">3. Hallazgos por fuente</h2>
+<h3 id="31-ine-notebooksstaginginepy">3.1 INE (<code>notebooks/staging/ine.py</code>)</h3>
+<h4 id="asistencia_medica-corregido-100-null-poblado"><code>asistencia_medica</code> — corregido (100% null → poblado)</h4>
+<p>El schema original definía <code>asistencia_medica</code> como <code>BooleanType</code>, pero los CSV
+del INE traen códigos numéricos (<code>1</code>–<code>5</code>, <code>9</code>) o etiquetas (<code>Médica</code>, <code>Empírica</code>).
+El cast fallaba silenciosamente. Corregido a <code>StringType</code> + decodificación vía
+catálogo. Distribución final en stage:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Filas</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Médica</td>
+<td>2464</td>
+<td>58.0%</td>
+</tr>
+<tr>
+<td>Ninguna</td>
+<td>1547</td>
+<td>36.4%</td>
+</tr>
+<tr>
+<td>Empírica</td>
+<td>96</td>
+<td>2.3%</td>
+</tr>
+<tr>
+<td>Paramédica</td>
+<td>17</td>
+<td>0.4%</td>
+</tr>
+<tr>
+<td>Comadrona</td>
+<td>1</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>null</td>
+<td>120</td>
+<td>2.8%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cie10_nombre-poblado-desde-diccionario-cie-10-del-ine"><code>cie10_nombre</code> — poblado desde diccionario CIE-10 del INE</h4>
+<p>Antes <code>cie10_nombre</code> era NULL por diseño (el master GBD no trae el nombre de
+cada código CIE-10). Se cableó al diccionario CIE-10 del INE
+(<code>data/raw/ine/csv/ine_diccionario_cie-10.csv</code>, 14,365 filas, código →
+descripción en español). Cobertura final: <strong>100%</strong> (4,217/4,217 en sample,
+918,687/918,687 en tabla real).</p>
+<p><strong>Infraestructura requerida:</strong> el diccionario se ingesta a
+<code>sandbox.raw_ine_diccionario_cie10</code> desde gDrive (mismo patrón pandas +
+createDataFrame).</p>
+<h4 id="crosswalk-etario-implementado">Crosswalk etario — implementado</h4>
+<p>INE trae año simple <code>edad</code> (0–120) + <code>periodo_edad</code> para &lt;1 año. Se derivan
+<code>id_etario</code> + <code>categoria_etaria</code> vía <code>_add_etario_columns</code> (crosswalk §5.3 del
+modelo dimensional). Cobertura: <strong>100%</strong>. Distribución real (tabla de 918k):</p>
+<table>
+<thead>
+<tr>
+<th>id_etario</th>
+<th>Banda</th>
+<th>Categoria</th>
+<th>% aprox</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (LT1)</td>
+<td>Menores de 1</td>
+<td>Niñez</td>
+<td>~3%</td>
+</tr>
+<tr>
+<td>2 (01-04)</td>
+<td>1 a 4</td>
+<td>Niñez</td>
+<td>~2%</td>
+</tr>
+<tr>
+<td>5-7 (15-29)</td>
+<td>Juventud</td>
+<td>Juventud</td>
+<td>~6%</td>
+</tr>
+<tr>
+<td>8-14 (30-64)</td>
+<td>Adultez</td>
+<td>Adultez</td>
+<td>~45%</td>
+</tr>
+<tr>
+<td>15-19 (65+)</td>
+<td>Vejez</td>
+<td>Vejez</td>
+<td>~42%</td>
+</tr>
+<tr>
+<td>98 (UNK)</td>
+<td>No especificada</td>
+<td>—</td>
+<td>~0.5%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-ihme-notebooksstagingihmepy">3.2 IHME (<code>notebooks/staging/ihme.py</code>)</h3>
+<h4 id="medida-corregido-50-null-0-null"><code>medida</code> — corregido (50% null → 0% null)</h4>
+<p>Los datos raw incluyen el nombre completo entre paréntesis:
+<code>"DALYs (Disability-Adjusted Life Years)"</code>. El <code>isin</code> contra
+<code>MEDIDAS_VALIDAS</code> no encontraba coincidencia. Corregido con <code>regexp_replace</code>
+que elimina el paréntesis antes de validar.</p>
+<p>Distribución final: <code>Deaths</code> 2,592 + <code>DALYs</code> 2,592 = 5,184 filas. <code>metrica</code>:
+<code>Número</code> 1,728 + <code>Tasa</code> 1,728 + <code>Porcentaje</code> 1,728.</p>
+<h4 id="cobertura-gbd-y-etario">Cobertura GBD y etario</h4>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gbd_code</code> NOT null</td>
+<td>5,184 / 5,184 (<strong>100%</strong>)</td>
+</tr>
+<tr>
+<td><code>id_etario</code> NOT null</td>
+<td>5,184 / 5,184 (<strong>100%</strong>)</td>
+</tr>
+<tr>
+<td><code>id_etario</code> valor único</td>
+<td><code>99</code> (ALL/Total) — correcto, IHME solo trae "All ages"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cobertura-temporal">Cobertura temporal</h4>
+<p>Años 2015–2023 (9 años). Todas las causas son GBD Nivel 2 nativas (16 causas).</p>
+<h3 id="33-mspas-notebooksstagingmspaspy">3.3 MSPAS (<code>notebooks/staging/mspas.py</code>)</h3>
+<h4 id="contexto-los-excel-de-mspas-son-pdfs-con-graficas">Contexto: los "Excel" de MSPAS son PDFs con gráficas</h4>
+<p>Los archivos fuente resultaron ser PDFs con imágenes, no tablas estructuradas.
+La extracción solo capturó totales anuales. Schemas simplificados a lo disponible.</p>
+<h4 id="estado-final-tras-eliminar-exceso">Estado final (tras eliminar exceso)</h4>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Filas</th>
+<th>Años</th>
+<th>Columnas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stage.mspas_mortalidad_general</code></td>
+<td>15</td>
+<td>2010–2024</td>
+<td>6 (<code>anio</code>, <code>defunciones</code>, ...)</td>
+</tr>
+<tr>
+<td><code>stage.mspas_tasa</code></td>
+<td>19</td>
+<td>2001–2019</td>
+<td>6 (<code>anio</code>, <code>tasa_por_100k</code>, ...)</td>
+</tr>
+</tbody>
+</table>
+<p>Total defunciones (general): 1,291,799. Tasa cubre solo pre-COVID (acaba 2019).</p>
+<h3 id="34-panama-notebooksstagingpanamapy">3.4 Panamá (<code>notebooks/staging/panama.py</code>)</h3>
+<h4 id="cobertura-gbd-y-etario_1">Cobertura GBD y etario</h4>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gbd_code</code> NOT null</td>
+<td>4,103 / 5,592 (<strong>73.4%</strong>)</td>
+</tr>
+<tr>
+<td><code>id_etario</code> NOT null</td>
+<td>5,592 / 5,592 (<strong>100%</strong>)</td>
+</tr>
+<tr>
+<td><code>nivel</code> (anti doble-conteo)</td>
+<td>simple 5,411 + grupo 181</td>
+</tr>
+</tbody>
+</table>
+<p>Cobertura temporal: 2020–2024 (4 años en el output actual; la raw tiene 2015–2024).</p>
+<h3 id="35-who-notebooksstagingwho_mortalitypy">3.5 WHO (<code>notebooks/staging/who_mortality.py</code>)</h3>
+<h4 id="cobertura-temporal-correccion-del-doc">Cobertura temporal (corrección del doc)</h4>
+<p><code>WHO.csv</code> (deaths) y <code>WHO-2.csv</code> (population) cubren <strong>2015–2022 completo</strong>
+(8 años), no 2000–2003 como decía <code>modelo_dimensional.md</code> §2.2. WHO se
+mantiene como hecho válido.</p>
+<table>
+<thead>
+<tr>
+<th>Tabla</th>
+<th>Filas</th>
+<th>Años</th>
+<th>age_group_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WHO.csv</code> (deaths)</td>
+<td>1,344</td>
+<td>2015–2022</td>
+<td>21 bandas (all, 0, 1-4, ... 85+, age_unknown)</td>
+</tr>
+<tr>
+<td><code>WHO-2.csv</code> (population)</td>
+<td>672</td>
+<td>2015–2022</td>
+<td>28 bandas (incluye agregados solapados)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pendiente-normalizacion-gbd-etario-descarte-de-bandas-solapadas">Pendiente: normalización GBD + etario + descarte de bandas solapadas</h4>
+<p>WHO aún <strong>no</strong> tiene columnas <code>gbd_*</code> ni <code>id_etario</code> (el notebook no se tocó en
+esta ronda). Pendiente:
+- <code>indicator_code</code> (CGXXXX) → <code>gbd_code</code> directo (WHO lo usa nativamente).
+- <code>age_group_code</code> → <code>id_etario</code> vía crosswalk §5.3.
+- Descartar agregados solapados de population: <code>age00_04</code>, <code>age05_14</code>,
+  <code>age15_24</code>, <code>age25_34</code>, <code>age35_54</code>, <code>55-74</code>, <code>75+</code> (§5.4 #1).</p>
+<hr />
+<h2 id="4-cobertura-de-normalizacion-gbd-ine-detalle">4. Cobertura de normalización GBD — INE (detalle)</h2>
+<h3 id="41-el-problema-gaps-del-master-gbd">4.1 El problema: gaps del master GBD</h3>
+<p>El crosswalk CIE-10 → GBD Nivel 2 se construye desde los rangos ICD-10 del
+master GBD (<code>Deaths.XLSX</code>, 811 códigos de 3 chars con dueño único). Sin
+embargo, el master deja <strong>gaps</strong> que excluyen códigos CIE-10 muy comunes en
+Guatemala:</p>
+<table>
+<thead>
+<tr>
+<th>Código CIE-10</th>
+<th>Descripción</th>
+<th>Filas (10 años)</th>
+<th>Gap del master</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>J18</code></td>
+<td>Neumonía</td>
+<td>56,507</td>
+<td>Rango J09-J15.8 deja fuera J16-J19</td>
+</tr>
+<tr>
+<td><code>E14</code></td>
+<td>Diabetes no insulinodependiente</td>
+<td>55,930</td>
+<td>Solo E10-E11 en el master</td>
+</tr>
+<tr>
+<td><code>R99</code></td>
+<td>Causa mal definida</td>
+<td>42,408</td>
+<td>Fuera de las 16 (correcto NULL)</td>
+</tr>
+<tr>
+<td><code>R98</code></td>
+<td>Muerte sin asistencia</td>
+<td>34,175</td>
+<td>Fuera de las 16 (correcto NULL)</td>
+</tr>
+<tr>
+<td><code>X59</code></td>
+<td>Exposición no especificada</td>
+<td>27,952</td>
+<td>Gap X54.9-X57</td>
+</tr>
+<tr>
+<td><code>R54</code></td>
+<td>Senilidad</td>
+<td>27,801</td>
+<td>Fuera de las 16 (correcto NULL)</td>
+</tr>
+<tr>
+<td><code>I64</code></td>
+<td>AVC no especificado</td>
+<td>17,499</td>
+<td>Gap I63.9-I65</td>
+</tr>
+<tr>
+<td><code>V89</code></td>
+<td>Accidente vehículo no espec.</td>
+<td>16,958</td>
+<td>Gap V86.9-V87.2</td>
+</tr>
+<tr>
+<td><code>I50</code></td>
+<td>Insuficiencia cardíaca</td>
+<td>14,217</td>
+<td>Gap I48.9-I51.0</td>
+</tr>
+<tr>
+<td><code>A41</code></td>
+<td>Sepsis</td>
+<td>12,397</td>
+<td>Fuera de las 16</td>
+</tr>
+<tr>
+<td><code>N19</code></td>
+<td>Insuficiencia renal</td>
+<td>11,505</td>
+<td>Solo N18 en el master</td>
+</tr>
+<tr>
+<td><code>I10</code></td>
+<td>Enfermedad hipertensiva</td>
+<td>9,613</td>
+<td>Solo I11 en el master</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-cobertura-antes-y-despues-de-los-overrides">4.2 Cobertura antes y después de los overrides</h3>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Filas con causa</th>
+<th>Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crosswalk original (811 códigos)</td>
+<td>445,688 / 919,231</td>
+<td><strong>48.5%</strong></td>
+</tr>
+<tr>
+<td>+ Overrides (22 códigos → 16 causas)</td>
+<td>667,331 / 919,231</td>
+<td><strong>72.6%</strong></td>
+</tr>
+<tr>
+<td>+ Nombres fuera de las 16 (12 códigos)</td>
+<td>711,611 / 919,231</td>
+<td><strong>77.4%</strong></td>
+</tr>
+<tr>
+<td>R-codes (mal definidos, NULL correcto)</td>
+<td>124,564 / 919,231</td>
+<td>13.6%</td>
+</tr>
+<tr>
+<td>Resto sin causa (NULL)</td>
+<td>83,056 / 919,231</td>
+<td>9.0%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-overrides-aplicados-22-codigos-16-causas-gbd">4.3 Overrides aplicados (22 códigos → 16 causas GBD)</h3>
+<p>Códigos de 3 chars que el master deja en gaps pero que lógicamente pertenecen
+a una de las 16 causas (verificación manual vs WHO Mortality):</p>
+<table>
+<thead>
+<tr>
+<th>CIE-10</th>
+<th>Causa GBD asignada</th>
+<th>Filas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>I10</code>, <code>I50</code>, <code>I64</code>, <code>I26</code>, <code>I99</code></td>
+<td>Cardiovascular diseases</td>
+<td>~45k</td>
+</tr>
+<tr>
+<td><code>E14</code>, <code>N17</code>, <code>N19</code>, <code>N39</code></td>
+<td>Diabetes and kidney diseases</td>
+<td>~83k</td>
+</tr>
+<tr>
+<td><code>J18</code>, <code>J96</code></td>
+<td>Respiratory infections and tuberculosis</td>
+<td>~59k</td>
+</tr>
+<tr>
+<td><code>V89</code></td>
+<td>Transport injuries</td>
+<td>~17k</td>
+</tr>
+<tr>
+<td><code>X45</code>, <code>X49</code>, <code>X59</code>, <code>W76</code></td>
+<td>Unintentional injuries</td>
+<td>~37k</td>
+</tr>
+<tr>
+<td><code>K72</code>, <code>K65</code></td>
+<td>Digestive diseases</td>
+<td>~4k</td>
+</tr>
+<tr>
+<td><code>Y09</code></td>
+<td>Self-harm and interpersonal violence</td>
+<td>~2k</td>
+</tr>
+<tr>
+<td><code>C80</code>, <code>C55</code>, <code>C74</code></td>
+<td>Neoplasms</td>
+<td>~10k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-causas-fuera-de-las-16-12-codigos-solo-gbd_nombre">4.4 Causas fuera de las 16 (12 códigos → solo <code>gbd_nombre</code>)</h3>
+<p>Códigos que pertenecen a causas GBD Nivel 2 fuera de las 16. Se puebla <strong>solo</strong>
+<code>gbd_nombre</code> (autoritativo); <code>gbd_code</code>/<code>gbd_cause_id</code> quedan NULL porque el
+<code>CGxxxx</code> no existe en ninguna fuente confiable (no se fabrica). Misma regla
+que Panamá lista-103 (§6.4):</p>
+<table>
+<thead>
+<tr>
+<th>CIE-10</th>
+<th>gbd_nombre</th>
+<th>Filas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A41</code></td>
+<td>Other infectious diseases</td>
+<td>~12k</td>
+</tr>
+<tr>
+<td><code>F10</code></td>
+<td>Substance use disorders</td>
+<td>~5k</td>
+</tr>
+<tr>
+<td><code>P07</code>, <code>P21</code>, <code>P22</code>, <code>P24</code>, <code>P36</code></td>
+<td>Neonatal disorders</td>
+<td>~17k</td>
+</tr>
+<tr>
+<td><code>Q24</code>, <code>Q89</code>, <code>Q90</code></td>
+<td>Congenital birth defects</td>
+<td>~9k</td>
+</tr>
+<tr>
+<td><code>D64</code>, <code>D65</code></td>
+<td>Blood disorders</td>
+<td>~5k</td>
+</tr>
+<tr>
+<td><code>E86</code>, <code>E87</code></td>
+<td>Nutritional deficiencies</td>
+<td>~6k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-cobertura-gbd-por-ano-tabla-real-stageine-918687-filas">4.5 Cobertura GBD por año (tabla real <code>stage.ine</code>, 918,687 filas)</h3>
+<table>
+<thead>
+<tr>
+<th>Año</th>
+<th>Filas</th>
+<th><code>gbd_code</code> NOT null</th>
+<th>Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2015</td>
+<td>80,814</td>
+<td>63,127</td>
+<td>78.1%</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>82,521</td>
+<td>63,635</td>
+<td>77.1%</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>81,665</td>
+<td>62,512</td>
+<td>76.5%</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>83,021</td>
+<td>62,557</td>
+<td>75.4%</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>85,518</td>
+<td>64,323</td>
+<td>75.2%</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>95,955</td>
+<td>74,095</td>
+<td>77.2%</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>118,414</td>
+<td>92,064</td>
+<td>77.7%</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>95,337</td>
+<td>70,428</td>
+<td>73.9%</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>95,889</td>
+<td>69,642</td>
+<td>72.6%</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>99,553</td>
+<td>71,772</td>
+<td>72.1%</td>
+</tr>
+</tbody>
+</table>
+<p>Tendencia: ligera caída en 2022–2024, posiblemente por mayor proporción de
+códigos mal definidos (R-codes) en años recientes.</p>
+<hr />
+<h2 id="5-crosswalk-etario-implementacion-por-fuente">5. Crosswalk etario — implementación por fuente</h2>
+<p>Grid canónico <code>DIM_ETARIO</code> (§5.2 del modelo dimensional): 21 filas (id_etario
+1–19 + 98 UNK + 99 ALL). Cada notebook embebe el grid y deriva <code>id_etario</code> +
+<code>categoria_etaria</code> (Niñez/Juventud/Adultez/Vejez/Total para roll-up).</p>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Cómo deriva <code>id_etario</code></th>
+<th>Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>INE</strong></td>
+<td>año simple <code>edad</code> → banda (<code>F.when</code> encadenado); null → 98 (UNK)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>Panamá</strong></td>
+<td>etiqueta normalizada → mapa directo (<code>'Menores de 1'</code>→1, …, <code>'No especificada'</code>→98)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>IHME</strong></td>
+<td><code>'All ages'</code> → 99 (ALL/Total), miembro único</td>
+<td>100%</td>
+</tr>
+<tr>
+<td><strong>WHO</strong></td>
+<td>pendiente (<code>age_group_code</code> → <code>id_etario</code>)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>MSPAS</strong></td>
+<td>no aplica (sin edad, solo totales nacionales)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>MSPAS no recibe <code>id_etario</code> porque sus tablas son totales anuales sin
+desglose etario.</p>
+<hr />
+<h2 id="6-estado-final-de-schemas">6. Estado final de schemas</h2>
+<h3 id="stageine-41-columnas-918687-filas"><code>stage.ine</code> — 41 columnas, 918,687 filas</h3>
+<p>Cobertura: años 2015–2024 (10), <code>gbd_code</code> 75% promedio, <code>cie10_nombre</code> 100%,
+<code>id_etario</code> 100%. Incluye <code>id_etario</code> + <code>categoria_etaria</code> + bloque
+<code>cie10_*</code>/<code>gbd_*</code> completo.</p>
+<h3 id="stageihme-23-columnas-5184-filas"><code>stage.ihme</code> — 23 columnas, 5,184 filas</h3>
+<p>Cobertura: años 2015–2023, <code>gbd_code</code> 100%, <code>id_etario</code> 100% (todo 99/ALL).
+Sin <code>cie10_*</code> (no aplica). <code>medida</code>/<code>metrica</code> corregidas.</p>
+<h3 id="stagepanama-23-columnas-5592-filas"><code>stage.panama</code> — 23 columnas, 5,592 filas</h3>
+<p>Cobertura: <code>gbd_code</code> 73.4%, <code>id_etario</code> 100%, <code>nivel</code> (anti doble-conteo)
+presente. Bloque <code>cie10_*</code>/<code>gbd_*</code> completo.</p>
+<h3 id="stagemspas_mortalidad_general-6-columnas-15-filas"><code>stage.mspas_mortalidad_general</code> — 6 columnas, 15 filas</h3>
+<p>Años 2010–2024. Solo <code>anio</code> + <code>defunciones</code> (totales nacionales).</p>
+<h3 id="stagemspas_tasa-6-columnas-19-filas"><code>stage.mspas_tasa</code> — 6 columnas, 19 filas</h3>
+<p>Años 2001–2019. Solo <code>anio</code> + <code>tasa_por_100k</code> (por-100k). NULL para 2020–2024
+(documentar en dashboards pre/post-COVID).</p>
+<h3 id="stagemspas_exceso-eliminado"><code>stage.mspas_exceso</code> — ELIMINADO</h3>
+<p>No se genera. El notebook ya no lo procesa.</p>
+<hr />
+<h2 id="7-patrones-reutilizables-identificados">7. Patrones reutilizables identificados</h2>
+<h3 id="pandas-sparkcreatedataframe-databricks-connect">pandas + <code>spark.createDataFrame</code> (Databricks Connect)</h3>
+<p>Para leer CSV locales en un entorno con Databricks Connect, <strong>nunca</strong> usar
+<code>spark.read.format("csv").load("file:...")</code> (busca en el FS del cluster
+remoto). En su lugar, leer con pandas en el cliente y enviar al cluster:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">pdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">pdf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;_c</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pdf</span><span class="o">.</span><span class="n">columns</span><span class="p">))]</span>  <span class="c1"># si se espera _c0,_c1,...</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<p>Válido para archivos de hasta ~hundreds of MB (limitado por el overhead del
+protocolo de Connect).</p>
+<h3 id="_normalize_cols-renombrar-completar-con-nulls"><code>_normalize_cols</code> — renombrar + completar con nulls</h3>
+<p>Cuando la fuente puede tener nombres en inglés o en español, y puede carecer
+de columnas opcionales:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">_normalize_cols</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">rename_map</span><span class="p">,</span> <span class="n">null_defaults</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">select_exprs</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="n">target</span> <span class="o">=</span> <span class="n">rename_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="k">if</span> <span class="n">target</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            <span class="n">select_exprs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;`</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">`&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>            <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="o">*</span><span class="n">select_exprs</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">dtype</span> <span class="ow">in</span> <span class="n">null_defaults</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>            <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">lit</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">dtype</span><span class="p">))</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div>
+<h3 id="backtick-escaping-para-palabras-reservadas-sql">Backtick escaping para palabras reservadas SQL</h3>
+<p>PySpark <code>withColumnRenamed("group", "grupo")</code> falla con palabras reservadas.
+La forma correcta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">F</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;`group`&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;grupo&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="sentinels-blancos-del-raw-null-en-staging">Sentinels: blancos del raw → null en staging</h3>
+<p>El raw rellena blancos con <code>"Desconocido"</code> / <code>"No Especificado"</code> / <code>"Ignorado"</code>
+para evitar nulls en Delta. El staging los revierte a <code>null</code> con
+<code>_apply_sentinels</code>. Si una columna nueva tiene este comportamiento, agregarla
+a <code>_SENTINEL_COLS</code>.</p>
+<hr />
+<h2 id="8-pendientes">8. Pendientes</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tema</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>WHO: aplicar GBD (<code>indicator_code</code>→<code>gbd_code</code>) + etario + descartar bandas solapadas</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>2</td>
+<td>WHO: eliminar agregados solapados de population (<code>age00_04</code>, <code>55-74</code>, <code>75+</code>, etc.)</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Regenerar <code>ddl.sql</code> desde los schemas reales (actual está stale)</td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Capa dimensional: <code>DIM_CAUSA</code>, <code>DIM_ETARIO</code>, <code>DIM_TIEMPO</code>, <code>DIM_GEOGRAFIA</code>, <code>DIM_SOURCE</code></td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Capa de hechos: <code>FACT_INE</code>, <code>FACT_PANAMA</code>, <code>FACT_IHME</code>, <code>FACT_MSPAS</code>, <code>FACT_WHO_*</code></td>
+<td>Pendiente</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Actualizar <code>modelo_dimensional.md</code> §2.2 (WHO cubre 2015–2022, no 2000–2003)</td>
+<td>Pendiente</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

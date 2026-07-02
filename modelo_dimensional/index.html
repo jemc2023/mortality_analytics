@@ -1,0 +1,1773 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Modelo dimensional (cubo OLAP) — decisiones y observaciones - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-dimensional-cubo-olap-decisiones-y-observaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelo dimensional (cubo OLAP) — decisiones y observaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fuentes/" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../administraci%C3%B3n/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fuentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../administraci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-cobertura-real-por-fuente-verificado-contra-la-raw-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Cobertura real por fuente (verificado contra la raw data)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decisiones-de-alcance-hechos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Decisiones de alcance (hechos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decisiones de alcance (hechos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-se-elimina-fact_mspas_exceso-definitivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Se ELIMINA FACT_MSPAS_EXCESO (definitivo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-who_deaths-mantener-correccion-2026-06-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 WHO_DEATHS — MANTENER (corrección 2026-06-18)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-fact_mspas-observacion-de-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 FACT_MSPAS — observación de cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-fact_ihme-critico-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 FACT_IHME — crítico RESUELTO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-fact_panama-alcance-reducido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 FACT_PANAMA — alcance reducido
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-dimensiones-problemas-y-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Dimensiones — problemas y soluciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Dimensiones — problemas y soluciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-dim_tiempo-dim_geografia-simplificadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 DIM_TIEMPO / DIM_GEOGRAFIA — SIMPLIFICADAS ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-dim_source-mal-modelada-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 DIM_SOURCE — mal modelada, PENDIENTE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-dim_causa-normalizacion-a-gbd-plan-definido-seccion-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 DIM_CAUSA — normalización a GBD, PLAN DEFINIDO (sección 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-dim_etario-conformidad-solucion-definida-seccion-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 DIM_ETARIO — conformidad, SOLUCIÓN DEFINIDA (sección 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-reglas-de-carga-de-panama-anti-doble-conteo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Reglas de carga de Panamá (anti doble-conteo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dim_etario-esquema-comun-crosswalk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. DIM_ETARIO — esquema común + crosswalk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. DIM_ETARIO — esquema común + crosswalk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-quien-aporta-edad-realmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Quién aporta edad realmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-grid-canonico-filas-de-la-dimension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Grid canónico (filas de la dimensión)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-crosswalk-como-cada-fuente-llena-id_etario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Crosswalk (cómo cada fuente llena id_etario)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-reglas-anti-doble-conteo-criticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Reglas anti doble-conteo (críticas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Resultado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-normalizacion-de-causa-a-gbd-conformar-dim_causa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Normalización de causa a GBD (conformar DIM_CAUSA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Normalización de causa a GBD (conformar DIM_CAUSA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#60-archivos-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.0 Archivos de referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-nivel-de-conformidad-gbd-nivel-2-16-causas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Nivel de conformidad: GBD Nivel 2 (16 causas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-diccionario-maestro-gbd-nivel-2-16-causas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Diccionario maestro GBD Nivel 2 (16 causas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-pipeline-por-fuente-todo-en-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Pipeline por fuente (todo en stage)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-tareas-pendientes-de-implementacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Tareas pendientes de implementación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-estado-de-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Estado de decisiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="modelo-dimensional-cubo-olap-decisiones-y-observaciones">Modelo dimensional (cubo OLAP) — decisiones y observaciones</h1>
+<p>Documento de diseño del cubo de mortalidad. Recoge el análisis de la raw data y
+de la capa de staging, las decisiones de alcance tomadas y los problemas de
+conformidad que quedan por resolver. Es la referencia para construir las
+dimensiones y los hechos.</p>
+<blockquote>
+<p><strong>Alcance temporal del proyecto:</strong> 2015–2022, con enfoque <strong>pre-COVID vs.
+post-COVID</strong>. Marco: Pre-COVID = 2015–2019; COVID/Post = 2020–2022.</p>
+</blockquote>
+<hr />
+<h2 id="1-cobertura-real-por-fuente-verificado-contra-la-raw-data">1. Cobertura real por fuente (verificado contra la raw data)</h2>
+<table>
+<thead>
+<tr>
+<th>Fuente (hecho)</th>
+<th>Rango real</th>
+<th style="text-align: center;">Pre-COVID (15–19)</th>
+<th style="text-align: center;">COVID/Post (20–22)</th>
+<th>¿Sirve pre/post?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INE (<code>FACT_INE</code>)</td>
+<td>2015–2024</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td><strong>Sí, completo</strong></td>
+</tr>
+<tr>
+<td>Panamá (<code>FACT_PANAMA</code>)</td>
+<td>2015–2024</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td><strong>Sí, completo</strong></td>
+</tr>
+<tr>
+<td>IHME (<code>FACT_IHME</code>)</td>
+<td>2015–2023</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td><strong>Sí, completo</strong></td>
+</tr>
+<tr>
+<td>MSPAS general (<code>FACT_MSPAS</code>.defunciones)</td>
+<td>2010–2024</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td><strong>Sí, completo</strong></td>
+</tr>
+<tr>
+<td>MSPAS tasa (<code>FACT_MSPAS</code>.tasa_por_100k)</td>
+<td>2001–<strong>2019</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td><strong>Solo pre-COVID</strong></td>
+</tr>
+<tr>
+<td>WHO deaths (<code>WHO_DEATHS</code>)</td>
+<td><strong>2000–2003</strong></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td><strong>No (fuera de rango)</strong></td>
+</tr>
+<tr>
+<td>MSPAS exceso (<code>FACT_MSPAS_EXCESO</code>)</td>
+<td><strong>solo 2022</strong></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">parcial</td>
+<td><strong>No relevante</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Núcleo sólido para pre/post-COVID:</strong> INE (Guatemala, detalle), IHME (regional
+CA) y MSPAS general (totales GTM). Las tres cubren 2015–2022 completo.</p>
+<hr />
+<h2 id="2-decisiones-de-alcance-hechos">2. Decisiones de alcance (hechos)</h2>
+<h3 id="21-se-elimina-fact_mspas_exceso-definitivo">2.1 Se ELIMINA <code>FACT_MSPAS_EXCESO</code> (definitivo)</h3>
+<ul>
+<li>Solo existe 2022 → no aporta a la comparación pre/post-COVID.</li>
+<li>Además modelaba mal la dimensión <code>grupo</code>: eran cortes marginales solapados
+  (<code>Total</code>, <code>&lt;65</code>, <code>&gt;65</code>, <code>Hombres</code>, <code>Mujeres</code>) que combinaban dos particiones
+  independientes (edad y sexo) en una sola columna de texto, sin ser un cruce
+  real. No encajaban en <code>DIM_GENERO</code>/<code>DIM_ETARIO</code> sin riesgo de doble conteo.</li>
+<li>No se conserva ni como hecho a nivel nacional.</li>
+</ul>
+<h3 id="22-who_deaths-mantener-correccion-2026-06-18">2.2 <code>WHO_DEATHS</code> — MANTENER (corrección 2026-06-18)</h3>
+<ul>
+<li>La raw data de WHO cubre <strong>2015–2022</strong> completo (1,344 filas de deaths +
+  672 de population, 8 años), <strong>dentro</strong> de la ventana pre/post-COVID. La
+  sección previa ("candidato a ELIMINAR, solo 2000–2003") estaba equivocada:
+  correspondía a un export obsoleto; el actual sí trae años recientes.</li>
+<li><code>FACT_WHO_POPULATION</code> también cubre 2015–2022 → sirve como denominador.</li>
+<li><strong>Observación de conformidad (§6.1, corrección 2026-06-18):</strong> WHO Mortality
+  usa su propia lista de <code>CGXXXX</code> (Nivel 1: Communicable / Noncommunicable /
+  Injuries / Ill-defined), <strong>no</strong> las 16 causas GBD Nivel 2 de IHME. Los CG de
+  WHO no coinciden con los del diccionario GBD (p. ej. WHO <code>CG0590</code> =
+  "Noncommunicable diseases", pero en el diccionario <code>CG0590</code> =
+  "Neurological disorders"). Por eso <code>gbd_code</code> queda NULL en WHO y
+  <code>gbd_nombre</code> se puebla con <code>indicator_name</code> (best-effort, §6.4, misma regla
+  que INE/Panamá para causas fuera de las 16). WHO <strong>no</strong> se une por igualdad
+  directa de <code>gbd_code</code> con las demás fuentes.</li>
+</ul>
+<h3 id="23-fact_mspas-observacion-de-cobertura">2.3 <code>FACT_MSPAS</code> — observación de cobertura</h3>
+<ul>
+<li><code>defunciones</code> (mortalidad general) cubre 2015–2022 completo.</li>
+<li><code>tasa_por_100k</code> <strong>acaba en 2019</strong> → quedará NULL para 2020–2022. En dashboards
+  pre/post, la tasa MSPAS solo tendrá lado pre-COVID. <strong>Documentar.</strong></li>
+</ul>
+<h3 id="24-fact_ihme-critico-resuelto">2.4 <code>FACT_IHME</code> — crítico RESUELTO</h3>
+<ul>
+<li><code>valor</code> significa cosas distintas según <code>medida</code> (Deaths/DALYs/YLLs/…) ×
+  <code>metrica</code> (Número/Tasa/Porcentaje). Sin esas columnas se sumarían
+  muertes + DALYs + tasas + % en una sola columna.</li>
+<li><strong>Solución aplicada:</strong> se añadieron <code>DIM_MEDIDA</code> y <code>DIM_METRICA</code>, y <code>FACT_IHME</code>
+  ahora tiene <code>id_medida</code> + <code>id_metrica</code>.</li>
+<li><strong>Regla BI:</strong> filtrar siempre <code>medida</code> + <code>metrica</code> antes de cualquier
+  <code>SUM(valor)</code>. <code>metrica='Número'</code> es aditivo; <code>Tasa</code>/<code>Porcentaje</code> NO.</li>
+</ul>
+<h3 id="25-fact_panama-alcance-reducido">2.5 <code>FACT_PANAMA</code> — alcance reducido</h3>
+<p>Solo se usan: <code>grupo_edad</code>, <code>sexo</code>, <code>causa</code>, <code>país</code>, <code>año</code>, <code>defunciones</code>,
+<code>source</code>, <code>record_hash</code>, <code>ingestion_ts</code>. Se descartan las sub-tablas de
+provincia, certificación, estado conyugal, actividad económica y tasa.
+- La data local solo trae la sub-tabla <code>causa_edad_sexo</code> (las demás no están en
+  los CSV locales). Coincide con el alcance elegido.
+- <strong>Reglas de carga obligatorias:</strong> ver sección 4 (Panamá tiene subtotales en los
+  tres ejes y duplica si se suma sin filtrar).</p>
+<hr />
+<h2 id="3-dimensiones-problemas-y-soluciones">3. Dimensiones — problemas y soluciones</h2>
+<h3 id="31-dim_tiempo-dim_geografia-simplificadas">3.1 <code>DIM_TIEMPO</code> / <code>DIM_GEOGRAFIA</code> — SIMPLIFICADAS ✅</h3>
+<ul>
+<li><strong>Decisión:</strong> quedarse <strong>solo con ocurrencia</strong>. Se eliminan los roles de
+  registro y residencia. Esto resuelve el problema de "roles aplastados"
+  (varios roles en una misma fila) que explotaba filas y confundía el grano.</li>
+<li><code>semana_epidemiologica</code> se elimina (no existe en ninguna fuente real).</li>
+<li><code>DIM_TIEMPO</code>: grano = <strong>año</strong> (la mayoría de fuentes son anuales); mes/día solo
+  poblados desde INE.</li>
+</ul>
+<h3 id="32-dim_source-mal-modelada-pendiente">3.2 <code>DIM_SOURCE</code> — mal modelada, PENDIENTE</h3>
+<ul>
+<li>Tiene <code>ingestion_ts</code> y <code>record_hash</code>: son <strong>linaje por fila</strong>, únicos por
+  registro. Al estar en una dimensión <strong>conformada</strong> (compartida por todos los
+  hechos), la vuelven 1:1 con los hechos → deja de ser dimensión.</li>
+<li><strong>Solución:</strong></li>
+<li><code>DIM_SOURCE</code>/<code>DIM_FUENTE</code> = catálogo de sistemas (INE/WHO/IHME/MSPAS/Panamá),
+    pocas filas, atributos descriptivos (cobertura, granularidad, tipo de datos).</li>
+<li><code>ingestion_ts</code> y <code>record_hash</code> → <strong>columnas de auditoría en cada hecho</strong>
+    (degeneradas), no en la dimensión.</li>
+<li><code>record_hash</code> nunca debe ser dimensión (único por fila por definición).</li>
+</ul>
+<h3 id="33-dim_causa-normalizacion-a-gbd-plan-definido-seccion-6">3.3 <code>DIM_CAUSA</code> — normalización a GBD, PLAN DEFINIDO (sección 6)</h3>
+<p>Hay <strong>cuatro vocabularios de causa distintos</strong>, uno por fuente. La solución es
+normalizar <strong>todas</strong> a un código GBD común. Ver sección 6 para el detalle.</p>
+<p>Columnas objetivo de <code>DIM_CAUSA</code>: <code>cie-10_code</code>, <code>cie-10_nombre</code>, <code>GBD_code</code>,
+<code>GBD_nombre</code>. El bloque CIE-10 es <strong>best-effort / omitible</strong> si su poblado resulta
+muy complejo; el bloque GBD es <strong>obligatorio</strong> (es la llave conformada).</p>
+<h3 id="34-dim_etario-conformidad-solucion-definida-seccion-5">3.4 <code>DIM_ETARIO</code> — conformidad, SOLUCIÓN DEFINIDA (sección 5)</h3>
+<p>Este es el punto más importante pendiente. Ver sección 5.</p>
+<hr />
+<h2 id="4-reglas-de-carga-de-panama-anti-doble-conteo">4. Reglas de carga de Panamá (anti doble-conteo)</h2>
+<p><code>causa_edad_sexo</code> tiene <strong>subtotales en los tres ejes</strong>; todos duplican si se
+suman sin filtrar. Verificado contra la raw data (32.525 filas, 2015–2024):</p>
+<table>
+<thead>
+<tr>
+<th>Eje</th>
+<th>Hallazgo (verificado)</th>
+<th>Regla de carga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sexo</strong></td>
+<td><code>Total</code> = <code>Hombres</code> + <code>Mujeres</code> (causa 003, 2022: Total=125=H+M)</td>
+<td>Cargar <strong>solo <code>Hombres</code> + <code>Mujeres</code></strong>, excluir <code>Total</code></td>
+</tr>
+<tr>
+<td><strong>Causa</strong></td>
+<td>Códigos-rango (<code>001-025</code>, <code>064-071</code>) son agregados de los simples; coexisten en la misma celda (<code>064-071</code>=737 = Σ<code>065..071</code>, verificado 2024)</td>
+<td><strong>Implementado:</strong> <code>stage.panama</code> trae columna <code>nivel</code> (<code>grupo</code>/<code>simple</code>) y conserva ambos (≈411k def solo existen como grupo, p.ej. externas <code>095</code>). Al sumar se filtra <strong>un solo <code>nivel</code></strong>. ⚠️ los simples NO cubren todo (<code>066</code> hipertensivas, <code>071</code> resto → sin GBD)</td>
+</tr>
+<tr>
+<td><strong>Edad</strong></td>
+<td>Bandas solapadas e inconsistentes entre años (2015 trae años simples + <code>Menores de 5</code>; 2016–19 <code>1 a 4</code>; 2020–24 años simples)</td>
+<td>Normalizar (ver 5.2): colapsar <code>1,2,3,4</code>→<code>1 a 4</code>, <strong>descartar</strong> <code>Menores de 5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-dim_etario-esquema-comun-crosswalk">5. <code>DIM_ETARIO</code> — esquema común + crosswalk</h2>
+<h3 id="51-quien-aporta-edad-realmente">5.1 Quién aporta edad realmente</h3>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Edad que trae</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INE</td>
+<td>año simple <code>0…120</code></td>
+<td>bucketizar a banda</td>
+</tr>
+<tr>
+<td>Panamá</td>
+<td>bandas (con solapes)</td>
+<td>mapear + limpiar</td>
+</tr>
+<tr>
+<td>WHO_POPULATION</td>
+<td>quinquenios <code>0,1-4,5-9…85+</code></td>
+<td>mapeo casi directo</td>
+</tr>
+<tr>
+<td><strong>IHME</strong></td>
+<td><strong>solo <code>All ages</code></strong></td>
+<td>→ miembro único <code>ALL</code></td>
+</tr>
+</tbody>
+</table>
+<p>La conformidad real es <strong>INE ↔ Panamá ↔ WHO_pop</strong>, y los tres caben en el
+estándar quinquenal GBD/WHO. IHME solo necesita el miembro "Todas las edades".</p>
+<h3 id="52-grid-canonico-filas-de-la-dimension">5.2 Grid canónico (filas de la dimensión)</h3>
+<table>
+<thead>
+<tr>
+<th>id_etario</th>
+<th>grupo_edad_codigo</th>
+<th>grupo_edad_nombre</th>
+<th>edad_min</th>
+<th>edad_max</th>
+<th>categoria_etaria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>LT1</code></td>
+<td>Menores de 1</td>
+<td>0</td>
+<td>0</td>
+<td>Niñez</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>01-04</code></td>
+<td>1 a 4</td>
+<td>1</td>
+<td>4</td>
+<td>Niñez</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>05-09</code></td>
+<td>5 a 9</td>
+<td>5</td>
+<td>9</td>
+<td>Niñez</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>10-14</code></td>
+<td>10 a 14</td>
+<td>10</td>
+<td>14</td>
+<td>Niñez</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>15-19</code></td>
+<td>15 a 19</td>
+<td>15</td>
+<td>19</td>
+<td>Juventud</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>20-24</code></td>
+<td>20 a 24</td>
+<td>20</td>
+<td>24</td>
+<td>Juventud</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>25-29</code></td>
+<td>25 a 29</td>
+<td>25</td>
+<td>29</td>
+<td>Juventud</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>30-34</code></td>
+<td>30 a 34</td>
+<td>30</td>
+<td>34</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>35-39</code></td>
+<td>35 a 39</td>
+<td>35</td>
+<td>39</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>40-44</code></td>
+<td>40 a 44</td>
+<td>40</td>
+<td>44</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>45-49</code></td>
+<td>45 a 49</td>
+<td>45</td>
+<td>49</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>50-54</code></td>
+<td>50 a 54</td>
+<td>50</td>
+<td>54</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>55-59</code></td>
+<td>55 a 59</td>
+<td>55</td>
+<td>59</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>14</td>
+<td><code>60-64</code></td>
+<td>60 a 64</td>
+<td>60</td>
+<td>64</td>
+<td>Adultez</td>
+</tr>
+<tr>
+<td>15</td>
+<td><code>65-69</code></td>
+<td>65 a 69</td>
+<td>65</td>
+<td>69</td>
+<td>Vejez</td>
+</tr>
+<tr>
+<td>16</td>
+<td><code>70-74</code></td>
+<td>70 a 74</td>
+<td>70</td>
+<td>74</td>
+<td>Vejez</td>
+</tr>
+<tr>
+<td>17</td>
+<td><code>75-79</code></td>
+<td>75 a 79</td>
+<td>75</td>
+<td>79</td>
+<td>Vejez</td>
+</tr>
+<tr>
+<td>18</td>
+<td><code>80-84</code></td>
+<td>80 a 84</td>
+<td>80</td>
+<td>84</td>
+<td>Vejez</td>
+</tr>
+<tr>
+<td>19</td>
+<td><code>85+</code></td>
+<td>85 y más</td>
+<td>85</td>
+<td><em>(null)</em></td>
+<td>Vejez</td>
+</tr>
+<tr>
+<td>98</td>
+<td><code>UNK</code></td>
+<td>No especificada</td>
+<td><em>(null)</em></td>
+<td><em>(null)</em></td>
+<td>No especificado</td>
+</tr>
+<tr>
+<td>99</td>
+<td><code>ALL</code></td>
+<td>Todas las edades</td>
+<td>0</td>
+<td><em>(null)</em></td>
+<td>Total</td>
+</tr>
+</tbody>
+</table>
+<p><code>edad_max</code> es null en <code>85+</code> y <code>ALL</code>. <code>categoria_etaria</code> habilita el roll-up
+Niñez / Juventud / Adultez / Vejez.</p>
+<h3 id="53-crosswalk-como-cada-fuente-llena-id_etario">5.3 Crosswalk (cómo cada fuente llena <code>id_etario</code>)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>INE (año simple):    id_etario = banda donde edad_min &lt;= edad &lt;= edad_max
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                     (edad=0 -&gt; LT1; edad 1..4 -&gt; 01-04; … &gt;=85 -&gt; 85+)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Panamá (etiquetas):  &#39;Menores de 1&#39;        -&gt; LT1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                     &#39;1&#39;,&#39;2&#39;,&#39;3&#39;,&#39;4&#39;       -&gt; 01-04   (colapsa años simples)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                     &#39;1 a 4&#39;               -&gt; 01-04
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                     &#39;5 a 9&#39;               -&gt; 05-09 … &#39;85 y más&#39; -&gt; 85+
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                     &#39;No especificada&#39;     -&gt; UNK
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                     &#39;Menores de 5&#39;        -&gt; ❌ DESCARTAR (solapa LT1+01-04)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>WHO_POP (códigos):   age00 -&gt; LT1, age01_04 -&gt; 01-04, … age85_over -&gt; 85+
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                     age55_74, age75_over  -&gt; ❌ DESCARTAR (agregados solapados)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>IHME:                &#39;All ages&#39;            -&gt; ALL
+</code></pre></div>
+<h3 id="54-reglas-anti-doble-conteo-criticas">5.4 Reglas anti doble-conteo (críticas)</h3>
+<ol>
+<li><strong>Descartar bandas agregadas que solapan a las hoja:</strong> <code>Menores de 5</code>
+   (Panamá 2015) y <code>age55_74</code> / <code>age75_over</code> (WHO).</li>
+<li><strong>Colapsar los años simples 1–4 de Panamá</strong> a <code>01-04</code>, igualándolos con los
+   años que traen <code>'1 a 4'</code>. Así la banda 1–4 significa lo mismo en los 10 años.</li>
+</ol>
+<h3 id="55-resultado">5.5 Resultado</h3>
+<ul>
+<li>Una <code>id_etario</code> significa la misma banda en <code>FACT_INE</code>, <code>FACT_PANAMA</code> y
+  <code>FACT_WHO_POPULATION</code> → comparables entre sí.</li>
+<li><code>FACT_IHME</code> cuelga del miembro <code>ALL</code> (coherente: no tiene desglose por edad).</li>
+<li>Roll-up por <code>categoria_etaria</code> uniforme entre países.</li>
+<li><strong>Decisión abierta:</strong> mantener <code>LT1</code> y <code>01-04</code> separados (recomendado, porque
+  Panamá y WHO distinguen <code>&lt;1</code>) o fusionarlos en <code>00-04</code>. Siempre se puede
+  agregar hacia arriba, nunca al revés.</li>
+</ul>
+<hr />
+<h2 id="6-normalizacion-de-causa-a-gbd-conformar-dim_causa">6. Normalización de causa a GBD (conformar <code>DIM_CAUSA</code>)</h2>
+<p><strong>Objetivo:</strong> que <code>FACT_INE</code>, <code>FACT_PANAMA</code>, <code>FACT_IHME</code> y <code>WHO_DEATHS</code> compartan
+un <strong>código GBD común</strong> (<code>GBD_code</code> + <code>GBD_nombre</code>), para poder comparar causas
+entre fuentes/países. La normalización se hace en la <strong>capa stage</strong> (cada tabla
+sale de stage ya con sus columnas de causa normalizadas).</p>
+<blockquote>
+<p><strong>Orden de trabajo: el primer mapeo a consolidar es Panamá.</strong></p>
+</blockquote>
+<h3 id="60-archivos-de-referencia">6.0 Archivos de referencia</h3>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Qué es</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Deaths.XLSX</code></td>
+<td>GBD Appendix Table 6: nombres de causa GBD ↔ rangos <strong>ICD-10/ICD-9</strong> (jerárquica, 306 filas)</td>
+<td>Crosswalk maestro <strong>CIE-10 → GBD</strong></td>
+</tr>
+<tr>
+<td><code>Decodificador panama.pdf</code></td>
+<td>Boletín INEC Panamá (Estadísticas Vitales Vol. III). Trae la <strong>Lista abreviada de 103 grupos</strong> con <code>código → causa → rango CIE-10</code> ("Lista detallada", p. ej. <code>001-025 → A00-B99</code>)</td>
+<td>Decodificar <code>causa_codigo</code> de Panamá a CIE-10</td>
+</tr>
+<tr>
+<td><code>mapeo_completo_gbd</code> (dict, abajo)</td>
+<td>16 causas GBD <strong>Nivel 2</strong> → <code>who_code</code> (CGXXXX) + <code>cause_id</code></td>
+<td>Mapeo directo de nombres GBD y unificación del código</td>
+</tr>
+</tbody>
+</table>
+<h3 id="61-nivel-de-conformidad-gbd-nivel-2-16-causas">6.1 Nivel de conformidad: <strong>GBD Nivel 2 (16 causas)</strong></h3>
+<p>IHME en esta data viene exactamente con las <strong>16 causas GBD de Nivel 2</strong>
+(Neoplasms, Cardiovascular diseases, …). Ese es el nivel al que se conforman
+todas las fuentes. INE y Panamá tienen CIE-10 mucho más fino → se mapea cada
+código CIE-10 a su <strong>padre GBD Nivel 2</strong>. (El detalle CIE-10 fino se conserva en
+<code>cie-10_code</code>/<code>cie-10_nombre</code> para INE, que es quien lo tiene real.)</p>
+<p><strong>Llave común = <code>GBD_code</code> (CGXXXX) + <code>GBD_nombre</code>.</strong></p>
+<blockquote>
+<p><strong>Corrección 2026-06-18 (WHO):</strong> la sección anterior decía que WHO usa los
+<code>CGXXXX</code> de forma nativa y son los mismos <code>who_code</code> del diccionario → unión
+por igualdad directa. <strong>Esto es FALSO para la data real.</strong> WHO Mortality
+trae 4 categorías de Nivel 1 (<code>CG0010</code> Communicable, <code>CG0590</code>
+Noncommunicable, <code>CG1480</code> Injuries, <code>CG1610</code> Ill-defined), no las 16 de
+Nivel 2. Además los CG de WHO no coinciden con los del diccionario (WHO
+<code>CG0590</code> = "Noncommunicable diseases" vs diccionario <code>CG0590</code> =
+"Neurological disorders"). Por eso en WHO <code>gbd_code</code> queda NULL y
+<code>gbd_nombre</code> se puebla con <code>indicator_name</code> (best-effort, §6.4). La
+conformidad real de <code>gbd_code</code> es <strong>INE ↔ Panamá ↔ IHME</strong>; WHO cuelga
+separadamente con su <code>gbd_nombre</code> descriptivo.</p>
+</blockquote>
+<h3 id="62-diccionario-maestro-gbd-nivel-2-16-causas">6.2 Diccionario maestro GBD Nivel 2 (16 causas)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">mapeo_completo_gbd</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="s2">&quot;Neoplasms&quot;</span><span class="p">:</span>                                     <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0600&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">410</span><span class="p">},</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s2">&quot;Cardiovascular diseases&quot;</span><span class="p">:</span>                       <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0530&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">491</span><span class="p">},</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="s2">&quot;Neglected tropical diseases and malaria&quot;</span><span class="p">:</span>       <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0250&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">344</span><span class="p">},</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s2">&quot;Nutritional deficiencies&quot;</span><span class="p">:</span>                      <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0470&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">386</span><span class="p">},</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s2">&quot;Diabetes and kidney diseases&quot;</span><span class="p">:</span>                  <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0510&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">955</span><span class="p">},</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="s2">&quot;Mental disorders&quot;</span><span class="p">:</span>                              <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0610&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">545</span><span class="p">},</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="s2">&quot;Neurological disorders&quot;</span><span class="p">:</span>                        <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0590&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">542</span><span class="p">},</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="s2">&quot;Self-harm and interpersonal violence&quot;</span><span class="p">:</span>          <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0860&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">717</span><span class="p">},</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="s2">&quot;COVID-19&quot;</span><span class="p">:</span>                                      <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0995&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">1013</span><span class="p">},</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="s2">&quot;Transport injuries&quot;</span><span class="p">:</span>                            <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0810&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">688</span><span class="p">},</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="s2">&quot;Digestive diseases&quot;</span><span class="p">:</span>                            <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0580&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">526</span><span class="p">},</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="s2">&quot;Unintentional injuries&quot;</span><span class="p">:</span>                        <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0850&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">696</span><span class="p">},</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="s2">&quot;Diarrheal diseases&quot;</span><span class="p">:</span>                            <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0350&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">302</span><span class="p">},</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="s2">&quot;HIV/AIDS and sexually transmitted infections&quot;</span><span class="p">:</span>  <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0290&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">366</span><span class="p">},</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="s2">&quot;Respiratory infections and tuberculosis&quot;</span><span class="p">:</span>       <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0390&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">337</span><span class="p">},</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="s2">&quot;Chronic respiratory diseases&quot;</span><span class="p">:</span>                  <span class="p">{</span><span class="s2">&quot;who_code&quot;</span><span class="p">:</span> <span class="s2">&quot;CG0570&quot;</span><span class="p">,</span> <span class="s2">&quot;cause_id&quot;</span><span class="p">:</span> <span class="mi">508</span><span class="p">},</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
+</code></pre></div>
+<p>PySpark (mapa plano para derivar la columna):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_map</span><span class="p">,</span> <span class="n">lit</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">chain</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">mapeo_cg</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="s2">&quot;who_code&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mapeo_completo_gbd</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">map_expr</span> <span class="o">=</span> <span class="n">create_map</span><span class="p">([</span><span class="n">lit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="n">mapeo_cg</span><span class="o">.</span><span class="n">items</span><span class="p">())])</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;GBD_code&quot;</span><span class="p">,</span> <span class="n">map_expr</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;causa&quot;</span><span class="p">]])</span>
+</code></pre></div>
+<h3 id="63-pipeline-por-fuente-todo-en-stage">6.3 Pipeline por fuente (todo en stage)</h3>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Código origen</th>
+<th>Cómo llega a GBD</th>
+<th>CIE-10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IHME</strong></td>
+<td><code>causa</code> (nombre GBD, ej. <code>Neoplasms</code>)</td>
+<td>Directo vía <code>mapeo_completo_gbd</code> → <code>GBD_code</code>(CGXXXX) + <code>cause_id</code> + <code>GBD_nombre</code></td>
+<td>— (no aplica)</td>
+</tr>
+<tr>
+<td><strong>WHO_DEATHS</strong></td>
+<td><code>indicator_code</code> (<code>CGXXXX</code>) + <code>icd10_group</code></td>
+<td><code>indicator_code</code> <strong>ya es</strong> <code>GBD_code</code>; normalizar <code>icd10_group</code> y validar contra el diccionario</td>
+<td>desde <code>icd10_group</code></td>
+</tr>
+<tr>
+<td><strong>INE</strong></td>
+<td><code>causa_cie10</code> (<code>A09</code>, <code>J18</code>…)</td>
+<td>CIE-10 → padre GBD Nivel 2 vía <code>Deaths.XLSX</code> (rangos ICD-10) → <code>GBD_code</code>+<code>GBD_nombre</code></td>
+<td><code>cie-10_code</code> nativo + <code>cie-10_nombre</code></td>
+</tr>
+<tr>
+<td><strong>Panamá</strong></td>
+<td><code>causa_codigo</code> (lista 103, <code>001-025</code>)</td>
+<td>lista 103 → rango CIE-10 (PDF) → padre GBD Nivel 2 (<code>Deaths.XLSX</code>) → <code>GBD_code</code>+<code>GBD_nombre</code></td>
+<td>rango CIE-10 desde PDF</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Salida estándar (todas las tablas con causa):</strong> columnas <code>cie-10_code</code>,
+<code>cie-10_nombre</code>, <code>GBD_code</code>, <code>GBD_nombre</code>. <code>cie-10_*</code> puede quedar null donde la
+fuente no lo provee (IHME) o si su poblado es muy costoso (omitible).</p>
+<h3 id="64-tareas-pendientes-de-implementacion">6.4 Tareas pendientes de implementación</h3>
+<blockquote>
+<p><strong>Estado:</strong> §6 implementado en stage (tareas 1–4). Las 4 fuentes salen con
+columnas <code>cie10_code</code>, <code>cie10_nombre</code>, <code>gbd_code</code>, <code>gbd_nombre</code>, <code>gbd_cause_id</code>
+(snake_case, sin guion, para evitar el escape de <code>cie-10_*</code> en Spark/Delta).
+El crosswalk se genera con <code>scripts/transformation/build_gbd_crosswalk.py</code>
+(<code>data/processed/cie10_gbd_nivel2.csv</code>, <code>panama_lista103_gbd.csv</code>) y se <strong>embebe</strong>
+en los notebooks (sin I/O en runtime). Regla aplicada: COVID (U07) se fuerza a
+<code>CG0995</code>; todo código ambiguo, agregado o fuera de las 16 → <code>gbd_code = NULL</code>.</p>
+</blockquote>
+<ol>
+<li>✅ <strong>Panamá:</strong> lista 103 → CIE-10 (PDF) → GBD Nivel 2 (<code>Deaths.XLSX</code>). <code>staging/panama.py</code>.
+   Dos niveles de mapeo (ver dict <code>PANAMA_LISTA103</code>):</li>
+<li><strong>16 causas de IHME</strong> (llave conformada completa): <code>gbd_code</code> + <code>gbd_nombre</code> + <code>gbd_cause_id</code>.
+     Incluye reasignar los "resto de capítulo" a su capítulo cuando colapsa a una sola
+     (071 circulatorio→Cardiovascular, 061 nervioso→Neurological, 057 mental→Mental,
+     085 renal→Diabetes and kidney), igual que ya se hacía con 066 hipertensivas.</li>
+<li><strong>Causas GBD Nivel 2 FUERA de las 16</strong> (decisión 2026-06-18, reduce nulos): se puebla
+     <strong>solo <code>gbd_nombre</code></strong> (autoritativo, verificado vs rangos ICD-10 de WHO Mortality);
+     <code>gbd_code</code>/<code>gbd_cause_id</code> quedan <strong>NULL</strong> porque el <code>CGxxxx</code> no existe en ninguna
+     fuente confiable y no se fabrica. Cubre: piel 082, osteomuscular 083, órganos de los
+     sentidos 062/063, perinatal 092, congénitas 093, uso de sustancias 056, otras
+     infecciosas 008/010/011/012/059.</li>
+<li><strong>NULL total</strong> (sin nombre): agregados multi-causa (095 externas, sin simples en la
+     data), códigos especiales/COVID (U00-12, U00-U85), mal definidos (094 R00-R99) y
+     residuales realmente mixtos (086, 077, 054, 049, 050, 025).</li>
+<li>✅ <strong>IHME:</strong> <code>mapeo_completo_gbd</code> sobre <code>causa</code> → <code>gbd_code</code>/<code>gbd_nombre</code>/
+   <code>gbd_cause_id</code>. cie10 no aplica (NULL). <code>staging/ihme.py</code>.</li>
+<li>✅ <strong>INE:</strong> lookup CIE-10 (3 chars) → GBD Nivel 2 desde los rangos de <code>Deaths.XLSX</code>
+   (811 códigos, broadcast join); <code>cie10_code</code> = <code>causa_cie10</code>. <code>staging/ine.py</code>.</li>
+<li>✅ <strong>WHO_DEATHS:</strong> <code>indicator_code</code> (CGXXXX) usado como <code>gbd_code</code>; validado
+   contra las 16; nombre/cause_id derivados. <code>staging/who_mortality.py</code>.</li>
+<li>⏳ <strong><code>DIM_CAUSA</code>:</strong> poblar desde la unión de las 4 fuentes ya normalizadas
+   (deduplicado por <code>gbd_code</code>). — capa dimensión, pendiente.</li>
+</ol>
+<blockquote>
+<p><strong>Brecha conocida (revisar):</strong> la neumonía no especificada (<code>J17</code>, <code>J18</code>) y otros
+15 códigos de 3 chars que GBD reasigna a nivel decimal quedan en <code>gbd_code = NULL</code>
+en INE. Panamá no puede aislar COVID (su bucket <code>U00-U85</code> es demasiado amplio).</p>
+<p><strong>Riesgo a vigilar:</strong> valores fuera de las 16 causas (subtotales tipo "All
+Causes" <code>CG0000</code>, o causas no mapeadas) → deben quedar como <code>GBD_code = NULL</code>
+y revisarse, nunca forzarse a una categoría.</p>
+</blockquote>
+<hr />
+<h2 id="7-estado-de-decisiones">7. Estado de decisiones</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tema</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Eliminar <code>FACT_MSPAS_EXCESO</code></td>
+<td>✅ Decidido (definitivo)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>IHME <code>medida</code>/<code>metrica</code> (DIM_MEDIDA, DIM_METRICA)</td>
+<td>✅ Aplicado</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>FACT_PANAMA</code> alcance reducido (edad/sexo/causa/país/año)</td>
+<td>✅ Decidido</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>DIM_TIEMPO</code>/<code>DIM_GEOGRAFIA</code> solo ocurrencia</td>
+<td>✅ Decidido</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>DIM_ETARIO</code> grid canónico + crosswalk</td>
+<td>✅ Implementado en stage (INE, Panamá, IHME, WHO)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Reglas anti doble-conteo Panamá</td>
+<td>✅ Implementado vía columna <code>nivel</code> (grupo/simple) en <code>stage.panama</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>WHO_DEATHS</code> — mantener (cubre 2015–2022)</td>
+<td>✅ Decidido (corrección 2026-06-18, antes era "eliminar")</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>DIM_SOURCE</code> → catálogo + auditoría en hecho</td>
+<td>⏳ Pendiente</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Normalización de causa a GBD en stage (sección 6, tareas 1–4)</td>
+<td>✅ Implementado (INE, Panamá, IHME, WHO)</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>DIM_CAUSA</code> poblada desde las 4 fuentes normalizadas (sección 6, tarea 5)</td>
+<td>⏳ Pendiente (capa dimensión)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

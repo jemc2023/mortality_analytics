@@ -1,0 +1,1218 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Análisis de Mortalidad Pre-COVID y Post-COVID en Guatemala y Centroamérica">
+      
+      
+        <meta name="author" content="Seminario de Sistemas 2 — USAC 2026">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Dashboards Analíticos — Insights - Plataforma Analítica de Mortalidad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dashboards-analiticos-insights" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Plataforma Analítica de Mortalidad" class="md-header__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plataforma Analítica de Mortalidad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dashboards Analíticos — Insights
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../arquitectura/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitectura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fuentes/" class="md-tabs__link">
+          
+  
+  
+  Datos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../administraci%C3%B3n/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Administración
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../propuesta_financiera/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Propuesta Financiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Insights/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Insights
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Plataforma Analítica de Mortalidad" class="md-nav__button md-logo" aria-label="Plataforma Analítica de Mortalidad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plataforma Analítica de Mortalidad
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jemc2023/mortality_analytics" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mortality-analytics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fuentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fuentes de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-to-target-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source-To-Target Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobernanza de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../administraci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../propuesta_financiera/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuesta Financiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-1-pre-vs-post-covid-guatemala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard 1: Pre vs Post COVID — Guatemala
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard 1: Pre vs Post COVID — Guatemala">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturas-de-graficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capturas de gráficas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insights-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insights esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-2-causas-de-muerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard 2: Causas de Muerte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard 2: Causas de Muerte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturas-de-graficas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capturas de gráficas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insights-esperados_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insights esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-3-geografia-y-demografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard 3: Geografía y Demografía
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dashboard 3: Geografía y Demografía">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#charts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturas-de-graficas_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capturas de gráficas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insights-esperados_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insights esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas-metodologicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas Metodológicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notas Metodológicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#periodo-de-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Período de análisis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normalizacion-de-causas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normalización de causas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-conocidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones conocidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cumplimiento-etico-eu-data-act" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cumplimiento ético (EU Data Act)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="dashboards-analiticos-insights">Dashboards Analíticos — Insights</h1>
+<p>Tres dashboards fueron diseñados para responder preguntas estratégicas del encargo PNUD/MSPAS, cubriendo las dimensiones de <strong>tiempo</strong> (pre vs post COVID), <strong>causa</strong> (CIE-10/GBD), <strong>geografía</strong> (departamentos de Guatemala) y <strong>demografía</strong> (sexo, grupo etario).</p>
+<hr />
+<h2 id="dashboard-1-pre-vs-post-covid-guatemala">Dashboard 1: Pre vs Post COVID — Guatemala</h2>
+<p><strong>Objetivo</strong>: Comparar la mortalidad general entre el período pre-COVID (2015-2019) y post-COVID (2020-2024), validando con datos oficiales del MSPAS.</p>
+<h3 id="charts">Charts</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Visualización</th>
+<th>Tipo</th>
+<th>Fuente</th>
+<th>Qué responde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Total Defunciones Pre-COVID (2015-2019)</td>
+<td>Big Number + Trend</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Cuál fue la carga base de mortalidad antes de la pandemia?</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Total Defunciones Post-COVID (2020-2024)</td>
+<td>Big Number + Trend</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Cómo cambió la mortalidad total después de 2020?</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Variación Pre vs Post COVID</td>
+<td>Big Number</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Cuál es el cambio porcentual neto entre períodos?</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Defunciones Mensuales 2015-2024</td>
+<td>Línea (Time Series)</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Hay patrones estacionales? ¿Se observa el pico COVID-2020/2021?</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Defunciones por Año — Pre vs Post</td>
+<td>Barras Agrupadas</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Qué años fueron los más letales? ¿Hay tendencia al alza/baja?</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>Tasa de Mortalidad Nacional (MSPAS)</td>
+<td>Línea (Time Series)</td>
+<td><code>v_mspas_nacional</code></td>
+<td>¿Coinciden los datos del INE con la tasa oficial del MSPAS?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capturas-de-graficas">Capturas de gráficas</h3>
+<p><img alt="Total Defunciones Pre-COVID" src="../../img/superset/charts/d1_01_total_pre.png" /></p>
+<p><img alt="Total Defunciones Post-COVID" src="../../img/superset/charts/d1_02_total_post.png" /></p>
+<p><img alt="Variación Pre vs Post COVID" src="../../img/superset/charts/d1_03_variacion.png" /></p>
+<p><img alt="Defunciones Mensuales 2015-2024" src="../../img/superset/charts/d1_04_mensuales.png" /></p>
+<p><img alt="Defunciones por Año — Pre vs Post COVID" src="../../img/superset/charts/d1_05_anual_pre_post.png" /></p>
+<p><img alt="Tasa de Mortalidad Nacional x 100k hab MSPAS" src="../../img/superset/charts/d1_06_tasa_mspas.png" /></p>
+<h3 id="insights-esperados">Insights esperados</h3>
+<ol>
+<li><strong>Exceso de mortalidad 2020-2021</strong>: Se espera un pico pronunciado en 2020 y 2021, reflejando el impacto directo de COVID-19 y el colapso del sistema de salud.</li>
+<li><strong>Efecto persistente 2022-2024</strong>: La mortalidad post-pico puede mantenerse elevada respecto al baseline pre-COVID, indicando efectos indirectos (enfermedades crónicas desatendidas, salud mental, interrupción de servicios).</li>
+<li><strong>Validación MSPAS</strong>: Los datos del INE (registro individual de defunciones) deberían alinearse con las tasas oficiales del MSPAS para años pre-COVID. Divergencias post-2020 pueden indicar subregistro.</li>
+<li><strong>Estacionalidad</strong>: Se espera mayor mortalidad en meses de invierno (noviembre-febrero) por enfermedades respiratorias, patrón que pudo acentuarse durante la pandemia.</li>
+</ol>
+<hr />
+<h2 id="dashboard-2-causas-de-muerte">Dashboard 2: Causas de Muerte</h2>
+<p><strong>Objetivo</strong>: Desglosar la mortalidad por causa GBD Nivel 2, identificando qué enfermedades cambiaron más su participación relativa entre períodos, y contextualizar Guatemala en Centroamérica.</p>
+<h3 id="charts_1">Charts</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Visualización</th>
+<th>Tipo</th>
+<th>Fuente</th>
+<th>Qué responde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Defunciones por Causa GBD L2</td>
+<td>Treemap</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Cuáles son las causas dominantes en Guatemala?</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Top 10 Causas de Muerte</td>
+<td>Treemap</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Qué ranking tienen las enfermedades?</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Tendencia Pre vs Post COVID</td>
+<td>Línea</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Cómo cambia la mortalidad total por período a través del tiempo?</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Tendencia de Causas en Centroamérica (IHME)</td>
+<td>Líneas Múltiples</td>
+<td><code>v_ihme_centroamerica</code></td>
+<td>¿Es Guatemala un caso atípico frente a la región?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capturas-de-graficas_1">Capturas de gráficas</h3>
+<p><img alt="Defunciones por Causa GBD L2" src="../../img/superset/charts/d2_01_causa_gbd_l2.png" /></p>
+<p><img alt="Top 10 Causas de Muerte" src="../../img/superset/charts/d2_02_top10_causas.png" /></p>
+<p><img alt="Tendencia Pre vs Post COVID" src="../../img/superset/charts/d2_03_tendencia_pre_post.png" /></p>
+<p><img alt="Tendencia de Causas en Centroamérica IHME" src="../../img/superset/charts/d2_04_tendencia_ihme.png" /></p>
+<h3 id="insights-esperados_1">Insights esperados</h3>
+<ol>
+<li><strong>COVID-19 como nueva causa principal</strong>: A partir de 2020, COVID-19 aparece como causa GBD (código <code>B.1.22</code> u otro asignado por el crosswalk), desplazando potencialmente a enfermedades cardiovasculares o neoplasias del primer lugar.</li>
+<li><strong>Efecto sustitución</strong>: Enfermedades crónicas (diabetes, hipertensión) pueden mostrar un aumento indirecto por desatención durante la pandemia.</li>
+<li><strong>Causas externas</strong>: Homicidios y accidentes (causas externas GBD) pueden mostrar patrones diferentes — algunos estudios sugieren reducción durante confinamientos, con rebote posterior.</li>
+<li><strong>Contexto regional IHME</strong>: Guatemala puede tener un perfil de mortalidad distinto al resto de Centroamérica (mayor carga de enfermedades transmisibles, menor carga de neoplasias por pirámide poblacional más joven).</li>
+<li><strong>Causas mal definidas</strong>: Un porcentaje alto de causas "mal definidas" o "síntomas no clasificados" (CIE-10 capítulo XVIII) indicaría debilidades en el sistema de registro de defunciones.</li>
+</ol>
+<hr />
+<h2 id="dashboard-3-geografia-y-demografia">Dashboard 3: Geografía y Demografía</h2>
+<p><strong>Objetivo</strong>: Identificar disparidades geográficas en la mortalidad a nivel departamental, y patrones demográficos por sexo y grupo etario.</p>
+<h3 id="charts_2">Charts</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Visualización</th>
+<th>Tipo</th>
+<th>Fuente</th>
+<th>Qué responde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Defunciones por Departamento</td>
+<td>Treemap</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Qué departamentos concentran mayor mortalidad absoluta?</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Defunciones por Grupo Etario y Año</td>
+<td>Barras apiladas</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Qué grupos de edad fueron más afectados y cuándo?</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Defunciones por Sexo y Año</td>
+<td>Barras Apiladas</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Hay diferencias anuales de mortalidad entre hombres y mujeres?</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Resumen: Departamento × Causa</td>
+<td>Tabla Dinámica</td>
+<td><code>v_ine_completa</code></td>
+<td>¿Qué causa predomina en cada departamento?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="capturas-de-graficas_2">Capturas de gráficas</h3>
+<p><img alt="Defunciones por Departamento" src="../../img/superset/charts/d3_01_departamento.png" /></p>
+<p><img alt="Defunciones por Grupo Etario y Año" src="../../img/superset/charts/d3_02_etario_anio.png" /></p>
+<p><img alt="Defunciones por Sexo y Año" src="../../img/superset/charts/d3_03_sexo_anio.png" /></p>
+<p><img alt="Resumen Departamento por Causa" src="../../img/superset/charts/d3_04_resumen_departamento_causa.png" /></p>
+<h3 id="insights-esperados_2">Insights esperados</h3>
+<ol>
+<li><strong>Concentración urbana</strong>: El departamento de Guatemala (área metropolitana) concentra la mayor cantidad absoluta de defunciones por densidad poblacional; para comparar riesgo entre departamentos haría falta una tasa con denominador poblacional departamental.</li>
+<li><strong>Desigualdad en salud</strong>: Departamentos del corredor seco (Chiquimula, Jutiapa, El Progreso) o con alta población indígena (Quiché, Totonicapán) pueden mostrar tasas elevadas de mortalidad por enfermedades prevenibles.</li>
+<li><strong>Impacto etario de COVID-19</strong>: Las barras apiladas deberían mostrar que el grupo de 60+ años fue el más afectado en 2020-2021, pero también podrían revelar un aumento en grupos de 40-59 años (población económicamente activa).</li>
+<li><strong>Sobremortalidad masculina</strong>: Consistentemente, los hombres pueden mostrar mayor mortalidad anual que las mujeres; la brecha pudo ampliarse durante la pandemia (mayor exposición, comorbilidades, menor búsqueda de atención médica).</li>
+<li><strong>Perfil departamental diferenciado</strong>: La tabla dinámica permite identificar si ciertas causas (ej. desnutrición, enfermedades infecciosas) predominan en departamentos específicos, lo cual es crítico para focalizar intervenciones de política pública.</li>
+</ol>
+<hr />
+<h2 id="notas-metodologicas">Notas Metodológicas</h2>
+<h3 id="periodo-de-analisis">Período de análisis</h3>
+<ul>
+<li><strong>Pre-COVID</strong>: 2015–2019 (5 años de referencia)</li>
+<li><strong>Post-COVID</strong>: 2020–2024 (incluye años pandémicos y post-pandémicos)</li>
+<li>La dimensión <code>dim_tiempo.es_pre_covid</code> segmenta automáticamente los datos.</li>
+</ul>
+<h3 id="normalizacion-de-causas">Normalización de causas</h3>
+<p>Las causas de muerte se normalizaron a <strong>GBD Nivel 2</strong> (16 categorías) mediante un crosswalk desde códigos CIE-10. Detalles en <a href="../../modelo_dimensional/">Modelo Dimensional</a>.</p>
+<h3 id="limitaciones-conocidas">Limitaciones conocidas</h3>
+<ol>
+<li><strong>Subregistro</strong>: El INE depende del registro civil; defunciones no registradas (especialmente en áreas rurales) no aparecen.</li>
+<li><strong>Causas mal definidas</strong>: Un porcentaje de defunciones tiene causa "R99" (CIE-10) o similar, limitando el análisis causal.</li>
+<li><strong>Datos MSPAS post-2019</strong>: La tasa <code>tasa_por_100k</code> de MSPAS solo está disponible hasta 2019; para 2020+ solo se tiene el conteo absoluto <code>defunciones</code>.</li>
+<li><strong>WHO limitado a 2022</strong>: Los datos de población WHO solo cubren hasta 2022, limitando el cálculo de tasas para 2023-2024.</li>
+<li><strong>Panamá no incluido en dashboards</strong>: Por simplicidad, los dashboards priorizan Guatemala. <code>v_ihme_centroamerica</code> provee contexto regional con datos IHME.</li>
+</ol>
+<h3 id="cumplimiento-etico-eu-data-act">Cumplimiento ético (EU Data Act)</h3>
+<ul>
+<li>Los datos presentados son <strong>agregados</strong> a nivel departamental/causal/grupo etario.</li>
+<li>No se expone ningún registro individual ni información personal identificable.</li>
+<li>Las tasas se calculan sobre denominadores poblacionales publicados por WHO.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
